@@ -4,7 +4,7 @@ namespace Seren.Scripts.Services;
 
 public interface ILocalizationService : INotifyPropertyChanged
 {
-    IReadOnlyList<string> SupportedLanguageIds { get; }
+    IEnumerable<string> SupportedLanguageIds { get; }
     
     string CurrentLanguageId { get; }
     

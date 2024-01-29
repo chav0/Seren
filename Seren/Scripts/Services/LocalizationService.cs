@@ -11,7 +11,7 @@ public class LocalizationService : ObservableObject, ILocalizationService
     private Dictionary<string, Dictionary<string, string>> _localizations;
     private string _currentLanguageId;
 
-    public IReadOnlyList<string> SupportedLanguageIds => _localizations.Keys.ToList();
+    public IEnumerable<string> SupportedLanguageIds => _localizations.Keys.ToList();
     
     public string CurrentLanguageId
     {
