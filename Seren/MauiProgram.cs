@@ -26,6 +26,7 @@ public static class MauiProgram
 			// repository
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
+			.AddSingleton<IUserMoodCalendarRepository, UserMoodCalendarRepository>()
 			// services
 			.AddSingleton<ILocalizationService, LocalizationService>();
 

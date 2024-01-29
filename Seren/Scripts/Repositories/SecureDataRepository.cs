@@ -3,14 +3,14 @@ using Seren.Scripts.Models;
 
 namespace Seren.Scripts.Repositories;
 
-public class JsonRepository<T> where T : IIdentifiable
+public class SecureDataRepository<T> where T : IIdentifiable
 {
-    private readonly string _jsonFilePath;
+    private readonly string _storagePath;
     private Dictionary<string, T> _itemsMap;
     
-    protected JsonRepository(string jsonFilePath)
+    protected SecureDataRepository(string storagePath)
     {
-        _jsonFilePath = jsonFilePath;
+        _storagePath = storagePath;
     }
 
     public async Task<IEnumerable<T>> GetAllAsync()
@@ -29,18 +29,33 @@ public class JsonRepository<T> where T : IIdentifiable
 
         return _itemsMap!.TryGetValue(id, out var item) ? item : default;
     }
+    
+    public async Task SetByIdAsync(string id, T value)
+    {
+        if (_itemsMap == null)
+            await LoadItemsAsync();
+
+        _itemsMap![id] = value;
+        await Flush();
+    }
 
     private async Task LoadItemsAsync()
     {
-        if (_jsonFilePath == null)
+        if (_storagePath == null)
             return;
         
-        await using var stream = await FileSystem.OpenAppPackageFileAsync(_jsonFilePath);
-        using var reader = new StreamReader(stream);
-
-        var json = await reader.ReadToEndAsync();
+        var json = await SecureStorage.GetAsync(_storagePath);
         var items = JsonSerializer.Deserialize<IEnumerable<T>>(json).ToList();
 
         _itemsMap = items.ToDictionary(item => item.Id);
+    }
+    
+    private async Task Flush()
+    {
+        if (_storagePath == null)
+            return;
+        
+        var json = JsonSerializer.Serialize(_itemsMap.Values);
+        await SecureStorage.SetAsync(_storagePath, json);
     }
 }

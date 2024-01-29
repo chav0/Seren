@@ -1,9 +1,10 @@
 namespace Seren.Scripts.Models;
 
-public class UserMoodEntry
+public class UserMoodEntry : IIdentifiable
 {
     public DateTime Date { get; set; }
     public Mood Mood { get; set; }
+    public string Id => Date.ToShortDateString();
 }
 
 public enum Mood
