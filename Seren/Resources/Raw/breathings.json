@@ -1,0 +1,83 @@
+[
+  {
+    "Id": "calming_breath_478",
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 4
+      },
+      {
+        "Type": "Hold",
+        "Time": 7
+      },
+      {
+        "Type": "Exhale",
+        "Time": 8
+      }
+    ]
+  },
+  {
+    "Id": "smooth_flow_55",
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 5
+      },
+      {
+        "Type": "Exhale",
+        "Time": 5
+      }
+    ]
+  },
+  {
+    "Id": "observer_breath",
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": "Variable"
+      },
+      {
+        "Type": "Exhale",
+        "Time": "Variable"
+      }
+    ]
+  },
+  {
+    "Id": "grounding_breath_336",
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 3
+      },
+      {
+        "Type": "Hold",
+        "Time": 3
+      },
+      {
+        "Type": "Exhale",
+        "Time": 6
+      }
+    ]
+  },
+  {
+    "Id": "box_breathing_4444",
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 4
+      },
+      {
+        "Type": "Hold",
+        "Time": 4
+      },
+      {
+        "Type": "Exhale",
+        "Time": 4
+      },
+      {
+        "Type": "Hold",
+        "Time": 4
+      }
+    ]
+  }
+]
