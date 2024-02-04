@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Seren.Screens;
 
-public partial class Loading : ContentPage
+public partial class LoadingPage : ContentPage
 {
-    public Loading()
+    public LoadingPage()
     {
         InitializeComponent();
     }

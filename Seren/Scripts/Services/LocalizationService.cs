@@ -10,7 +10,7 @@ public class LocalizationService : ObservableObject, ILocalizationService
     
     private Dictionary<string, Dictionary<string, string>> _localizations;
     private string _currentLanguageId;
-
+    
     public IEnumerable<string> SupportedLanguageIds => _localizations.Keys.ToList();
     
     public string CurrentLanguageId
@@ -25,10 +25,11 @@ public class LocalizationService : ObservableObject, ILocalizationService
             OnPropertyChanged();
         }
     }
-
-    public LocalizationService()
+    
+    public async Task InitializeAsync()
     {
-        LoadLocalizations();
+        await LoadLocalizations();
+        
         var currentUiCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
         CurrentLanguageId = SupportedLanguageIds.Contains(currentUiCulture) 
@@ -36,9 +37,9 @@ public class LocalizationService : ObservableObject, ILocalizationService
             : "en";
     }
 
-    private void LoadLocalizations()
+    private async Task LoadLocalizations()
     {
-        var json = File.ReadAllText(LocalizationsJsonPath);
+        var json = await File.ReadAllTextAsync(LocalizationsJsonPath);
         _localizations = JsonSerializer.Deserialize<Dictionary<string, Dictionary<string, string>>>(json);
     }
 
