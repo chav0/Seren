@@ -16,7 +16,7 @@ public partial class App : Application
 	{
 		await serviceProvider.GetService<ILocalizationService>().InitializeAsync();
 		
-		MainPage = new MainPage();
+		//MainPage = new MainPage();
 	}
 }
 
