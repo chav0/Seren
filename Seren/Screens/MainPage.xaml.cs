@@ -1,4 +1,4 @@
-﻿namespace Seren;
+﻿namespace Seren.Screens;
 
 public partial class MainPage : ContentPage
 {

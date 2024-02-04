@@ -73,4 +73,17 @@
 		<BundleResource Include="GoogleService-Info.plist" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="Screens\MainPage.xaml">
+	    <SubType>Designer</SubType>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Screens\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	    <SubType>Code</SubType>
+	  </Compile>
+	</ItemGroup>
+
 </Project>
