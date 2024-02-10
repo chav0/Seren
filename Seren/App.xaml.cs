@@ -1,5 +1,4 @@
 ﻿using Seren.Screens;
-using Seren.Scripts.Services;
 
 namespace Seren;
 
@@ -14,9 +13,9 @@ public partial class App : Application
 
 	private async void InitializeAsync(IServiceProvider serviceProvider)
 	{
-		await serviceProvider.GetService<ILocalizationService>().InitializeAsync();
+		await Task.Delay(5000);
 		
-		//MainPage = new MainPage();
+		MainPage = new MainPage();
 	}
 }
 

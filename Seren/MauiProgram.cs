@@ -16,21 +16,20 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				fonts.AddFont("SpaceGrotesk-Regular.ttf", "SpaceGroteskRegular");
-				//fonts.AddFont("Vollkorn-Bold.ttf", "VollkornBold");
+				fonts.AddFont("Vollkorn-Bold.ttf", "VollkornBold");
 			});
 
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-		
+
 		builder.Services
 			// models
 			// repository
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
-			.AddSingleton<IUserMoodCalendarRepository, UserMoodCalendarRepository>()
+			.AddSingleton<IUserMoodCalendarRepository, UserMoodCalendarRepository>();
 			// services
-			.AddSingleton<ILocalizationService, LocalizationService>();
 
 		return builder.Build();
 	}

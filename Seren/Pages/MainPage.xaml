@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Seren.Pages.Views"
+             xmlns:strings="clr-namespace:Seren.Resources.Raw"
+             x:Class="Seren.Screens.MainPage">
+    
+    <VerticalStackLayout
+        Spacing="40"
+        Padding="0,0"
+        VerticalOptions="Center">
+        
+        <Button Text="Panic"
+                WidthRequest="350"
+                HeightRequest="350"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                CornerRadius="175"
+                BackgroundColor="{StaticResource Red400}"
+                TextColor="White"
+                Clicked="OnPanicClick" />
+
+        <VerticalStackLayout
+            Spacing="10"
+            Padding="0,0"
+            VerticalOptions="Center">
+            
+            <views:MainMenuButtonView 
+                Text="Meditations" 
+                Clicked="OnMeditationClick"/>
+            
+            <views:MainMenuButtonView 
+                Text="Help!" 
+                Clicked="OnHelpClick"/>
+            
+            <views:MainMenuButtonView 
+                Text="Breathing" 
+                Clicked="OnBreathingClick"/>
+            
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
