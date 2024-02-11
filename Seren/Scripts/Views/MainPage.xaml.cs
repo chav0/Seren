@@ -1,4 +1,4 @@
-﻿namespace Seren.Screens;
+﻿namespace Seren.Scripts.Views;
 
 public partial class MainPage : ContentPage
 {

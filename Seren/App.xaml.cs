@@ -1,4 +1,4 @@
-﻿using Seren.Screens;
+﻿using Seren.Scripts.Views;
 
 namespace Seren;
 

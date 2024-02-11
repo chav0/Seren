@@ -67,6 +67,7 @@
 
 	<ItemGroup>
 	  <Folder Include="Resources\Audio\" />
+	  <Folder Include="Scripts\ViewModels\" />
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">

@@ -1,4 +1,4 @@
-namespace Seren.Pages.Views;
+namespace Seren.Scripts.Views;
 
 public partial class MainMenuButtonView : ContentView
 {
