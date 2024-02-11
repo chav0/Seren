@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:strings="clr-namespace:Seren.Resources.Strings"
-             xmlns:views1="clr-namespace:Seren.Scripts.Views"
-             x:Class="Seren.Scripts.Views.MainPage">
+             xmlns:views="clr-namespace:Seren.Scripts.Views"
+             x:Class="Seren.Scripts.Views.MainPage"
+             BackgroundColor="{StaticResource Gray200}">
     
     <VerticalStackLayout
         Spacing="40"
@@ -24,19 +25,31 @@
 
         <VerticalStackLayout
             Spacing="10"
-            Padding="0,0"
+            Padding="20,0"
             VerticalOptions="Center">
             
-            <views1:MainMenuButtonView 
-                Text="{x:Static strings:Localizations.Meditation}" 
+            <views:MainMenuButtonView 
+                Header="{x:Static strings:Localizations.Meditation}" 
+                Description="{x:Static strings:Localizations.MeditationDescription}"
+                Color="{StaticResource Yellow400}"
+                TextColor="{StaticResource Yellow700}"
+                IconPath="meditation_icon.png"
                 Clicked="OnMeditationClick"/>
             
-            <views1:MainMenuButtonView 
-                Text="{x:Static strings:Localizations.HelpYourself}" 
+            <views:MainMenuButtonView 
+                Header="{x:Static strings:Localizations.HelpYourself}" 
+                Description="{x:Static strings:Localizations.HelpYourselfDescription}" 
+                Color="{StaticResource Green600}"
+                TextColor="{StaticResource Gray100}"
+                IconPath="help_icon.png"
                 Clicked="OnHelpClick"/>
             
-            <views1:MainMenuButtonView 
-                Text="{x:Static strings:Localizations.Breath}" 
+            <views:MainMenuButtonView 
+                Header="{x:Static strings:Localizations.Breath}" 
+                Description="{x:Static strings:Localizations.BreathDescription}" 
+                Color="{StaticResource Blue500}"
+                TextColor="{StaticResource Gray100}"
+                IconPath="breath_icon.png"
                 Clicked="OnBreathingClick"/>
             
         </VerticalStackLayout>

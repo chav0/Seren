@@ -1,15 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:views="clr-namespace:Seren.Scripts.Views"
+             x:DataType="views:MainMenuButtonView"
              x:Class="Seren.Scripts.Views.MainMenuButtonView">
     
-    <Button x:Name="InternalButton"
-            Text="{Binding ButtonText}"
-            HorizontalOptions="FillAndExpand"
-            HeightRequest="140"
-            CornerRadius="20"
-            BackgroundColor="Blue"
-            TextColor="White"/>
+    <Frame CornerRadius="20"
+           BackgroundColor="{Binding Color}"
+           Padding="30, 20"
+           HorizontalOptions="FillAndExpand"
+           HeightRequest="140">
+        
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnInternalButtonClicked"/>
+        </Frame.GestureRecognizers>
+        
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="CenterAndExpand"
+                     Spacing="15">
+            
+            <StackLayout HorizontalOptions="StartAndExpand">
+                <Label Text="{Binding Header}"
+                       FontFamily="VollkornBold"
+                       FontSize="30"
+                       TextColor="{Binding TextColor}"
+                       HorizontalOptions="Start" />
+                <Label Text="{Binding Description}"
+                       FontFamily="SpaceGroteskRegular"
+                       FontSize="18"
+                       LineHeight="1.1"
+                       TextColor="{Binding TextColor}"
+                       HorizontalOptions="Start" />
+            </StackLayout>
+
+            <Image Source="{Binding IconPath}"
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     HorizontalOptions="End"
+                     VerticalOptions="Center"/>
+        </StackLayout>
+    </Frame>
     
 </ContentView>

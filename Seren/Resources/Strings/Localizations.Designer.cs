@@ -57,9 +57,9 @@ namespace Seren.Resources.Strings {
             }
         }
         
-        internal static string MeditationDestription {
+        internal static string MeditationDescription {
             get {
-                return ResourceManager.GetString("MeditationDestription", resourceCulture);
+                return ResourceManager.GetString("MeditationDescription", resourceCulture);
             }
         }
         
@@ -78,6 +78,12 @@ namespace Seren.Resources.Strings {
         internal static string Breath {
             get {
                 return ResourceManager.GetString("Breath", resourceCulture);
+            }
+        }
+        
+        internal static string BreathDescription {
+            get {
+                return ResourceManager.GetString("BreathDescription", resourceCulture);
             }
         }
     }

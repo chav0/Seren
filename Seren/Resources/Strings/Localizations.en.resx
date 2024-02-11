@@ -24,7 +24,7 @@
     <data name="Meditation" xml:space="preserve">
         <value>Meditation</value>
     </data>
-    <data name="MeditationDestription" xml:space="preserve">
+    <data name="MeditationDescription" xml:space="preserve">
         <value>Ways to suppress anxiety</value>
     </data>
     <data name="HelpYourselfDescription" xml:space="preserve">
@@ -32,5 +32,11 @@
     </data>
     <data name="HelpYourself" xml:space="preserve">
         <value>Help yourself</value>
+    </data>
+    <data name="Breath" xml:space="preserve">
+        <value>Breath</value>
+    </data>
+    <data name="BreathDescription" xml:space="preserve">
+        <value>Concentration  on breathing</value>
     </data>
 </root>
