@@ -9,6 +9,7 @@
     <Color x:Key="Gray300">#9A9480</Color>
     <Color x:Key="Gray200">#ECE8D9</Color> 
     <Color x:Key="Gray100">#FFFFFF</Color> 
+    <Color x:Key="Gray100Alpha">#1AFFFFFF</Color> 
     <Color x:Key="Yellow700">#6B442F</Color>
     <Color x:Key="Yellow600">#AE8E4D</Color>
     <Color x:Key="Yellow400">#EDBE5F</Color>
@@ -45,13 +46,13 @@
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
     
-    <Color x:Key="BackgroundGradientColor1">#3D377D</Color>
-    <Color x:Key="BackgroundGradientColor2">#374F7D</Color>
-    <Color x:Key="BackgroundGradientColor3">#1F3258</Color>
+    <Color x:Key="BackgroundGradientColor1">#3B3C7D</Color>
+    <Color x:Key="BackgroundGradientColor2">#374E7D</Color>
+    <Color x:Key="BackgroundGradientColor3">#273B64</Color>
     
-    <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0,0.3" EndPoint="1,0.7">
+    <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0,0.7" EndPoint="1,0.3">
         <GradientStop Color="{StaticResource BackgroundGradientColor1}" Offset="0.0"/>
-        <GradientStop Color="{StaticResource BackgroundGradientColor2}" Offset="0.7"/>
+        <GradientStop Color="{StaticResource BackgroundGradientColor2}" Offset="0.5"/>
         <GradientStop Color="{StaticResource BackgroundGradientColor3}" Offset="1.0"/>
     </LinearGradientBrush>
 

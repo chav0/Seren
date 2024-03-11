@@ -39,4 +39,7 @@
     <data name="BreathDescription" xml:space="preserve">
         <value>Концентрация на дыхании</value>
     </data>
+    <data name="DoYouHavePanic" xml:space="preserve">
+        <value>Ты испытываешь паническую атаку?</value>
+    </data>
 </root>

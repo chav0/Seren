@@ -86,5 +86,11 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("BreathDescription", resourceCulture);
             }
         }
+        
+        internal static string DoYouHavePanic {
+            get {
+                return ResourceManager.GetString("DoYouHavePanic", resourceCulture);
+            }
+        }
     }
 }

@@ -7,18 +7,53 @@
              Background="{StaticResource BackgroundGradient}">
     
     <VerticalStackLayout
-        Spacing="40"
-        Padding="0,0"
+        Spacing="30"
+        Padding="15,15"
         VerticalOptions="Center">
+        
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <ImageButton Grid.Column="0" 
+                         Source="calendar.png"
+                         WidthRequest="60" 
+                         HeightRequest="60"
+                         CornerRadius="30" 
+                         Padding="10"
+                         BackgroundColor="{StaticResource Gray100Alpha}" 
+                         HorizontalOptions="Start"/>
+            
+            <ImageButton Grid.Column="2" 
+                         Source="settings.png" 
+                         WidthRequest="60" 
+                         HeightRequest="60"
+                         CornerRadius="30" 
+                         Padding="10"
+                         BackgroundColor="{StaticResource Gray100Alpha}" 
+                         HorizontalOptions="End"/>
+        </Grid>
+        
+        <Label Text="{x:Static strings:Localizations.DoYouHavePanic}"
+               FontFamily="VollkornBold"
+               FontSize="40"
+               TextColor="{StaticResource Gray100}"
+               HorizontalTextAlignment="Center"
+               Padding="0,7,0,0"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
         
         <Button Text="{x:Static strings:Localizations.Panic}"
                 FontFamily="VollkornBold"
                 FontSize="50"
-                WidthRequest="350"
-                HeightRequest="350"
+                WidthRequest="320"
+                HeightRequest="320"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                CornerRadius="175"
+                CornerRadius="160"
                 BackgroundColor="{StaticResource Red400}"
                 TextColor="White"
                 Clicked="OnPanicClick" />

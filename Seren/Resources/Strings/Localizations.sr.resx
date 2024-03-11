@@ -11,4 +11,28 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="DoYouHavePanic" xml:space="preserve">
+        <value>Да ли доживљаваш панични напад?</value>
+    </data>
+    <data name="Breath" xml:space="preserve">
+        <value>Дисање</value>
+    </data>
+    <data name="BreathDescription" xml:space="preserve">
+        <value>Концентрација на дисању</value>
+    </data>
+    <data name="HelpYourself" xml:space="preserve">
+        <value>Помози себи</value>
+    </data>
+    <data name="HelpYourselfDescription" xml:space="preserve">
+        <value>Самопомоћ током паничног напада</value>
+    </data>
+    <data name="Meditation" xml:space="preserve">
+        <value>Медитација</value>
+    </data>
+    <data name="MeditationDescription" xml:space="preserve">
+        <value>Начини за смањење анксиозности</value>
+    </data>
+    <data name="Panic" xml:space="preserve">
+        <value>Паника</value>
+    </data>
 </root>

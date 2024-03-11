@@ -33,5 +33,8 @@
 	<data name="BreathDescription" xml:space="preserve">
 		<value>Concentration  on breathing</value>
 	</data>
+	<data name="DoYouHavePanic" xml:space="preserve">
+		<value>Are you having a panic attack?</value>
+	</data>
 </root>
 
