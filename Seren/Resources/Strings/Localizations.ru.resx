@@ -40,6 +40,6 @@
         <value>Концентрация на дыхании</value>
     </data>
     <data name="DoYouHavePanic" xml:space="preserve">
-        <value>Ты испытываешь паническую атаку?</value>
+        <value>У тебя паническая атака?</value>
     </data>
 </root>

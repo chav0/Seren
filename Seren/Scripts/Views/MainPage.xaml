@@ -1,95 +1,98 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:strings="clr-namespace:Seren.Resources.Strings"
              xmlns:views="clr-namespace:Seren.Scripts.Views"
              x:Class="Seren.Scripts.Views.MainPage"
              Background="{StaticResource BackgroundGradient}">
-    
-    <VerticalStackLayout
-        Spacing="30"
-        Padding="15,15"
-        VerticalOptions="Center">
-        
-        <Grid HorizontalOptions="FillAndExpand">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            
-            <ImageButton Grid.Column="0" 
-                         Source="calendar.png"
-                         WidthRequest="60" 
-                         HeightRequest="60"
-                         CornerRadius="30" 
-                         Padding="10"
-                         BackgroundColor="{StaticResource Gray100Alpha}" 
-                         HorizontalOptions="Start"/>
-            
-            <ImageButton Grid.Column="2" 
-                         Source="settings.png" 
-                         WidthRequest="60" 
-                         HeightRequest="60"
-                         CornerRadius="30" 
-                         Padding="10"
-                         BackgroundColor="{StaticResource Gray100Alpha}" 
-                         HorizontalOptions="End"/>
-        </Grid>
-        
-        <Label Text="{x:Static strings:Localizations.DoYouHavePanic}"
-               FontFamily="VollkornBold"
-               FontSize="40"
-               TextColor="{StaticResource Gray100}"
-               HorizontalTextAlignment="Center"
-               Padding="0,7,0,0"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
-        
-        <Button Text="{x:Static strings:Localizations.Panic}"
-                FontFamily="VollkornBold"
-                FontSize="50"
-                WidthRequest="320"
-                HeightRequest="320"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                CornerRadius="160"
-                BackgroundColor="{StaticResource Red400}"
-                TextColor="White"
-                Clicked="OnPanicClick" />
 
+    <ScrollView>
         <VerticalStackLayout
-            Spacing="10"
-            Padding="20,0"
+            Spacing="30"
+            Padding="15,15"
             VerticalOptions="Center">
-            
-            <views:MainMenuButtonView 
-                Header="{x:Static strings:Localizations.Meditation}" 
-                Description="{x:Static strings:Localizations.MeditationDescription}"
-                Color="{StaticResource Yellow400}"
-                TextColor="{StaticResource Yellow700}"
-                IconPath="meditation_icon.png"
-                Clicked="OnMeditationClick"/>
-            
-            <views:MainMenuButtonView 
-                Header="{x:Static strings:Localizations.HelpYourself}" 
-                Description="{x:Static strings:Localizations.HelpYourselfDescription}" 
-                Color="{StaticResource Green600}"
-                TextColor="{StaticResource Gray100}"
-                IconPath="help_icon.png"
-                Clicked="OnHelpClick"/>
-            
-            <views:MainMenuButtonView 
-                Header="{x:Static strings:Localizations.Breath}" 
-                Description="{x:Static strings:Localizations.BreathDescription}" 
-                Color="{StaticResource Blue500}"
-                TextColor="{StaticResource Gray100}"
-                IconPath="breath_icon.png"
-                Clicked="OnBreathingClick"/>
-            
-        </VerticalStackLayout>
 
-    </VerticalStackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <ImageButton Grid.Column="0"
+                             Source="calendar.png"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             CornerRadius="30"
+                             Padding="10"
+                             BackgroundColor="{StaticResource Gray100Alpha}"
+                             HorizontalOptions="Start" />
+
+                <ImageButton Grid.Column="2"
+                             Source="settings.png"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             CornerRadius="30"
+                             Padding="10"
+                             BackgroundColor="{StaticResource Gray100Alpha}"
+                             HorizontalOptions="End" />
+            </Grid>
+
+            <Label Text="{x:Static strings:Localizations.DoYouHavePanic}"
+                   Padding="0, 7, 0, 0"
+                   Style="{StaticResource HeaderStyle}" />
+
+            <Button Text="{x:Static strings:Localizations.Panic}"
+                    FontFamily="VollkornBold"
+                    FontSize="50"
+                    WidthRequest="320"
+                    HeightRequest="320"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    CornerRadius="160"
+                    BackgroundColor="{StaticResource Red400}"
+                    TextColor="White"
+                    Clicked="OnPanicClick" />
+
+            <FlexLayout Wrap="Wrap"
+                        JustifyContent="SpaceAround">
+
+                <views:MainMenuButtonView
+                    Header="{x:Static strings:Localizations.Meditation}"
+                    Description="{x:Static strings:Localizations.MeditationDescription}"
+                    Color="{StaticResource Yellow400}"
+                    TextColor="{StaticResource Yellow700}"
+                    IconPath="meditation_icon.png"
+                    Clicked="OnMeditationClick" />
+
+                <views:MainMenuButtonView
+                    Header="{x:Static strings:Localizations.HelpYourself}"
+                    Description="{x:Static strings:Localizations.HelpYourselfDescription}"
+                    Color="{StaticResource Green600}"
+                    TextColor="{StaticResource Gray100}"
+                    IconPath="help_icon.png"
+                    Clicked="OnHelpClick" />
+
+                <views:MainMenuButtonView
+                    Header="{x:Static strings:Localizations.Breath}"
+                    Description="{x:Static strings:Localizations.BreathDescription}"
+                    Color="{StaticResource Blue500}"
+                    TextColor="{StaticResource Gray100}"
+                    IconPath="breath_icon.png"
+                    Clicked="OnBreathingClick" />
+
+                <views:MainMenuButtonView
+                    Header="{x:Static strings:Localizations.Breath}"
+                    Description="{x:Static strings:Localizations.BreathDescription}"
+                    Color="{StaticResource Blue500}"
+                    TextColor="{StaticResource Gray100}"
+                    IconPath="breath_icon.png"
+                    Clicked="OnBreathingClick" />
+
+            </FlexLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
-
