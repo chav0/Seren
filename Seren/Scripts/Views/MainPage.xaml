@@ -26,7 +26,7 @@
                              HeightRequest="60"
                              CornerRadius="30"
                              Padding="10"
-                             BackgroundColor="{StaticResource Gray100Alpha}"
+                             BackgroundColor="{StaticResource Gray100Alpha10}"
                              HorizontalOptions="Start" />
 
                 <ImageButton Grid.Column="2"
@@ -35,7 +35,7 @@
                              HeightRequest="60"
                              CornerRadius="30"
                              Padding="10"
-                             BackgroundColor="{StaticResource Gray100Alpha}"
+                             BackgroundColor="{StaticResource Gray100Alpha10}"
                              HorizontalOptions="End" />
             </Grid>
 
@@ -43,36 +43,57 @@
                    Padding="0, 7, 0, 0"
                    Style="{StaticResource HeaderStyle}" />
 
-            <Button Text="{x:Static strings:Localizations.Panic}"
-                    FontFamily="VollkornBold"
-                    FontSize="50"
-                    WidthRequest="320"
-                    HeightRequest="320"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center"
-                    CornerRadius="160"
-                    BackgroundColor="{StaticResource Red400}"
-                    TextColor="White"
-                    Clicked="OnPanicClick" />
-
-            <FlexLayout Wrap="Wrap"
-                        JustifyContent="SpaceAround">
+            <AbsoluteLayout HorizontalOptions="Center" 
+                            VerticalOptions="Center"
+                            Margin="0, 0, 0, 73">
+                <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 320, 320" AbsoluteLayout.LayoutFlags="PositionProportional"
+                       BackgroundColor="{StaticResource Gray100Alpha5}"
+                       CornerRadius="160" 
+                       HasShadow="False"/>
+                <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 280, 280" AbsoluteLayout.LayoutFlags="PositionProportional"
+                       BackgroundColor="{StaticResource Gray100Alpha10}" 
+                       CornerRadius="140" 
+                       HasShadow="False"/>
+                <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 240, 240" AbsoluteLayout.LayoutFlags="PositionProportional"
+                       BackgroundColor="{StaticResource Red400}" 
+                       CornerRadius="120"
+                       HasShadow="False"/>
+                <Button Text="{x:Static strings:Localizations.Panic}"
+                        FontFamily="VollkornBold"
+                        FontSize="35"
+                        AbsoluteLayout.LayoutBounds="0.5, 0.5, 240, 240" AbsoluteLayout.LayoutFlags="PositionProportional"
+                        BackgroundColor="Transparent"
+                        TextColor="White"
+                        Clicked="OnPanicClick" />
+            </AbsoluteLayout>
+            
+            <Grid RowSpacing="10" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="150" />
+                </Grid.RowDefinitions>
 
                 <views:MainMenuButtonView
                     Header="{x:Static strings:Localizations.Meditation}"
                     Description="{x:Static strings:Localizations.MeditationDescription}"
                     Color="{StaticResource Yellow400}"
-                    TextColor="{StaticResource Yellow700}"
+                    TextColor="{StaticResource Gray100}"
                     IconPath="meditation_icon.png"
-                    Clicked="OnMeditationClick" />
-
+                    Clicked="OnMeditationClick" 
+                    Grid.Column="0" Grid.Row="0"/>
+                
                 <views:MainMenuButtonView
                     Header="{x:Static strings:Localizations.HelpYourself}"
                     Description="{x:Static strings:Localizations.HelpYourselfDescription}"
                     Color="{StaticResource Green600}"
                     TextColor="{StaticResource Gray100}"
                     IconPath="help_icon.png"
-                    Clicked="OnHelpClick" />
+                    Clicked="OnHelpClick" 
+                    Grid.Column="1" Grid.Row="0"/>
 
                 <views:MainMenuButtonView
                     Header="{x:Static strings:Localizations.Breath}"
@@ -80,7 +101,8 @@
                     Color="{StaticResource Blue500}"
                     TextColor="{StaticResource Gray100}"
                     IconPath="breath_icon.png"
-                    Clicked="OnBreathingClick" />
+                    Clicked="OnBreathingClick" 
+                    Grid.Column="0" Grid.Row="1"/>
 
                 <views:MainMenuButtonView
                     Header="{x:Static strings:Localizations.Breath}"
@@ -88,9 +110,9 @@
                     Color="{StaticResource Blue500}"
                     TextColor="{StaticResource Gray100}"
                     IconPath="breath_icon.png"
-                    Clicked="OnBreathingClick" />
-
-            </FlexLayout>
+                    Clicked="OnBreathingClick"
+                    Grid.Column="1" Grid.Row="1"/>
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

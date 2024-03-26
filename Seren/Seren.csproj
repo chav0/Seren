@@ -61,6 +61,7 @@
 
     <ItemGroup>
         <Folder Include="Resources\Audio\" />
+        <Folder Include="Scripts\Utils\" />
         <Folder Include="Scripts\ViewModels\" />
     </ItemGroup>
 

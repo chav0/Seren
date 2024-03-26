@@ -9,7 +9,8 @@
     <Color x:Key="Gray300">#9A9480</Color>
     <Color x:Key="Gray200">#ECE8D9</Color> 
     <Color x:Key="Gray100">#FFFFFF</Color> 
-    <Color x:Key="Gray100Alpha">#1AFFFFFF</Color> 
+    <Color x:Key="Gray100Alpha10">#1AFFFFFF</Color> 
+    <Color x:Key="Gray100Alpha5">#0DFFFFFF</Color> 
     <Color x:Key="Yellow700">#6B442F</Color>
     <Color x:Key="Yellow600">#AE8E4D</Color>
     <Color x:Key="Yellow400">#EDBE5F</Color>
