@@ -2,7 +2,7 @@ namespace Seren.Scripts.Views;
 
 public partial class MainMenuButtonView : ContentView
 {
-    public event EventHandler Clicked;
+    public event EventHandler? Clicked;
     
     public MainMenuButtonView()
     {
@@ -10,11 +10,9 @@ public partial class MainMenuButtonView : ContentView
         BindingContext = this;
     }
 
-    private void OnInternalButtonClicked(object sender, EventArgs e)
-    {
+    private void OnInternalButtonClicked(object sender, EventArgs e) => 
         Clicked?.Invoke(this, e);
-    }
-    
+
     public static readonly BindableProperty HeaderProperty =
         BindableProperty.Create(nameof(Header), typeof(string), typeof(MainMenuButtonView));
     

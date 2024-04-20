@@ -33,6 +33,6 @@
         <value>Módok a szorongás csökkentésére</value>
     </data>
     <data name="Panic" xml:space="preserve">
-        <value>Pánik</value>
+        <value>Pánik!</value>
     </data>
 </root>

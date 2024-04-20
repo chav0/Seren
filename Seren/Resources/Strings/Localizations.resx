@@ -13,7 +13,7 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
 	<data name="Panic" xml:space="preserve">
-		<value>Panic</value>
+		<value>Panic!</value>
 	</data>
 	<data name="Meditation" xml:space="preserve">
 		<value>Meditation</value>
@@ -35,6 +35,27 @@
 	</data>
 	<data name="DoYouHavePanic" xml:space="preserve">
 		<value>Are you having a panic attack?</value>
+	</data>
+	<data name="YouHavePanic" xml:space="preserve">
+		<value>Okay, you have a panic</value>
+	</data>
+	<data name="HowStrongIsAttack" xml:space="preserve">
+		<value>How strong is that attack?</value>
+	</data>
+	<data name="AttackStrongness1" xml:space="preserve">
+		<value>A bit</value>
+	</data>
+	<data name="AttackStrongness2" xml:space="preserve">
+		<value />
+	</data>
+	<data name="AttackStrongness3" xml:space="preserve">
+		<value>Somewhat</value>
+	</data>
+	<data name="AttackStrongness4" xml:space="preserve">
+		<value />
+	</data>
+	<data name="AttackStrongness5" xml:space="preserve">
+		<value>Very!!</value>
 	</data>
 </root>
 

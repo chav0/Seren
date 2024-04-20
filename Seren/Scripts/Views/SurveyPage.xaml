@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:strings="clr-namespace:Seren.Resources.Strings"
+             xmlns:views="clr-namespace:Seren.Scripts.Views"
+             x:Class="Seren.Scripts.Views.SurveyPage"
+             Background="{StaticResource BackgroundGradient}">
+
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <AbsoluteLayout x:Name="MainLayout"
+                    Padding="15"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+        <ImageButton Source="settings.png"
+                     WidthRequest="60"
+                     HeightRequest="60"
+                     CornerRadius="30"
+                     Padding="10"
+                     BackgroundColor="{StaticResource Gray100Alpha10}"
+                     AbsoluteLayout.LayoutBounds="1, 0, 60, 60"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"
+                     Clicked="OnBackClick" />
+        
+        <Label x:Name="AnimatedLabel"
+               Text="{x:Static strings:Localizations.DoYouHavePanic}"
+               Style="{StaticResource HeaderStyle}"
+               AbsoluteLayout.LayoutBounds="0.5, 0.5, 250, -1"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               Margin="0,-50,0,0"/>
+        
+        <VerticalStackLayout x:Name="RateLayout" Spacing="25"
+                               AbsoluteLayout.LayoutBounds="0.5, 0.5, 250, -1"
+                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                               Margin="0,200,0,0">
+            
+            <views:RateButton x:Name="RateHigh"
+                              Rate="5"
+                              RateText="{x:Static strings:Localizations.AttackStrongness5}"
+                              ButtonColor="{StaticResource Red400}"
+                              Clicked="OnRateButtonClicked"/>
+            
+            <views:RateButton x:Name="RateAboveAverage"
+                              Rate="4"
+                              RateText="{x:Static strings:Localizations.AttackStrongness4}"
+                              ButtonColor="{StaticResource Red300}"
+                              Clicked="OnRateButtonClicked"/>
+            
+            <views:RateButton x:Name="RateAverage"
+                              Rate="3"
+                              RateText="{x:Static strings:Localizations.AttackStrongness3}"
+                              ButtonColor="{StaticResource Red200}"
+                              Clicked="OnRateButtonClicked"/>
+            
+            <views:RateButton x:Name="RateBelowAverage"
+                              Rate="2"
+                              RateText="{x:Static strings:Localizations.AttackStrongness2}"
+                              ButtonColor="{StaticResource Red100}"
+                              Clicked="OnRateButtonClicked"/>
+                
+            <views:RateButton x:Name="RateLow"
+                              Rate="1"
+                              RateText="{x:Static strings:Localizations.AttackStrongness1}"
+                              ButtonColor="{StaticResource Gray100}"
+                              Clicked="OnRateButtonClicked"/>
+                
+        </VerticalStackLayout>
+    </AbsoluteLayout>
+</ContentPage>

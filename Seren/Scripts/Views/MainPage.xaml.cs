@@ -7,11 +7,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnPanicClick(object sender, EventArgs eventArgs)
-	{
-		
-	}
-	
+	private async void OnPanicClick(object sender, EventArgs eventArgs) => 
+		await Navigation.PushAsync(new SurveyPage());
+
 	private void OnMeditationClick(object sender, EventArgs eventArgs)
 	{
 		

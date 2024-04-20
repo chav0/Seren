@@ -92,5 +92,17 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("DoYouHavePanic", resourceCulture);
             }
         }
+        
+        internal static string YouHavePanic {
+            get {
+                return ResourceManager.GetString("YouHavePanic", resourceCulture);
+            }
+        }
+        
+        internal static string HowStrongIsAttack {
+            get {
+                return ResourceManager.GetString("HowStrongIsAttack", resourceCulture);
+            }
+        }
     }
 }

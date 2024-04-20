@@ -23,7 +23,9 @@
     <Color x:Key="Blue300">#A5CFE5</Color>
     <Color x:Key="Red700">#8C3232</Color>
     <Color x:Key="Red400">#E86D5F</Color>
-    <Color x:Key="Red300">#ECB0A9</Color>
+    <Color x:Key="Red300">#EA8E84</Color>
+    <Color x:Key="Red200">#ECB0A9</Color>
+    <Color x:Key="Red100">#F5D7D4</Color>
     
     <Color x:Key="Primary">#512BD4</Color>
     <Color x:Key="Secondary">#DFD8F7</Color>
