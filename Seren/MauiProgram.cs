@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using Seren.Scripts.Repositories;
 using Seren.Scripts.Services;
+using Seren.Scripts.ViewModels;
+using Seren.Scripts.Views;
 
 namespace Seren;
 
@@ -23,15 +25,36 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		builder.Services
-			// models
-			// repository
+		return builder.RegisterServices()
+			.RegisterViewModels()
+			.RegisterViews()
+			.Build();
+	}
+
+	private static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
-			.AddSingleton<IUserMoodCalendarRepository, UserMoodCalendarRepository>();
-			// services
+			.AddSingleton<IUserCalendarRepository, UserCalendarRepository>();
 
-		return builder.Build();
+		return mauiAppBuilder;        
+	}
+
+	private static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services.
+			AddTransient<SurveyPageViewModel>();
+
+		return mauiAppBuilder;        
+	}
+
+	private static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services
+			.AddTransient<SurveyPage>();
+
+		return mauiAppBuilder;        
 	}
 }
 

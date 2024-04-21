@@ -42,33 +42,33 @@
                     AbsoluteLayout.LayoutBounds="0, 0.8, 1, 0.8"
                     AbsoluteLayout.LayoutFlags="All">
 
-                <views:RateButton x:Name="RateHigh"
-                                  Rate="5"
-                                  RateText="{x:Static strings:Localizations.AttackStrongness5}"
+                <views:RateButton x:Name="RateExtreme"
+                                  PanicAttackLevel="Extreme"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness5}"
                                   ButtonColor="{StaticResource Red400}"
                                   Clicked="OnRateButtonClicked" />
 
-                <views:RateButton x:Name="RateAboveAverage"
-                                  Rate="4"
-                                  RateText="{x:Static strings:Localizations.AttackStrongness4}"
+                <views:RateButton x:Name="RateSevere"
+                                  PanicAttackLevel="Severe"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness4}"
                                   ButtonColor="{StaticResource Red300}"
                                   Clicked="OnRateButtonClicked" />
 
-                <views:RateButton x:Name="RateAverage"
-                                  Rate="3"
-                                  RateText="{x:Static strings:Localizations.AttackStrongness3}"
+                <views:RateButton x:Name="RateModerate"
+                                  PanicAttackLevel="Moderate"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness3}"
                                   ButtonColor="{StaticResource Red200}"
                                   Clicked="OnRateButtonClicked" />
 
-                <views:RateButton x:Name="RateBelowAverage"
-                                  Rate="2"
-                                  RateText="{x:Static strings:Localizations.AttackStrongness2}"
+                <views:RateButton x:Name="RateMild"
+                                  PanicAttackLevel="Mild"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness2}"
                                   ButtonColor="{StaticResource Red100}"
                                   Clicked="OnRateButtonClicked" />
 
-                <views:RateButton x:Name="RateLow"
-                                  Rate="1"
-                                  RateText="{x:Static strings:Localizations.AttackStrongness1}"
+                <views:RateButton x:Name="RateNone"
+                                  PanicAttackLevel="None"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness1}"
                                   ButtonColor="{StaticResource Gray100}"
                                   Clicked="OnRateButtonClicked" />
         </FlexLayout>

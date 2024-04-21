@@ -1,3 +1,5 @@
+using Seren.Scripts.Models;
+
 namespace Seren.Scripts.Views;
 
 public partial class RateButton : ContentView
@@ -17,15 +19,22 @@ public partial class RateButton : ContentView
         set => SetValue(ButtonColorProperty, value);
     }
     
-    public int Rate { get; set; }
+    public static readonly BindableProperty PanicAttackLevelProperty =
+        BindableProperty.Create(nameof(MoodText), typeof(PanicAttackLevel), typeof(RateButton));
     
-    public static readonly BindableProperty RateTextProperty =
-        BindableProperty.Create(nameof(RateText), typeof(string), typeof(RateButton));
-    
-    public string RateText
+    public PanicAttackLevel PanicAttackLevel
     {
-        get => (string)GetValue(RateTextProperty);
-        set => SetValue(RateTextProperty, value);
+        get => (PanicAttackLevel)GetValue(PanicAttackLevelProperty);
+        set => SetValue(PanicAttackLevelProperty, value);
+    }
+    
+    public static readonly BindableProperty MoodTextProperty =
+        BindableProperty.Create(nameof(MoodText), typeof(string), typeof(RateButton));
+    
+    public string MoodText
+    {
+        get => (string)GetValue(MoodTextProperty);
+        set => SetValue(MoodTextProperty, value);
     }
 
     public event EventHandler? Clicked;
@@ -36,6 +45,8 @@ public partial class RateButton : ContentView
 
     public Task Choose()
     {
-        return InnerButton.ScaleTo(1.2, 1000, Easing.CubicOut);
+        return Task.WhenAll(
+            InnerButton.ScaleTo(1.2, 1000, Easing.CubicOut),
+            InnerText.FadeTo(1, 1000));
     }
 }

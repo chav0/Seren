@@ -22,11 +22,14 @@
                 HeightRequest="80"
                 CornerRadius="40"
                 BackgroundColor="{Binding ButtonColor}"
+                Opacity="0"
                 Clicked="OnInternalButtonClicked"/>
         
-        <Label Grid.Column="3" 
-               Text="{Binding RateText}"
+        <Label x:Name="InnerText"
+               Grid.Column="3" 
+               Text="{Binding MoodText}"
                Style="{StaticResource TextStyle}"
+               Opacity="0"
                VerticalOptions="Center" 
                HorizontalOptions="Start"/> 
         

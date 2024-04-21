@@ -1,22 +1,17 @@
 using Seren.Resources.Strings;
+using Seren.Scripts.ViewModels;
 
 namespace Seren.Scripts.Views;
 
 public partial class SurveyPage : ContentPage
 {
-    private enum PageStep
-    {
-        None,
-        YouHaveAttack,
-        HowStrongIsAttack,
-        Survey
-    }
-
+    private SurveyPageViewModel ViewModel => BindingContext as SurveyPageViewModel;
     private PageStep _currentStep = PageStep.None;
 
-    public SurveyPage()
+    public SurveyPage(SurveyPageViewModel viewModel)
     {
         InitializeComponent();
+        BindingContext = viewModel;
         SwitchToNextStep();
     }
 
@@ -30,7 +25,7 @@ public partial class SurveyPage : ContentPage
             case PageStep.HowStrongIsAttack:
                 SetText(Localizations.HowStrongIsAttack);
                 break;
-            case PageStep.Survey:
+            case PageStep.Choose:
                 MoveLabelUp();
                 break;
         }
@@ -55,24 +50,36 @@ public partial class SurveyPage : ContentPage
     {
         var tasks = new List<Task>
         {
-            RateLow.FadeTo(1, 2000),
-            RateBelowAverage.FadeTo(1, 2000),
-            RateAverage.FadeTo(1, 2000),
-            RateAboveAverage.FadeTo(1, 2000),
-            RateHigh.FadeTo(1, 2000),
+            RateNone.FadeTo(1, 2000),
+            RateMild.FadeTo(1, 2000),
+            RateModerate.FadeTo(1, 2000),
+            RateSevere.FadeTo(1, 2000),
+            RateExtreme.FadeTo(1, 2000),
         };
         
         await Task.WhenAll(tasks);
     }
     
-    private void OnRateButtonClicked(object? sender, EventArgs e)
+    private async void OnRateButtonClicked(object? sender, EventArgs e)
     {
-        if (sender is RateButton button)
-        {
-            button.Choose();
-        }
+        if (sender is not RateButton button || _currentStep == PageStep.Chosen) 
+            return;
+        
+        var animationTask = button.Choose();
+        var saveResultTask = ViewModel.SaveResult(button.PanicAttackLevel);
+        await Task.WhenAll(animationTask, saveResultTask);
+        await Navigation.PushAsync(new MeditationPage());
     }
     
     private async void OnBackClick(object? sender, EventArgs e) =>
-        await Navigation.PopAsync();
+        await Navigation.PopToRootAsync();
+    
+    private enum PageStep
+    {
+        None,
+        YouHaveAttack,
+        HowStrongIsAttack,
+        Choose,
+        Chosen
+    }
 }

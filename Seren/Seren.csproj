@@ -24,7 +24,7 @@
         <ApplicationTitle>Seren</ApplicationTitle>
 
         <!-- App Identifier -->
-        <ApplicationId>com.companyname.seren</ApplicationId>
+        <ApplicationId>com.sieno.seren</ApplicationId>
 
         <!-- Versions -->
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>

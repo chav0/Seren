@@ -7,8 +7,17 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private async void OnPanicClick(object sender, EventArgs eventArgs) => 
-		await Navigation.PushAsync(new SurveyPage());
+	private async void OnPanicClick(object sender, EventArgs eventArgs)
+	{
+		var surveyPage = IPlatformApplication.Current?.Services.GetService<SurveyPage>();
+		if (surveyPage == null)
+		{
+			Console.WriteLine("Не удалось получить SurveyPage из сервисов.");
+			return;
+		}
+		
+		await Navigation.PushAsync(surveyPage);
+	}
 
 	private void OnMeditationClick(object sender, EventArgs eventArgs)
 	{

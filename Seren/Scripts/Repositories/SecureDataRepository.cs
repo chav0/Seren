@@ -45,9 +45,15 @@ public class SecureDataRepository<T> where T : IIdentifiable
             return;
         
         var json = await SecureStorage.GetAsync(_storagePath);
-        var items = JsonSerializer.Deserialize<IEnumerable<T>>(json).ToList();
-
-        _itemsMap = items.ToDictionary(item => item.Id);
+        if (json != null)
+        {
+            var items = JsonSerializer.Deserialize<IEnumerable<T>>(json).ToList();
+            _itemsMap = items.ToDictionary(item => item.Id);
+        }
+        else
+        {
+            _itemsMap = new Dictionary<string, T>();
+        }
     }
     
     private async Task Flush()
