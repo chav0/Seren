@@ -69,7 +69,7 @@ public partial class SurveyPage : ContentPage
     {
         if (sender is RateButton button)
         {
-            
+            button.Choose();
         }
     }
     

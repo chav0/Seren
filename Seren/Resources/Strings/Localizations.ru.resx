@@ -48,4 +48,19 @@
     <data name="HowStrongIsAttack" xml:space="preserve">
         <value>Насколько атака сильная?</value>
     </data>
+    <data name="AttackStrongness1" xml:space="preserve">
+        <value>Маленько</value>
+    </data>
+    <data name="AttackStrongness3" xml:space="preserve">
+        <value>Средне</value>
+    </data>
+    <data name="AttackStrongness5" xml:space="preserve">
+        <value>ОЧЕНЬ СИЛЬНО!</value>
+    </data>
+    <data name="AttackStrongness4" xml:space="preserve">
+        <value>Сильно</value>
+    </data>
+    <data name="AttackStrongness2" xml:space="preserve">
+        <value>Немного</value>
+    </data>
 </root>

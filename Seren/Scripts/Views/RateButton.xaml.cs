@@ -18,11 +18,24 @@ public partial class RateButton : ContentView
     }
     
     public int Rate { get; set; }
-    public string RateText { get; set; }
+    
+    public static readonly BindableProperty RateTextProperty =
+        BindableProperty.Create(nameof(RateText), typeof(string), typeof(RateButton));
+    
+    public string RateText
+    {
+        get => (string)GetValue(RateTextProperty);
+        set => SetValue(RateTextProperty, value);
+    }
 
     public event EventHandler? Clicked;
     private void OnInternalButtonClicked(object sender, EventArgs e) => 
         Clicked?.Invoke(this, e);
     
     public Task FadeTo(double opacity, uint length) => InnerButton.FadeTo(opacity, length);
+
+    public Task Choose()
+    {
+        return InnerButton.ScaleTo(1.2, 1000, Easing.CubicOut);
+    }
 }

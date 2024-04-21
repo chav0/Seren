@@ -17,6 +17,12 @@
         <Setter Property="HorizontalOptions" Value="Center"/>
         <Setter Property="VerticalOptions" Value="Center"/>
     </Style>
+    
+    <Style x:Key="TextStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="SpaceGroteskRegular"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="{StaticResource Gray100}"/>
+    </Style>
 
 </ResourceDictionary>
 

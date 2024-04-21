@@ -28,9 +28,7 @@
                    VerticalOptions="Start"/>
             
             <Label Text="{Binding Header}"
-                   FontFamily="SpaceGroteskRegular"
-                   FontSize="22"
-                   TextColor="{Binding TextColor}"
+                   Style="{StaticResource TextStyle}"
                    HorizontalOptions="Start" />
 
         </StackLayout>
