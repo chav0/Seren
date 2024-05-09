@@ -32,7 +32,10 @@
     <data name="MeditationDescription" xml:space="preserve">
         <value>Formas de aliviar la ansiedad</value>
     </data>
-    <data name="Panic" xml:space="preserve">
+    <data name="PanicSign" xml:space="preserve">
         <value>Pánico!</value>
+    </data>
+    <data name="Panic" xml:space="preserve">
+        <value>pánico</value>
     </data>
 </root>

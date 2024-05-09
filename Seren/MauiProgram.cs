@@ -3,6 +3,7 @@ using Seren.Scripts.Repositories;
 using Seren.Scripts.Services;
 using Seren.Scripts.ViewModels;
 using Seren.Scripts.Views;
+using Seren.Scripts.Views.Pages;
 
 namespace Seren;
 

@@ -85,6 +85,22 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Localizations.ru.resx</DependentUpon>
         </Compile>
+        <Compile Update="Scripts\Views\Pages\LoadingPage.xaml.cs">
+          <DependentUpon>LoadingPage.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Scripts\Views\Pages\MainPage.xaml.cs">
+          <DependentUpon>MainPage.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Scripts\Views\Pages\MeditationPage.xaml.cs">
+          <DependentUpon>MeditationPage.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Scripts\Views\Pages\SurveyPage.xaml.cs">
+          <DependentUpon>SurveyPage.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -100,6 +116,21 @@
             <Generator>ResXFileCodeGenerator</Generator>
             <LastGenOutput>Localizations.ru.Designer.cs</LastGenOutput>
         </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiXaml Update="Scripts\Views\Pages\LoadingPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Scripts\Views\Pages\MainPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Scripts\Views\Pages\MeditationPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Scripts\Views\Pages\SurveyPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
     </ItemGroup>
 
 </Project>

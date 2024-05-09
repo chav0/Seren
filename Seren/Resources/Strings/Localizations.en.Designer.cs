@@ -45,9 +45,9 @@ namespace Seren.Resources.Strings {
             }
         }
         
-        internal static string Panic {
+        internal static string PanicSign {
             get {
-                return ResourceManager.GetString("Panic", resourceCulture);
+                return ResourceManager.GetString("PanicSign", resourceCulture);
             }
         }
         
@@ -120,6 +120,12 @@ namespace Seren.Resources.Strings {
         internal static string AttackStrongness5 {
             get {
                 return ResourceManager.GetString("AttackStrongness5", resourceCulture);
+            }
+        }
+        
+        internal static string Panic {
+            get {
+                return ResourceManager.GetString("Panic", resourceCulture);
             }
         }
     }

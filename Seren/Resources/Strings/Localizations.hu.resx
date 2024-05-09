@@ -32,7 +32,10 @@
     <data name="MeditationDescription" xml:space="preserve">
         <value>Módok a szorongás csökkentésére</value>
     </data>
-    <data name="Panic" xml:space="preserve">
+    <data name="PanicSign" xml:space="preserve">
         <value>Pánik!</value>
+    </data>
+    <data name="Panic" xml:space="preserve">
+        <value>pánik</value>
     </data>
 </root>

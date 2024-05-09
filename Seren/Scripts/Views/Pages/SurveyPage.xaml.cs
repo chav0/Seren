@@ -1,7 +1,7 @@
 using Seren.Resources.Strings;
 using Seren.Scripts.ViewModels;
 
-namespace Seren.Scripts.Views;
+namespace Seren.Scripts.Views.Pages;
 
 public partial class SurveyPage : ContentPage
 {

@@ -18,7 +18,7 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="Panic" xml:space="preserve">
+    <data name="PanicSign" xml:space="preserve">
         <value>Паника!</value>
     </data>
     <data name="Meditation" xml:space="preserve">
@@ -40,7 +40,7 @@
         <value>Концентрация на дыхании</value>
     </data>
     <data name="DoYouHavePanic" xml:space="preserve">
-        <value>У тебя паническая атака?</value>
+        <value>Ты здесь, потому что испытываешь панику?</value>
     </data>
     <data name="YouHavePanic" xml:space="preserve">
         <value>Хорошо, у тебя паника</value>
@@ -62,5 +62,8 @@
     </data>
     <data name="AttackStrongness2" xml:space="preserve">
         <value>Немного</value>
+    </data>
+    <data name="Panic" xml:space="preserve">
+        <value>панику</value>
     </data>
 </root>

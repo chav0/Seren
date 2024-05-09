@@ -1,4 +1,5 @@
 ﻿using Seren.Scripts.Views;
+using Seren.Scripts.Views.Pages;
 
 namespace Seren;
 

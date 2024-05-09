@@ -4,6 +4,53 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     
+    <!-- Primary colors -->
+    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+    <Color x:Key="LoadingBackgroundColor">#F37039</Color>
+    <Color x:Key="TextColor">#B7C9D8</Color>
+    <Color x:Key="HeaderColor">#202426</Color>
+    <Color x:Key="OverlayColor">#33B7C9D8</Color>
+    <Color x:Key="NavBarBackgroundColor">#FFFFFF</Color>
+    <Color x:Key="TabBarBackgroundColor">#E4EAEF</Color>
+
+    <!-- Tab colors -->
+    <Color x:Key="PrimaryTab1Color">#F37039</Color>
+    <Color x:Key="SecondaryTab1Color">#FFAE64</Color>
+    <Color x:Key="PrimaryTab2Color">#3BA6FE</Color>
+    <Color x:Key="SecondaryTab2Color">#88D2FF</Color>
+    <Color x:Key="PrimaryTab3Color">#FFC300</Color>
+    <Color x:Key="SecondaryTab3Color">#FFDE37</Color>
+    <Color x:Key="UnselectedTabColor">#B7C9D8</Color>
+
+    <!-- Additional colors -->
+    <Color x:Key="StandardGray">#677987</Color>
+    
+    <!-- Gray Colors -->
+    <Color x:Key="White">#FFFFFF</Color>
+    <Color x:Key="Gray1">#E4EAEF</Color>
+    <Color x:Key="Gray2">#B7C9D8</Color>
+    <Color x:Key="Gray3">#677987</Color>
+    <Color x:Key="Gray4">#474E52</Color>
+    <Color x:Key="Gray5">#202426</Color>
+
+    <!-- Yellow Colors -->
+    <Color x:Key="Yellow1">#FFEC8F</Color>
+    <Color x:Key="Yellow2">#FFDE37</Color>
+    <Color x:Key="Yellow3">#FFC300</Color>
+
+    <!-- Green Colors -->
+    <Color x:Key="Green2">#CADE31</Color>
+    <Color x:Key="Green3">#9EC900</Color>
+
+    <!-- Blue Colors -->
+    <Color x:Key="Blue2">#88D2FF</Color>
+    <Color x:Key="Blue3">#3BA6FE</Color>
+
+    <!-- Red Colors -->
+    <Color x:Key="Red2">#FFAE64</Color>
+    <Color x:Key="Red3">#F37039</Color>
+
+    <!-- Legacy -->
     <Color x:Key="Gray600">#33312C</Color>
     <Color x:Key="Gray500">#504D45</Color>
     <Color x:Key="Gray300">#9A9480</Color>
@@ -26,37 +73,5 @@
     <Color x:Key="Red300">#EA8E84</Color>
     <Color x:Key="Red200">#ECB0A9</Color>
     <Color x:Key="Red100">#F5D7D4</Color>
-    
-    <Color x:Key="Primary">#512BD4</Color>
-    <Color x:Key="Secondary">#DFD8F7</Color>
-    <Color x:Key="Tertiary">#2B0B98</Color>
-    <Color x:Key="White">White</Color>
-    <Color x:Key="Black">Black</Color>
-    <Color x:Key="Gray400">#919191</Color>
-    <Color x:Key="Gray900">#212121</Color>
-    <Color x:Key="Gray950">#141414</Color>
-    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
-    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}"/>
-    <SolidColorBrush x:Key="TertiaryBrush" Color="{StaticResource Tertiary}"/>
-    <SolidColorBrush x:Key="WhiteBrush" Color="{StaticResource White}"/>
-    <SolidColorBrush x:Key="BlackBrush" Color="{StaticResource Black}"/>
-    <SolidColorBrush x:Key="Gray100Brush" Color="{StaticResource Gray100}"/>
-    <SolidColorBrush x:Key="Gray200Brush" Color="{StaticResource Gray200}"/>
-    <SolidColorBrush x:Key="Gray300Brush" Color="{StaticResource Gray300}"/>
-    <SolidColorBrush x:Key="Gray400Brush" Color="{StaticResource Gray400}"/>
-    <SolidColorBrush x:Key="Gray500Brush" Color="{StaticResource Gray500}"/>
-    <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
-    <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
-    <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
-    
-    <Color x:Key="BackgroundGradientColor1">#3B3C7D</Color>
-    <Color x:Key="BackgroundGradientColor2">#374E7D</Color>
-    <Color x:Key="BackgroundGradientColor3">#273B64</Color>
-    
-    <LinearGradientBrush x:Key="BackgroundGradient" StartPoint="0,0.7" EndPoint="1,0.3">
-        <GradientStop Color="{StaticResource BackgroundGradientColor1}" Offset="0.0"/>
-        <GradientStop Color="{StaticResource BackgroundGradientColor2}" Offset="0.5"/>
-        <GradientStop Color="{StaticResource BackgroundGradientColor3}" Offset="1.0"/>
-    </LinearGradientBrush>
 
 </ResourceDictionary>
