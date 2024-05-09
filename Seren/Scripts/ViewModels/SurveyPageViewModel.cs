@@ -1,6 +1,5 @@
 using Seren.Scripts.Models;
 using Seren.Scripts.Repositories;
-using Seren.Scripts.Views;
 
 namespace Seren.Scripts.ViewModels;
 

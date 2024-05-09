@@ -5,7 +5,8 @@
              xmlns:strings="clr-namespace:Seren.Resources.Strings"
              xmlns:views="clr-namespace:Seren.Scripts.Views"
              x:Class="Seren.Scripts.Views.SurveyPage"
-             Background="{StaticResource BackgroundGradient}">
+             Background="{StaticResource BackgroundGradient}"
+             NavigationPage.HasBackButton="False">
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
