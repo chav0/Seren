@@ -12,9 +12,9 @@
     Shell.TitleColor="{StaticResource HeaderColor}">
 
     <TabBar>
-        <ShellContent Title="Main" Icon="panic_icon.png" ContentTemplate="{DataTemplate pages:MainPage}" />
-        <ShellContent Title="Practices" Icon="breath_icon.png" ContentTemplate="{DataTemplate pages:PracticesPage}" />
-        <ShellContent Title="Settings" Icon="help_icon.png" ContentTemplate="{DataTemplate pages:SettingsPage}" />
+        <ShellContent Route="main" Title="Main" Icon="panic_icon.png" ContentTemplate="{DataTemplate pages:MainPage}" />
+        <ShellContent Route="practices" Title="Practices" Icon="breath_icon.png" ContentTemplate="{DataTemplate pages:PracticesPage}" />
+        <ShellContent Route="settings" Title="Settings" Icon="help_icon.png" ContentTemplate="{DataTemplate pages:SettingsPage}" />
     </TabBar>
 
 </Shell>

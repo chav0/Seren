@@ -14,7 +14,7 @@ public partial class App : Application
 	private async void InitializeAsync(IServiceProvider serviceProvider)
 	{
 		await Task.Delay(5000);
-		MainPage = new NavigationPage(new AppShell());
+		MainPage = new AppShell();
 	}
 }
 

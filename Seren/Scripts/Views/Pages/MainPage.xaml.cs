@@ -14,11 +14,9 @@ public partial class MainPage : ContentPage
 		await Navigation.PushAsync(surveyPage);
 	}
 
-	private void OnMeditationClick(object sender, EventArgs eventArgs)
-	{
-		
-	}
-	
+	private async void OnMeditationClick(object sender, EventArgs eventArgs) => 
+		await Shell.Current.GoToAsync("//practices/meditations");
+
 	private void OnHelpClick(object sender, EventArgs eventArgs)
 	{
 		
