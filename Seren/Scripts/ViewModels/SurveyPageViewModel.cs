@@ -5,7 +5,7 @@ namespace Seren.Scripts.ViewModels;
 
 public class SurveyPageViewModel
 {
-    readonly IUserCalendarRepository _userCalendar;
+    private readonly IUserCalendarRepository _userCalendar;
 
     public SurveyPageViewModel(IUserCalendarRepository userCalendar)
     {

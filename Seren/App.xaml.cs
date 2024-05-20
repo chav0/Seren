@@ -1,5 +1,4 @@
-﻿using Seren.Scripts.Views;
-using Seren.Scripts.Views.Pages;
+﻿using Seren.Scripts.Views.Pages;
 
 namespace Seren;
 
@@ -15,7 +14,7 @@ public partial class App : Application
 	private async void InitializeAsync(IServiceProvider serviceProvider)
 	{
 		await Task.Delay(5000);
-		MainPage = new NavigationPage(new MainPage());
+		MainPage = new NavigationPage(new AppShell());
 	}
 }
 

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:Seren.Scripts.Views.Pages"
+            x:Class="Seren.Scripts.Views.Pages.TabsPage"
+            BarBackgroundColor="{StaticResource TabBarBackgroundColor}"
+            BarTextColor="{StaticResource PrimaryTab2Color}"
+            SelectedTabColor="{StaticResource PrimaryTab2Color}"
+            UnselectedTabColor="{StaticResource UnselectedTabColor}">
+
+    <NavigationPage IconImageSource="panic_icon.png">
+        <x:Arguments>
+            <local:MainPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="breath_icon.png">
+        <x:Arguments>
+            <local:PracticesPage />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage IconImageSource="help_icon.png">
+        <x:Arguments>
+            <local:SettingsPage />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

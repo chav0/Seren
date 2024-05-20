@@ -5,11 +5,12 @@
              xmlns:strings="clr-namespace:Seren.Resources.Strings"
              xmlns:views="clr-namespace:Seren.Scripts.Views"
              x:Class="Seren.Scripts.Views.Pages.MainPage"
-             Background="{StaticResource BackgroundColor}">
+             Background="{StaticResource BackgroundColor}"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="True">
     
     <ScrollView>
-        <VerticalStackLayout
-            VerticalOptions="Center">
+        <VerticalStackLayout VerticalOptions="Start">
 
             <!-- Header Box -->
             <ContentView Height="112"
@@ -29,17 +30,19 @@
                          HorizontalOptions="FillAndExpand">
                 
                 <AbsoluteLayout HorizontalOptions="Center" 
-                                VerticalOptions="Center"
-                                Margin="0, 0, 0, 73">
-                    <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 282, 282" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                VerticalOptions="Center">
+                    <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 282, 282" 
+                           AbsoluteLayout.LayoutFlags="PositionProportional"
                            BackgroundColor="{StaticResource SecondaryTab1Color}" 
                            CornerRadius="141" 
                            HasShadow="False"/>
-                    <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 270, 270" AbsoluteLayout.LayoutFlags="PositionProportional"
+                    <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, 270, 270" 
+                           AbsoluteLayout.LayoutFlags="PositionProportional"
                            BackgroundColor="{StaticResource PrimaryTab1Color}" 
                            CornerRadius="135"
                            HasShadow="False"/>
-                    <Button AbsoluteLayout.LayoutBounds="0.5, 0.5, 240, 240" AbsoluteLayout.LayoutFlags="PositionProportional"
+                    <Button AbsoluteLayout.LayoutBounds="0.5, 0.5, 240, 240" 
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
                             Text="{x:Static strings:Localizations.Panic}"
                             FontFamily="VollkornBold"
                             FontSize="50"
@@ -50,54 +53,78 @@
                 
             </ContentView>
 
-
+            <!-- Calendar Box -->
+            <VerticalStackLayout
+                HeightRequest="176"
+                Padding="16"
+                HorizontalOptions="FillAndExpand">
+                    
+                <Label
+                    Text="Panic calendar >"
+                    Style="{StaticResource SmallHeaderStyle}">
+                </Label>
+                    
+                <Frame HeightRequest="112"
+                       CornerRadius="20"
+                       HorizontalOptions="FillAndExpand"
+                       HasShadow="False"
+                       BackgroundColor="{StaticResource OverlayColor}">
+                       
+                    <ScrollView>
+                        <HorizontalStackLayout Spacing="15">
+                            <VerticalStackLayout WidthRequest="15"
+                                                 VerticalOptions="End">
+                                
+                                <Frame HeightRequest="50"
+                                       WidthRequest="15"
+                                       HasShadow="False"
+                                       CornerRadius="8"
+                                       BackgroundColor="{StaticResource PrimaryTab1Color}"/>
+                                
+                                <Label Text="m"
+                                       Style="{StaticResource TextStyle}"/>
+                                
+                            </VerticalStackLayout>
+                            
+                            <VerticalStackLayout WidthRequest="15"
+                                                 VerticalOptions="End">
+                                
+                                <Frame HeightRequest="15"
+                                       WidthRequest="15"
+                                       HasShadow="False"
+                                       CornerRadius="8"
+                                       BackgroundColor="{StaticResource StandardGray}"/>
+                                
+                                <Label Text="t"
+                                       Style="{StaticResource TextStyle}"/>
+                                
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+                </Frame>
+                    
+            </VerticalStackLayout>
             
-            <Grid RowSpacing="10" ColumnSpacing="10">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="150" />
-                    <RowDefinition Height="150" />
-                </Grid.RowDefinitions>
-
-                <views:MainMenuButtonView
-                    Header="{x:Static strings:Localizations.Meditation}"
-                    Description="{x:Static strings:Localizations.MeditationDescription}"
-                    Color="{StaticResource Yellow400}"
-                    TextColor="{StaticResource Gray100}"
-                    IconPath="meditation_icon.png"
-                    Clicked="OnMeditationClick" 
-                    Grid.Column="0" Grid.Row="0"/>
-                
-                <views:MainMenuButtonView
-                    Header="{x:Static strings:Localizations.HelpYourself}"
-                    Description="{x:Static strings:Localizations.HelpYourselfDescription}"
-                    Color="{StaticResource Green600}"
-                    TextColor="{StaticResource Gray100}"
-                    IconPath="help_icon.png"
-                    Clicked="OnHelpClick" 
-                    Grid.Column="1" Grid.Row="0"/>
-
-                <views:MainMenuButtonView
-                    Header="{x:Static strings:Localizations.Breath}"
-                    Description="{x:Static strings:Localizations.BreathDescription}"
-                    Color="{StaticResource Blue500}"
-                    TextColor="{StaticResource Gray100}"
-                    IconPath="breath_icon.png"
-                    Clicked="OnBreathingClick" 
-                    Grid.Column="0" Grid.Row="1"/>
-
-                <views:MainMenuButtonView
-                    Header="{x:Static strings:Localizations.Breath}"
-                    Description="{x:Static strings:Localizations.BreathDescription}"
-                    Color="{StaticResource Blue500}"
-                    TextColor="{StaticResource Gray100}"
-                    IconPath="breath_icon.png"
-                    Clicked="OnBreathingClick"
-                    Grid.Column="1" Grid.Row="1"/>
-            </Grid>
+            <!-- Meditation Box -->
+            <VerticalStackLayout
+                HeightRequest="176"
+                Padding="16"
+                HorizontalOptions="FillAndExpand">
+                    
+                <Label
+                    Text="Meditation >"
+                    Style="{StaticResource SmallHeaderStyle}">
+                </Label>
+                    
+                <Frame HeightRequest="112"
+                       CornerRadius="20"
+                       HorizontalOptions="FillAndExpand"
+                       HasShadow="False"
+                       BackgroundColor="{StaticResource OverlayColor}">
+                    
+                </Frame>
+                    
+            </VerticalStackLayout>
 
         </VerticalStackLayout>
     </ScrollView>

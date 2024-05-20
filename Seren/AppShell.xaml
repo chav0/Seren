@@ -3,15 +3,18 @@
     x:Class="Seren.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Seren"
-    xmlns:views="clr-namespace:Seren.Scripts.Views"
     xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
     Shell.FlyoutBehavior="Disabled"
-    Title="Seren">
+    Shell.TabBarBackgroundColor="{StaticResource TabBarBackgroundColor}"
+    Shell.TabBarForegroundColor="{StaticResource PrimaryTab2Color}"
+    Shell.TabBarTitleColor="{StaticResource PrimaryTab2Color}"
+    Shell.TabBarUnselectedColor="{StaticResource UnselectedTabColor}"
+    Shell.TitleColor="{StaticResource HeaderColor}">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate pages:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent Title="Main" Icon="panic_icon.png" ContentTemplate="{DataTemplate pages:MainPage}" />
+        <ShellContent Title="Practices" Icon="breath_icon.png" ContentTemplate="{DataTemplate pages:PracticesPage}" />
+        <ShellContent Title="Settings" Icon="help_icon.png" ContentTemplate="{DataTemplate pages:SettingsPage}" />
+    </TabBar>
 
 </Shell>
