@@ -3,7 +3,7 @@ using Seren.Scripts.Repositories;
 
 namespace Seren.Scripts.ViewModels;
 
-public class SurveyPageViewModel
+public class SurveyPageViewModel : BaseViewModel
 {
     private readonly IUserCalendarRepository _userCalendar;
 

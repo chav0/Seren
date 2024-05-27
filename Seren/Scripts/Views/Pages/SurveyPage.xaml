@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:strings="clr-namespace:Seren.Resources.Strings"
-             xmlns:views="clr-namespace:Seren.Scripts.Views"
-             x:Class="Seren.Scripts.Views.Pages.SurveyPage"
-             Background="{StaticResource BackgroundColor}"
-             Shell.NavBarIsVisible="False"
-             Shell.TabBarIsVisible="False">
+<pages:BasePage x:TypeArguments="viewModels:SurveyPageViewModel" 
+                x:Class="Seren.Scripts.Views.Pages.SurveyPage"
+                xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:strings="clr-namespace:Seren.Resources.Strings"
+                xmlns:views="clr-namespace:Seren.Scripts.Views"
+                xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+                xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels"
+                Background="{StaticResource BackgroundColor}"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="False">
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
@@ -75,4 +78,4 @@
                                   Clicked="OnRateButtonClicked" />
         </FlexLayout>
     </AbsoluteLayout>
-</ContentPage>
+</pages:BasePage>

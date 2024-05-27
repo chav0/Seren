@@ -3,15 +3,13 @@ using Seren.Scripts.ViewModels;
 
 namespace Seren.Scripts.Views.Pages;
 
-public partial class SurveyPage : ContentPage
+public partial class SurveyPage
 {
-    private SurveyPageViewModel ViewModel => BindingContext as SurveyPageViewModel;
     private PageStep _currentStep = PageStep.None;
-
-    public SurveyPage(SurveyPageViewModel viewModel)
+    
+    public SurveyPage(SurveyPageViewModel viewModel) : base(viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel;
         SwitchToNextStep();
     }
 
@@ -66,7 +64,7 @@ public partial class SurveyPage : ContentPage
             return;
         
         var animationTask = button.Choose();
-        var saveResultTask = ViewModel.SaveResult(button.PanicAttackLevel);
+        var saveResultTask = BindingContext.SaveResult(button.PanicAttackLevel);
         await Task.WhenAll(animationTask, saveResultTask);
         await Navigation.PushAsync(new MeditationPage());
     }

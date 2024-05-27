@@ -46,6 +46,8 @@ public static class MauiProgram
 
 	private static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
 	{
+		mauiAppBuilder.Services
+			.AddTransient<SurveyPage, SurveyPageViewModel>();
 		mauiAppBuilder.Services.
 			AddTransient<SurveyPageViewModel>();
 
