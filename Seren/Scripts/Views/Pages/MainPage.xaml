@@ -42,7 +42,7 @@
                            HasShadow="False"/>
                     <Button AbsoluteLayout.LayoutBounds="0.5, 0.5, 240, 240" 
                             AbsoluteLayout.LayoutFlags="PositionProportional"
-                            Text="{x:Static strings:Localizations.Panic}"
+                            Text="{x:Static strings:Localizations.PanicSign}"
                             FontFamily="VollkornBold"
                             FontSize="50"
                             BackgroundColor="Transparent"
