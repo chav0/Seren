@@ -5,9 +5,9 @@
                 xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:strings="clr-namespace:Seren.Resources.Strings"
-                xmlns:views="clr-namespace:Seren.Scripts.Views"
                 xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
                 xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
                 Background="{StaticResource BackgroundColor}"
                 Shell.NavBarIsVisible="False"
                 Shell.TabBarIsVisible="False">

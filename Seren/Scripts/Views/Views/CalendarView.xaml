@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:BaseView x:TypeArguments="viewModels:CalendarViewModel" 
+                x:Class="Seren.Scripts.Views.Views.CalendarView"
+                xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels">
+    
+    <Frame HeightRequest="80"
+           CornerRadius="20"
+           HorizontalOptions="FillAndExpand"
+           HasShadow="False"
+           BackgroundColor="{StaticResource OverlayColor}">
+                       
+        <ScrollView>
+            <HorizontalStackLayout Spacing="16">
+                <VerticalStackLayout WidthRequest="32"
+                                     VerticalOptions="End">
+                                
+                    <Label Text="m"
+                           Style="{StaticResource TextStyle}"/>
+    
+                    <Frame HeightRequest="32"
+                           WidthRequest="32"
+                           HasShadow="False"
+                           CornerRadius="16"
+                           BackgroundColor="{StaticResource PrimaryTab1Color}">
+           
+                        <Label Text="10"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                               Style="{StaticResource SmallHeaderStyle}"
+                               TextColor ="{StaticResource White}"/>
+               
+                    </Frame>
+    
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+        </ScrollView>
+    </Frame>
+</views:BaseView>

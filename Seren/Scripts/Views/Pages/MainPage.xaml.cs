@@ -1,11 +1,25 @@
-﻿namespace Seren.Scripts.Views.Pages;
+﻿using Seren.Scripts.ViewModels;
+using Seren.Scripts.Views.Views;
 
-public partial class MainPage : ContentPage
+namespace Seren.Scripts.Views.Pages;
+
+public partial class MainPage 
 {
-	public MainPage()
+	private readonly IPageFactory _pageFactory;
+
+	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory) : base(viewModel)
 	{
+		_pageFactory = pageFactory;
 		InitializeComponent();
+		InitializeCalendar();
 		NavigationPage.SetHasNavigationBar(this, false);
+	}
+	
+	private void InitializeCalendar()
+	{
+		var calendarViewModel = _pageFactory.GetViewModel<CalendarViewModel>();
+		var calendarView = new CalendarView(calendarViewModel);
+		CalendarContainer.Content = calendarView;
 	}
 
 	private async void OnPanicClick(object sender, EventArgs eventArgs)

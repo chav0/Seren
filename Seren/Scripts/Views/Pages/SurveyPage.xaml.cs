@@ -1,5 +1,6 @@
 using Seren.Resources.Strings;
 using Seren.Scripts.ViewModels;
+using Seren.Scripts.Views.Views;
 
 namespace Seren.Scripts.Views.Pages;
 

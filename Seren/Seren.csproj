@@ -103,6 +103,14 @@
           <DependentUpon>SurveyPage.xaml</DependentUpon>
           <SubType>Code</SubType>
         </Compile>
+        <Compile Update="Scripts\Views\Widgets\MainMenuButtonView.xaml.cs">
+          <DependentUpon>MainMenuButtonView.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
+        <Compile Update="Scripts\Views\Widgets\RateButton.xaml.cs">
+          <DependentUpon>RateButton.xaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
@@ -131,6 +139,12 @@
         <SubType>Designer</SubType>
       </MauiXaml>
       <MauiXaml Update="Scripts\Views\Pages\SurveyPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Scripts\Views\Widgets\MainMenuButtonView.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+      <MauiXaml Update="Scripts\Views\Widgets\RateButton.xaml">
         <SubType>Designer</SubType>
       </MauiXaml>
     </ItemGroup>

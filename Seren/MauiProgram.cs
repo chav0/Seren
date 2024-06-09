@@ -5,6 +5,7 @@ using Seren.Scripts.Services;
 using Seren.Scripts.ViewModels;
 using Seren.Scripts.Views;
 using Seren.Scripts.Views.Pages;
+using Seren.Scripts.Views.Views;
 
 namespace Seren;
 
@@ -28,8 +29,11 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		return builder.RegisterServices()
-			.RegisterViewModels()
+		builder.Services.AddSingleton<IPageFactory, PageFactory>();
+
+		return builder
+			.RegisterServices()
+			.RegisterPages()
 			.RegisterViews()
 			.Build();
 	}
@@ -44,22 +48,20 @@ public static class MauiProgram
 		return mauiAppBuilder;        
 	}
 
-	private static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
+	private static MauiAppBuilder RegisterPages(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services
+			.AddTransient<MainPage, MainPageViewModel>()
 			.AddTransient<SurveyPage, SurveyPageViewModel>();
-		mauiAppBuilder.Services.
-			AddTransient<SurveyPageViewModel>();
 
 		return mauiAppBuilder;        
 	}
-
+	
 	private static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services
-			.AddTransient<SurveyPage>();
+			.AddTransient<CalendarView, CalendarViewModel>();
 
 		return mauiAppBuilder;        
 	}
 }
-

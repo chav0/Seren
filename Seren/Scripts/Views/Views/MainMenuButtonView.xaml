@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:views="clr-namespace:Seren.Scripts.Views"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
              x:DataType="views:MainMenuButtonView"
-             x:Class="Seren.Scripts.Views.MainMenuButtonView">
+             x:Class="Seren.Scripts.Views.Views.MainMenuButtonView">
     
     <Frame CornerRadius="30"
            BackgroundColor="{StaticResource Gray100Alpha10}" 

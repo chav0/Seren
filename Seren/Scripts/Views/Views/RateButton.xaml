@@ -2,9 +2,9 @@
 
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:Seren.Scripts.Views"
+             xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
              x:DataType="views:RateButton"
-             x:Class="Seren.Scripts.Views.RateButton">
+             x:Class="Seren.Scripts.Views.Views.RateButton">
     
     <Grid HorizontalOptions="FillAndExpand" 
           VerticalOptions="Center"

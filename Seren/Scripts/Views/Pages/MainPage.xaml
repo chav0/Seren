@@ -1,27 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:strings="clr-namespace:Seren.Resources.Strings"
-             x:Class="Seren.Scripts.Views.Pages.MainPage"
-             Background="{StaticResource BackgroundColor}"
-             Shell.NavBarIsVisible="False"
-             Shell.TabBarIsVisible="True">
+<pages:BasePage x:TypeArguments="viewModels:MainPageViewModel" xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:strings="clr-namespace:Seren.Resources.Strings"
+                xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+                xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels"
+                x:Class="Seren.Scripts.Views.Pages.MainPage"
+                Background="{StaticResource BackgroundColor}"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="True">
     
     <ScrollView>
         <VerticalStackLayout VerticalOptions="Start">
-
-            <!-- Header Box -->
-            <ContentView Height="112"
-                         HorizontalOptions="FillAndExpand"
-                         Padding="16, 20">
-                
+            
+            <!-- Calendar Box -->
+            <VerticalStackLayout
+                HeightRequest="176"
+                Padding="16"
+                HorizontalOptions="FillAndExpand">
+                    
                 <Label
-                    Text="{x:Static strings:Localizations.DoYouHavePanic}"
-                    Style="{StaticResource HeaderStyle}">
+                    Text="Panic calendar >"
+                    Style="{StaticResource SmallHeaderStyle}">
                 </Label>
-                
-            </ContentView>
+                    
+                <ContentView x:Name="CalendarContainer"/>
+                    
+            </VerticalStackLayout>
             
             <!-- Panic Button Box -->
             <ContentView Height="318"
@@ -51,58 +56,6 @@
                 </AbsoluteLayout>
                 
             </ContentView>
-
-            <!-- Calendar Box -->
-            <VerticalStackLayout
-                HeightRequest="176"
-                Padding="16"
-                HorizontalOptions="FillAndExpand">
-                    
-                <Label
-                    Text="Panic calendar >"
-                    Style="{StaticResource SmallHeaderStyle}">
-                </Label>
-                    
-                <Frame HeightRequest="112"
-                       CornerRadius="20"
-                       HorizontalOptions="FillAndExpand"
-                       HasShadow="False"
-                       BackgroundColor="{StaticResource OverlayColor}">
-                       
-                    <ScrollView>
-                        <HorizontalStackLayout Spacing="15">
-                            <VerticalStackLayout WidthRequest="15"
-                                                 VerticalOptions="End">
-                                
-                                <Frame HeightRequest="50"
-                                       WidthRequest="15"
-                                       HasShadow="False"
-                                       CornerRadius="8"
-                                       BackgroundColor="{StaticResource PrimaryTab1Color}"/>
-                                
-                                <Label Text="m"
-                                       Style="{StaticResource TextStyle}"/>
-                                
-                            </VerticalStackLayout>
-                            
-                            <VerticalStackLayout WidthRequest="15"
-                                                 VerticalOptions="End">
-                                
-                                <Frame HeightRequest="15"
-                                       WidthRequest="15"
-                                       HasShadow="False"
-                                       CornerRadius="8"
-                                       BackgroundColor="{StaticResource StandardGray}"/>
-                                
-                                <Label Text="t"
-                                       Style="{StaticResource TextStyle}"/>
-                                
-                            </VerticalStackLayout>
-                        </HorizontalStackLayout>
-                    </ScrollView>
-                </Frame>
-                    
-            </VerticalStackLayout>
             
             <!-- Meditation Box -->
             <VerticalStackLayout
@@ -135,4 +88,4 @@
         </VerticalStackLayout>
     </ScrollView>
 
-</ContentPage>
+</pages:BasePage>

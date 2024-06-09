@@ -1,6 +1,6 @@
 using Seren.Scripts.Models;
 
-namespace Seren.Scripts.Views;
+namespace Seren.Scripts.Views.Views;
 
 public partial class RateButton : ContentView
 {
