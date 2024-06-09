@@ -44,6 +44,12 @@
         <Setter Property="FontSize" Value="18"/>
         <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
     </Style>
+    
+    <Style x:Key="SmallTextStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="SpaceGroteskRegular"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="TextColor" Value="{StaticResource TextColor}"/>
+    </Style>
 
 </ResourceDictionary>
 

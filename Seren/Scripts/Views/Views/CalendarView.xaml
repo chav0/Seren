@@ -1,42 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<views:BaseView x:TypeArguments="viewModels:CalendarViewModel" 
-                x:Class="Seren.Scripts.Views.Views.CalendarView"
+<views:BaseView x:Class="Seren.Scripts.Views.Views.CalendarView"
                 xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
-                xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels">
-    
+                xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
+                xmlns:models="clr-namespace:Seren.Scripts.Models"
+                x:TypeArguments="vm:CalendarViewModel"
+                x:DataType="vm:CalendarViewModel">
+
     <Frame HeightRequest="80"
            CornerRadius="20"
            HorizontalOptions="FillAndExpand"
            HasShadow="False"
+           Padding="0, 0, 0, 8"
            BackgroundColor="{StaticResource OverlayColor}">
-                       
-        <ScrollView>
-            <HorizontalStackLayout Spacing="16">
-                <VerticalStackLayout WidthRequest="32"
-                                     VerticalOptions="End">
-                                
-                    <Label Text="m"
-                           Style="{StaticResource TextStyle}"/>
-    
-                    <Frame HeightRequest="32"
-                           WidthRequest="32"
-                           HasShadow="False"
-                           CornerRadius="16"
-                           BackgroundColor="{StaticResource PrimaryTab1Color}">
-           
-                        <Label Text="10"
-                               HorizontalOptions="Center"
-                               VerticalOptions="Center"
-                               Style="{StaticResource SmallHeaderStyle}"
-                               TextColor ="{StaticResource White}"/>
-               
-                    </Frame>
-    
-                </VerticalStackLayout>
-            </HorizontalStackLayout>
+
+        <ScrollView Orientation="Horizontal">
+            <CollectionView ItemsSource="{Binding CalendarEntries}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="16"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:UserCalendarEntry">
+                        <VerticalStackLayout WidthRequest="32"
+                                             HeightRequest="56"
+                                             Padding="0, 8, 0, 16"
+                                             Spacing="4"
+                                             VerticalOptions="Center">
+
+                            <Label Text="{Binding Date, StringFormat='{}{0:ddd}'}"
+                                   Style="{StaticResource SmallTextStyle}"
+                                   HorizontalOptions="Center" />
+
+                            <Frame HeightRequest="32"
+                                   WidthRequest="32"
+                                   HasShadow="False"
+                                   CornerRadius="16"
+                                   Padding="0"
+                                   BackgroundColor="{StaticResource PrimaryTab1Color}">
+
+                                <Label Text="{Binding Date, StringFormat='{}{0:dd}'}"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       Style="{StaticResource SmallHeaderStyle}"
+                                       TextColor="{StaticResource White}" />
+
+                            </Frame>
+
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </ScrollView>
     </Frame>
 </views:BaseView>
