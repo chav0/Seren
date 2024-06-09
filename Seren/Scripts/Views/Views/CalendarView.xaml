@@ -13,45 +13,44 @@
            CornerRadius="20"
            HorizontalOptions="FillAndExpand"
            HasShadow="False"
-           Padding="0, 0, 0, 8"
+           Padding="16, 0, 16, 8"
            BackgroundColor="{StaticResource OverlayColor}">
 
-        <ScrollView Orientation="Horizontal">
-            <CollectionView ItemsSource="{Binding CalendarEntries}">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="16"/>
-                </CollectionView.ItemsLayout>
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:UserCalendarEntry">
-                        <VerticalStackLayout WidthRequest="32"
-                                             HeightRequest="56"
-                                             Padding="0, 8, 0, 16"
-                                             Spacing="4"
-                                             VerticalOptions="Center">
+        <CollectionView ItemsSource="{Binding CalendarEntries}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="16" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:UserCalendarEntry">
+                    <VerticalStackLayout WidthRequest="32"
+                                         HeightRequest="56"
+                                         Padding="0, 8, 0, 16"
+                                         Spacing="4"
+                                         VerticalOptions="Center">
 
-                            <Label Text="{Binding Date, StringFormat='{}{0:ddd}'}"
-                                   Style="{StaticResource SmallTextStyle}"
-                                   HorizontalOptions="Center" />
+                        <Label Text="{Binding Date, StringFormat='{}{0:ddd}'}"
+                               Style="{StaticResource SmallTextStyle}"
+                               TextColor="{Binding DayColor}"
+                               HorizontalOptions="Center" />
 
-                            <Frame HeightRequest="32"
-                                   WidthRequest="32"
-                                   HasShadow="False"
-                                   CornerRadius="16"
-                                   Padding="0"
-                                   BackgroundColor="{StaticResource PrimaryTab1Color}">
+                        <Frame HeightRequest="32"
+                               WidthRequest="32"
+                               HasShadow="False"
+                               CornerRadius="16"
+                               Padding="0, 4, 0, 0"
+                               BackgroundColor="{Binding BackgroundColor}">
 
-                                <Label Text="{Binding Date, StringFormat='{}{0:dd}'}"
-                                       HorizontalOptions="Center"
-                                       VerticalOptions="Center"
-                                       Style="{StaticResource SmallHeaderStyle}"
-                                       TextColor="{StaticResource White}" />
+                            <Label Text="{Binding Date, StringFormat='{}{0:dd}'}"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   Style="{StaticResource SmallHeaderStyle}"
+                                   TextColor="{Binding TextColor}" />
 
-                            </Frame>
+                        </Frame>
 
-                        </VerticalStackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </ScrollView>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Frame>
 </views:BaseView>

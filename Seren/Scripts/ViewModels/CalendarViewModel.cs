@@ -23,11 +23,11 @@ public class CalendarViewModel : BaseViewModel
 
     private async void LoadCalendarEntries()
     {
-        var entries = new List<UserCalendarEntry>(8);
+        var entries = new List<UserCalendarEntry>(7);
         var today = DateTime.Today; 
-        for (var i = 0; i < 8; i++)
+        for (var i = 0; i < 7; i++)
         {
-            var time = today - TimeSpan.FromDays(8 - i + 1);
+            var time = today - TimeSpan.FromDays(7 - i - 2);
             var foundEntry = await _userCalendar.GetByIdAsync(time);
             entries.Add(foundEntry);
         }
