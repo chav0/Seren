@@ -5,7 +5,6 @@
                 xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
                 xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
                 x:Class="Seren.Scripts.Views.Views.BreathingExerciseCardView"
-                x:Name="ExerciseCardView"
                 x:TypeArguments="vm:BreathingExerciseViewModel"
                 x:DataType="vm:BreathingExerciseViewModel">
     
@@ -15,7 +14,7 @@
         <Frame HeightRequest="120"
                WidthRequest="120"
                CornerRadius="15"
-               BackgroundColor="{StaticResource Gray100Alpha10}" 
+               BackgroundColor="{StaticResource White}" 
                Padding="15, 15"
                HorizontalOptions="FillAndExpand"
                HasShadow="False">

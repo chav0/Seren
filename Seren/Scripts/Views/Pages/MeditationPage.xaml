@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:strings="clr-namespace:Seren.Resources.Strings"
+             xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+             xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
              x:Class="Seren.Scripts.Views.Pages.MeditationPage"
+             x:TypeArguments="vm:MeditationViewModel"
+             x:DataType="vm:MeditationViewModel"
              Background="{StaticResource BackgroundColor}"
              NavigationPage.HasBackButton="False">
     
@@ -24,4 +28,4 @@
                Margin="0,-50,0,0" />
             
     </AbsoluteLayout>
-</ContentPage>
+</pages:BasePage>

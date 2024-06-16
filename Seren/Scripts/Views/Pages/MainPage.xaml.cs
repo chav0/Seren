@@ -12,7 +12,8 @@ public partial class MainPage
 		_pageFactory = pageFactory;
 		InitializeComponent();
 		InitializeCalendar();
-		InitializeBreathingExercises(); 
+		InitializeBreathingExercises();
+		InitializeMeditations();
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	
@@ -28,6 +29,13 @@ public partial class MainPage
 		var breathingExercisesViewModel = _pageFactory.GetViewModel<BreathingExercisesViewModel>();
 		var breathingExercisesView = new BreathingExercisesView(breathingExercisesViewModel);
 		BreathingExercisesContainer.Content = breathingExercisesView;
+	}
+	
+	private void InitializeMeditations()
+	{
+		var meditationsViewModel = _pageFactory.GetViewModel<MeditationsViewModel>();
+		var meditationsListView = new MeditationsListView(meditationsViewModel);
+		MeditationsContainer.Content = meditationsListView;
 	}
 
 	private async void OnPanicClick(object sender, EventArgs eventArgs)

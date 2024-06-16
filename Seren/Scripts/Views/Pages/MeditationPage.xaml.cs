@@ -1,8 +1,10 @@
+using Seren.Scripts.ViewModels;
+
 namespace Seren.Scripts.Views.Pages;
 
-public partial class MeditationPage : ContentPage
+public partial class MeditationPage
 {
-    public MeditationPage()
+    public MeditationPage(MeditationViewModel viewModel) : base(viewModel)
     {
         InitializeComponent();
     }

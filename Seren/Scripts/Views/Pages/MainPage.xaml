@@ -67,7 +67,7 @@
                     Text="Breathing >"
                     Style="{StaticResource SmallHeaderStyle}">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnMeditationClick" />
+                        <TapGestureRecognizer Tapped="OnBreathingClick" />
                     </Label.GestureRecognizers>
                 </Label>
 
@@ -77,7 +77,7 @@
             
             <!-- Meditation Box -->
             <VerticalStackLayout
-                HeightRequest="176"
+                HeightRequest="228"
                 Padding="16"
                 HorizontalOptions="FillAndExpand">
                     
@@ -89,17 +89,7 @@
                     </Label.GestureRecognizers>
                 </Label>
                     
-                <Frame HeightRequest="112"
-                       CornerRadius="20"
-                       HorizontalOptions="FillAndExpand"
-                       HasShadow="False"
-                       BackgroundColor="{StaticResource OverlayColor}">
-                    
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnMeditationClick" />
-                    </Frame.GestureRecognizers>
-                    
-                </Frame>
+                <ContentView x:Name="MeditationsContainer"/>
                     
             </VerticalStackLayout>
 

@@ -6,10 +6,14 @@ namespace Seren.Scripts.ViewModels;
 public class SurveyPageViewModel : BaseViewModel
 {
     private readonly IUserCalendarRepository _userCalendar;
+    private readonly IMeditationRepository _meditationRepository;
 
-    public SurveyPageViewModel(IUserCalendarRepository userCalendar)
+    public Task<Meditation> AntiPanicMeditation => _meditationRepository.GetByIdAsync("anti-panic");
+
+    public SurveyPageViewModel(IUserCalendarRepository userCalendar, IMeditationRepository meditationRepository)
     {
         _userCalendar = userCalendar;
+        _meditationRepository = meditationRepository;
     }
     
     public Task SaveResult(PanicAttackLevel panicAttackLevel)

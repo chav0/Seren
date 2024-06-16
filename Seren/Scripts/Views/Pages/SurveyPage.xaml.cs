@@ -67,7 +67,8 @@ public partial class SurveyPage
         var animationTask = button.Choose();
         var saveResultTask = BindingContext.SaveResult(button.PanicAttackLevel);
         await Task.WhenAll(animationTask, saveResultTask);
-        await Navigation.PushAsync(new MeditationPage());
+        var meditation = await BindingContext.AntiPanicMeditation;
+        await Navigation.PushAsync(new MeditationPage(new MeditationViewModel(meditation)));
     }
     
     private async void OnBackClick(object? sender, EventArgs e) =>

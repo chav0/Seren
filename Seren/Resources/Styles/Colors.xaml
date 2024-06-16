@@ -28,11 +28,12 @@
     
     <!-- Gray Colors -->
     <Color x:Key="White">#FFFFFF</Color>
-    <Color x:Key="Gray1">#E4EAEF</Color>
-    <Color x:Key="Gray2">#B7C9D8</Color>
-    <Color x:Key="Gray3">#677987</Color>
-    <Color x:Key="Gray4">#474E52</Color>
-    <Color x:Key="Gray5">#202426</Color>
+    <Color x:Key="Gray1">#F0F3F5</Color>
+    <Color x:Key="Gray2">#E4EAEF</Color>
+    <Color x:Key="Gray3">#B7C9D8</Color>
+    <Color x:Key="Gray4">#677987</Color>
+    <Color x:Key="Gray5">#474E52</Color>
+    <Color x:Key="Gray6">#202426</Color>
 
     <!-- Yellow Colors -->
     <Color x:Key="Yellow1">#FFEC8F</Color>
