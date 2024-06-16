@@ -1,6 +1,45 @@
 [
   {
-    "Id": "calming_breath_478",
+    "Id": "circles_3",
+    "Header": "Circles 3",
+    "FullImagePath": "breathing_circles3.png",
+    "Count": 10,
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 3.0
+      },
+      {
+        "Type": "Exhale",
+        "Time": 3.0
+      },
+      {
+        "Type": "Repeat",
+        "Time": 3.0
+      }
+    ]
+  },
+  {
+    "Id": "mindful",
+    "Header": "Mindful",
+    "FullImagePath": "breathing_mindful.png",
+    "Count": 7,
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 4
+      },
+      {
+        "Type": "Exhale",
+        "Time": 4
+      }
+    ]
+  },
+  {
+    "Id": "box",
+    "Header": "Box",
+    "FullImagePath": "breathing_box.png",
+    "Count": 6,
     "Patterns": [
       {
         "Type": "Inhale",
@@ -8,16 +47,23 @@
       },
       {
         "Type": "Hold",
-        "Time": 7
+        "Time": 4
       },
       {
         "Type": "Exhale",
-        "Time": 8
+        "Time": 4
+      },
+      {
+        "Type": "Hold",
+        "Time": 4
       }
     ]
   },
   {
-    "Id": "smooth_flow_55",
+    "Id": "steady",
+    "Header": "Steady",
+    "FullImagePath": "breathing_steady.png",
+    "Count": 8,
     "Patterns": [
       {
         "Type": "Inhale",
@@ -30,20 +76,10 @@
     ]
   },
   {
-    "Id": "observer_breath",
-    "Patterns": [
-      {
-        "Type": "Inhale",
-        "Time": "Variable"
-      },
-      {
-        "Type": "Exhale",
-        "Time": "Variable"
-      }
-    ]
-  },
-  {
-    "Id": "grounding_breath_336",
+    "Id": "grounding",
+    "Header": "Grounding",
+    "FullImagePath": "breathing_grounding.png",
+    "Count": 5,
     "Patterns": [
       {
         "Type": "Inhale",
@@ -60,7 +96,26 @@
     ]
   },
   {
-    "Id": "box_breathing_4444",
+    "Id": "star_4",
+    "Header": "Star 4",
+    "FullImagePath": "breathing_star.png",
+    "Count": 12,
+    "Patterns": [
+      {
+        "Type": "Inhale",
+        "Time": 4
+      },
+      {
+        "Type": "Exhale",
+        "Time": 4
+      }
+    ]
+  },
+  {
+    "Id": "fan_4",
+    "Header": "Fan 4",
+    "FullImagePath": "breathing_fan4.png",
+    "Count": 9,
     "Patterns": [
       {
         "Type": "Inhale",
@@ -68,15 +123,11 @@
       },
       {
         "Type": "Hold",
-        "Time": 4
+        "Time": 7
       },
       {
         "Type": "Exhale",
-        "Time": 4
-      },
-      {
-        "Type": "Hold",
-        "Time": 4
+        "Time": 8
       }
     ]
   }

@@ -51,8 +51,11 @@ public static class MauiProgram
 	private static MauiAppBuilder RegisterPages(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services
-			.AddTransient<MainPage, MainPageViewModel>()
-			.AddTransient<SurveyPage, SurveyPageViewModel>();
+			.AddTransientWithShellRoute<MainPage, MainPageViewModel>("main")
+			.AddTransientWithShellRoute<SurveyPage, SurveyPageViewModel>("main/survey");
+		
+		// TODO: create ViewModel
+		Routing.RegisterRoute("practices/meditations", typeof(MeditationListPage));
 
 		return mauiAppBuilder;        
 	}
@@ -60,7 +63,8 @@ public static class MauiProgram
 	private static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services
-			.AddTransient<CalendarView, CalendarViewModel>();
+			.AddTransient<CalendarView, CalendarViewModel>()
+			.AddTransient<BreathingExercisesView, BreathingExercisesViewModel>();
 
 		return mauiAppBuilder;        
 	}

@@ -12,6 +12,7 @@ public partial class MainPage
 		_pageFactory = pageFactory;
 		InitializeComponent();
 		InitializeCalendar();
+		InitializeBreathingExercises(); 
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	
@@ -20,6 +21,13 @@ public partial class MainPage
 		var calendarViewModel = _pageFactory.GetViewModel<CalendarViewModel>();
 		var calendarView = new CalendarView(calendarViewModel);
 		CalendarContainer.Content = calendarView;
+	}
+	
+	private void InitializeBreathingExercises()
+	{
+		var breathingExercisesViewModel = _pageFactory.GetViewModel<BreathingExercisesViewModel>();
+		var breathingExercisesView = new BreathingExercisesView(breathingExercisesViewModel);
+		BreathingExercisesContainer.Content = breathingExercisesView;
 	}
 
 	private async void OnPanicClick(object sender, EventArgs eventArgs)

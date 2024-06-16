@@ -7,7 +7,6 @@ public partial class AppShell : Shell
 	public AppShell()
 	{
 		InitializeComponent();
-		Routing.RegisterRoute("practices/meditations", typeof(MeditationListPage));
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 }

@@ -39,6 +39,16 @@
         <Setter Property="VerticalOptions" Value="Center"/>
     </Style>
     
+    <Style x:Key="MicroHeaderStyle" TargetType="Label">
+        <Setter Property="FontFamily" Value="VollkornBold"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="LineHeight" Value="0.8"/>
+        <Setter Property="TextColor" Value="{StaticResource HeaderColor}"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="HorizontalOptions" Value="Start"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+    
     <Style x:Key="TextStyle" TargetType="Label">
         <Setter Property="FontFamily" Value="SpaceGroteskRegular"/>
         <Setter Property="FontSize" Value="18"/>

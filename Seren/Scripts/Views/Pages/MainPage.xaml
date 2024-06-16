@@ -57,6 +57,24 @@
                 
             </ContentView>
             
+            <!-- Breathing box -->
+            <VerticalStackLayout
+                HeightRequest="236"
+                Padding="16"
+                HorizontalOptions="FillAndExpand">
+                    
+                <Label
+                    Text="Breathing >"
+                    Style="{StaticResource SmallHeaderStyle}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnMeditationClick" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <ContentView x:Name="BreathingExercisesContainer"/>
+                    
+            </VerticalStackLayout>
+            
             <!-- Meditation Box -->
             <VerticalStackLayout
                 HeightRequest="176"
