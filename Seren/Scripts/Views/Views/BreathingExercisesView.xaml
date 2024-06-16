@@ -10,7 +10,8 @@
     <ScrollView Orientation="Horizontal"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
-                HeightRequest="168">
+                HeightRequest="168"
+                HorizontalScrollBarVisibility="Never">
         <HorizontalStackLayout x:Name="BreathingExercisesContainer"
                                Spacing="12"
                                HorizontalOptions="FillAndExpand"

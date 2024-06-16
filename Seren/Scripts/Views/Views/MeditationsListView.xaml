@@ -11,7 +11,8 @@
     <ScrollView Orientation="Horizontal"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
-                HeightRequest="160">
+                HeightRequest="160"
+                HorizontalScrollBarVisibility="Never">
         <HorizontalStackLayout x:Name="MeditationsContainer"
                                Spacing="12"
                                HorizontalOptions="FillAndExpand"
