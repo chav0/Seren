@@ -46,7 +46,7 @@
         <value>Okay, you have a panic</value>
     </data>
     <data name="HowStrongIsAttack" xml:space="preserve">
-        <value>How strong is that attack?</value>
+        <value>Rate your attack</value>
     </data>
     <data name="AttackStrongness1" xml:space="preserve">
         <value>A bit</value>

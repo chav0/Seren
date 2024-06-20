@@ -1,3 +1,4 @@
+using CommunityToolkit.Maui.Extensions;
 using Seren.Scripts.Models;
 
 namespace Seren.Scripts.Views.Views;
@@ -47,6 +48,6 @@ public partial class RateButton : ContentView
     {
         return Task.WhenAll(
             InnerButton.ScaleTo(1.2, 1000, Easing.CubicOut),
-            InnerText.FadeTo(1, 1000));
+            InnerButton.BackgroundColorTo(Colors.White));
     }
 }

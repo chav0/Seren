@@ -46,7 +46,7 @@
         <value>Хорошо, у тебя паника</value>
     </data>
     <data name="HowStrongIsAttack" xml:space="preserve">
-        <value>Насколько атака сильная?</value>
+        <value>Оцени панику</value>
     </data>
     <data name="AttackStrongness1" xml:space="preserve">
         <value>Маленько</value>

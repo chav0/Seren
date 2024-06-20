@@ -1,81 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<pages:BasePage x:TypeArguments="viewModels:SurveyPageViewModel" 
-                x:Class="Seren.Scripts.Views.Pages.SurveyPage"
-                xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:strings="clr-namespace:Seren.Resources.Strings"
                 xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
                 xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels"
                 xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
-                Background="{StaticResource BackgroundColor}"
-                Shell.NavBarIsVisible="False"
-                Shell.TabBarIsVisible="False">
+                Background="{StaticResource PrimaryTab2Color}"
+                x:TypeArguments="viewModels:SurveyPageViewModel"
+                x:Class="Seren.Scripts.Views.Pages.SurveyPage"
 
-    <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
-        </StackLayout>
-    </NavigationPage.TitleView>
-    
-    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <AbsoluteLayout Padding="15"
-                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                        AbsoluteLayout.LayoutFlags="All">
-            
-            <ImageButton Source="settings.png"
-                         WidthRequest="60"
-                         HeightRequest="60"
-                         CornerRadius="30"
-                         Padding="10"
-                         BackgroundColor="{StaticResource Gray100Alpha10}"
-                         AbsoluteLayout.LayoutBounds="1, 0, 60, 60"
-                         AbsoluteLayout.LayoutFlags="PositionProportional"
-                         Clicked="OnBackClick" />
+                Title=""
+                Shell.NavBarIsVisible="True"
+                Shell.TabBarIsVisible="False"
+                Shell.BackgroundColor="{StaticResource PrimaryTab2Color}"
+                Shell.TitleColor="{StaticResource White}"
+                Shell.ForegroundColor="{StaticResource White}">
 
-            <Label x:Name="AnimatedLabel"
-                   Text="{x:Static strings:Localizations.DoYouHavePanic}"
-                   Style="{StaticResource HeaderStyle}"
-                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 350, -1"
-                   AbsoluteLayout.LayoutFlags="PositionProportional"
-                   Margin="0,-50,0,0" />
-            
-        </AbsoluteLayout>
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior TextOverride=""
+                            IconOverride="back_icon.png" />
+    </Shell.BackButtonBehavior>
 
-        <FlexLayout Direction="Column" 
-                    JustifyContent="Center" 
-                    AlignItems="Center"
-                    AbsoluteLayout.LayoutBounds="0, 0.8, 1, 0.8"
-                    AbsoluteLayout.LayoutFlags="All">
+    <VerticalStackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         Padding="16, 16, 16, 64"
+                         Spacing="89">
 
-                <views:RateButton x:Name="RateExtreme"
-                                  PanicAttackLevel="Extreme"
-                                  MoodText="{x:Static strings:Localizations.AttackStrongness5}"
-                                  ButtonColor="{StaticResource Red400}"
-                                  Clicked="OnRateButtonClicked" />
+        <Label x:Name="AnimatedLabel"
+               Text="{x:Static strings:Localizations.DoYouHavePanic}"
+               Style="{StaticResource BigHeaderStyle}"
+               TextColor="{StaticResource White}"
+               HorizontalOptions="FillAndExpand"
+               HorizontalTextAlignment="Center" />
 
-                <views:RateButton x:Name="RateSevere"
-                                  PanicAttackLevel="Severe"
-                                  MoodText="{x:Static strings:Localizations.AttackStrongness4}"
-                                  ButtonColor="{StaticResource Red300}"
-                                  Clicked="OnRateButtonClicked" />
+        <VerticalStackLayout HorizontalOptions="FillAndExpand"
+                             Spacing="16">
 
-                <views:RateButton x:Name="RateModerate"
-                                  PanicAttackLevel="Moderate"
-                                  MoodText="{x:Static strings:Localizations.AttackStrongness3}"
-                                  ButtonColor="{StaticResource Red200}"
-                                  Clicked="OnRateButtonClicked" />
+            <views:RateButton x:Name="RateExtreme"
+                              PanicAttackLevel="Extreme"
+                              MoodText="{x:Static strings:Localizations.AttackStrongness5}"
+                              ButtonColor="{StaticResource White}"
+                              Clicked="OnRateButtonClicked" />
 
-                <views:RateButton x:Name="RateMild"
-                                  PanicAttackLevel="Mild"
-                                  MoodText="{x:Static strings:Localizations.AttackStrongness2}"
-                                  ButtonColor="{StaticResource Red100}"
-                                  Clicked="OnRateButtonClicked" />
+            <views:RateButton x:Name="RateSevere"
+                              PanicAttackLevel="Severe"
+                              MoodText="{x:Static strings:Localizations.AttackStrongness4}"
+                              ButtonColor="{StaticResource White90}"
+                              Padding="10, 0"
+                              Clicked="OnRateButtonClicked" />
 
-                <views:RateButton x:Name="RateNone"
-                                  PanicAttackLevel="None"
-                                  MoodText="{x:Static strings:Localizations.AttackStrongness1}"
-                                  ButtonColor="{StaticResource Gray100}"
-                                  Clicked="OnRateButtonClicked" />
-        </FlexLayout>
-    </AbsoluteLayout>
+            <views:RateButton x:Name="RateModerate"
+                              PanicAttackLevel="Moderate"
+                              MoodText="{x:Static strings:Localizations.AttackStrongness3}"
+                              ButtonColor="{StaticResource White80}"
+                              Padding="20, 0"
+                              Clicked="OnRateButtonClicked" />
+
+            <views:RateButton x:Name="RateMild"
+                              PanicAttackLevel="Mild"
+                              MoodText="{x:Static strings:Localizations.AttackStrongness2}"
+                              ButtonColor="{StaticResource White70}"
+                              Padding="30, 0"
+                              Clicked="OnRateButtonClicked" />
+
+            <views:RateButton x:Name="RateNone"
+                              PanicAttackLevel="None"
+                              MoodText="{x:Static strings:Localizations.AttackStrongness1}"
+                              ButtonColor="{StaticResource White60}"
+                              Padding="40, 0"
+                              Clicked="OnRateButtonClicked" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
 </pages:BasePage>

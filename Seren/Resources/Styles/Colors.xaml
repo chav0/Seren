@@ -26,8 +26,14 @@
     <!-- Additional colors -->
     <Color x:Key="StandardGray">#677987</Color>
     
-    <!-- Gray Colors -->
+    <!-- White Colors -->
     <Color x:Key="White">#FFFFFF</Color>
+    <Color x:Key="White90">#E6FFFFFF</Color>
+    <Color x:Key="White80">#CCFFFFFF</Color>
+    <Color x:Key="White70">#B3FFFFFF</Color>
+    <Color x:Key="White60">#99FFFFFF</Color>
+    
+    <!-- Gray Colors -->
     <Color x:Key="Gray1">#F0F3F5</Color>
     <Color x:Key="Gray2">#E4EAEF</Color>
     <Color x:Key="Gray3">#B7C9D8</Color>

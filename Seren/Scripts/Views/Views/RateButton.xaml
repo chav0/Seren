@@ -6,32 +6,16 @@
              x:DataType="views:RateButton"
              x:Class="Seren.Scripts.Views.Views.RateButton">
     
-    <Grid HorizontalOptions="FillAndExpand" 
-          VerticalOptions="Center"
-          Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="140" />
-            <ColumnDefinition Width="80" />
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="120" />
-        </Grid.ColumnDefinitions>
-        
-        <Button x:Name="InnerButton"
-                Grid.Column="1" 
-                WidthRequest="80"
-                HeightRequest="80"
-                CornerRadius="40"
-                BackgroundColor="{Binding ButtonColor}"
-                Opacity="0"
-                Clicked="OnInternalButtonClicked"/>
-        
-        <Label x:Name="InnerText"
-               Grid.Column="3" 
-               Text="{Binding MoodText}"
-               Style="{StaticResource TextStyle}"
-               Opacity="0"
-               VerticalOptions="Center" 
-               HorizontalOptions="Start"/> 
-        
-    </Grid>
+    <Button x:Name="InnerButton"
+            HorizontalOptions="FillAndExpand"
+            HeightRequest="95"
+            CornerRadius="30"
+            BackgroundColor="{Binding ButtonColor}"
+            Opacity="0"
+            Text="{Binding MoodText}"
+            TextColor="{StaticResource Blue3}"
+            FontFamily="VollkornBold"
+            FontSize="30"
+            Clicked="OnInternalButtonClicked">
+    </Button>
 </ContentView>

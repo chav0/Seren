@@ -34,6 +34,7 @@ public partial class SurveyPage
     {
         AnimatedLabel.Opacity = 0;
         AnimatedLabel.Text = text;
+        AnimatedLabel.TranslationY = 204;
         await AnimatedLabel.FadeTo(1, 2000);
         await Task.Delay(2000);
         SwitchToNextStep();
@@ -41,7 +42,7 @@ public partial class SurveyPage
 
     private async Task MoveLabelUp()
     {
-        await AnimatedLabel.TranslateTo(0, -Height * 0.3, 1000, Easing.CubicOut);
+        await AnimatedLabel.TranslateTo(0, 0, 1000, Easing.CubicOut);
         await InitializeRateButtons();
     }
 
