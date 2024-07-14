@@ -9,67 +9,61 @@
                 Background="{StaticResource PrimaryTab2Color}"
                 x:TypeArguments="viewModels:SurveyPageViewModel"
                 x:Class="Seren.Scripts.Views.Pages.SurveyPage"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="False">
 
-                Title=""
-                Shell.NavBarIsVisible="True"
-                Shell.TabBarIsVisible="False"
-                Shell.BackgroundColor="{StaticResource PrimaryTab2Color}"
-                Shell.TitleColor="{StaticResource White}"
-                Shell.ForegroundColor="{StaticResource White}">
-
-    <Shell.BackButtonBehavior>
-        <BackButtonBehavior TextOverride=""
-                            IconOverride="back_icon.png" />
-    </Shell.BackButtonBehavior>
-
-    <VerticalStackLayout HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand"
-                         Padding="16, 16, 16, 64"
-                         Spacing="89">
-
-        <Label x:Name="AnimatedLabel"
-               Text="{x:Static strings:Localizations.DoYouHavePanic}"
-               Style="{StaticResource BigHeaderStyle}"
-               TextColor="{StaticResource White}"
-               HorizontalOptions="FillAndExpand"
-               HorizontalTextAlignment="Center" />
+    <StackLayout>
+        <views:NavigationBar TitleText=""/>
 
         <VerticalStackLayout HorizontalOptions="FillAndExpand"
-                             Spacing="16">
+                             VerticalOptions="FillAndExpand"
+                             Padding="16, 16, 16, 64"
+                             Spacing="89">
 
-            <views:RateButton x:Name="RateExtreme"
-                              PanicAttackLevel="Extreme"
-                              MoodText="{x:Static strings:Localizations.AttackStrongness5}"
-                              ButtonColor="{StaticResource White}"
-                              Clicked="OnRateButtonClicked" />
+            <Label x:Name="AnimatedLabel"
+                   Text="{x:Static strings:Localizations.DoYouHavePanic}"
+                   Style="{StaticResource BigHeaderStyle}"
+                   TextColor="{StaticResource White}"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" />
 
-            <views:RateButton x:Name="RateSevere"
-                              PanicAttackLevel="Severe"
-                              MoodText="{x:Static strings:Localizations.AttackStrongness4}"
-                              ButtonColor="{StaticResource White90}"
-                              Padding="10, 0"
-                              Clicked="OnRateButtonClicked" />
+            <VerticalStackLayout HorizontalOptions="FillAndExpand"
+                                 Spacing="16">
 
-            <views:RateButton x:Name="RateModerate"
-                              PanicAttackLevel="Moderate"
-                              MoodText="{x:Static strings:Localizations.AttackStrongness3}"
-                              ButtonColor="{StaticResource White80}"
-                              Padding="20, 0"
-                              Clicked="OnRateButtonClicked" />
+                <views:RateButton x:Name="RateExtreme"
+                                  PanicAttackLevel="Extreme"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness5}"
+                                  ButtonColor="{StaticResource White}"
+                                  Clicked="OnRateButtonClicked" />
 
-            <views:RateButton x:Name="RateMild"
-                              PanicAttackLevel="Mild"
-                              MoodText="{x:Static strings:Localizations.AttackStrongness2}"
-                              ButtonColor="{StaticResource White70}"
-                              Padding="30, 0"
-                              Clicked="OnRateButtonClicked" />
+                <views:RateButton x:Name="RateSevere"
+                                  PanicAttackLevel="Severe"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness4}"
+                                  ButtonColor="{StaticResource White90}"
+                                  Padding="10, 0"
+                                  Clicked="OnRateButtonClicked" />
 
-            <views:RateButton x:Name="RateNone"
-                              PanicAttackLevel="None"
-                              MoodText="{x:Static strings:Localizations.AttackStrongness1}"
-                              ButtonColor="{StaticResource White60}"
-                              Padding="40, 0"
-                              Clicked="OnRateButtonClicked" />
+                <views:RateButton x:Name="RateModerate"
+                                  PanicAttackLevel="Moderate"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness3}"
+                                  ButtonColor="{StaticResource White80}"
+                                  Padding="20, 0"
+                                  Clicked="OnRateButtonClicked" />
+
+                <views:RateButton x:Name="RateMild"
+                                  PanicAttackLevel="Mild"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness2}"
+                                  ButtonColor="{StaticResource White70}"
+                                  Padding="30, 0"
+                                  Clicked="OnRateButtonClicked" />
+
+                <views:RateButton x:Name="RateNone"
+                                  PanicAttackLevel="None"
+                                  MoodText="{x:Static strings:Localizations.AttackStrongness1}"
+                                  ButtonColor="{StaticResource White60}"
+                                  Padding="40, 0"
+                                  Clicked="OnRateButtonClicked" />
+            </VerticalStackLayout>
         </VerticalStackLayout>
-    </VerticalStackLayout>
+    </StackLayout>
 </pages:BasePage>

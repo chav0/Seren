@@ -4,11 +4,18 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                 xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
                 xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
                 x:Class="Seren.Scripts.Views.Pages.BreathingExercisePage"
                 x:TypeArguments="vm:BreathingExerciseViewModel"
-                x:DataType="vm:BreathingExerciseViewModel">
+                x:DataType="vm:BreathingExerciseViewModel"
+                Background="{StaticResource PrimaryTab2Color}"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="False">
 
-    <ContentPage.Content>
-
-    </ContentPage.Content>
+    <StackLayout>
+        <views:NavigationBar TitleText="{Binding Header}" />
+        
+        <ContentView x:Name="Timer"/>
+        
+    </StackLayout>
 </pages:BasePage>

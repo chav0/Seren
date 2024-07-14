@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging;
 using Seren.Scripts.Repositories;
 using Seren.Scripts.Services;
 using Seren.Scripts.ViewModels;
-using Seren.Scripts.Views;
 using Seren.Scripts.Views.Pages;
 using Seren.Scripts.Views.Views;
 
@@ -52,7 +51,8 @@ public static class MauiProgram
 	{
 		mauiAppBuilder.Services
 			.AddTransientWithShellRoute<MainPage, MainPageViewModel>("main")
-			.AddTransientWithShellRoute<SurveyPage, SurveyPageViewModel>("main/survey");
+			.AddTransientWithShellRoute<SurveyPage, SurveyPageViewModel>("main/survey")
+			.AddTransientWithShellRoute<MeditationPage, MeditationViewModel>("main/meditation");
 		
 		// TODO: create ViewModel
 		Routing.RegisterRoute("practices/meditations", typeof(MeditationListPage));

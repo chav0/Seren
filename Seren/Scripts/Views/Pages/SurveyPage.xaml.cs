@@ -72,9 +72,6 @@ public partial class SurveyPage
         await Navigation.PushAsync(new MeditationPage(new MeditationViewModel(meditation)));
     }
     
-    private async void OnBackClick(object? sender, EventArgs e) =>
-        await Navigation.PopToRootAsync();
-    
     private enum PageStep
     {
         None,

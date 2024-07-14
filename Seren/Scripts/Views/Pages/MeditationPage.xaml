@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:strings="clr-namespace:Seren.Resources.Strings"
-             xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
-             xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
-             x:Class="Seren.Scripts.Views.Pages.MeditationPage"
-             x:TypeArguments="vm:MeditationViewModel"
-             x:DataType="vm:MeditationViewModel"
-             Background="{StaticResource BackgroundColor}"
-             NavigationPage.HasBackButton="False">
-    
-    <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
-        </StackLayout>
-    </NavigationPage.TitleView>
-    
-    <AbsoluteLayout Padding="15"
-                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                    AbsoluteLayout.LayoutFlags="All">
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+                xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                x:Class="Seren.Scripts.Views.Pages.MeditationPage"
+                x:TypeArguments="vm:MeditationViewModel"
+                x:DataType="vm:MeditationViewModel"
+                Background="{StaticResource PrimaryTab2Color}"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="False">
 
-        <Label x:Name="AnimatedLabel"
-               Text="{x:Static strings:Localizations.DoYouHavePanic}"
-               Style="{StaticResource HeaderStyle}"
-               AbsoluteLayout.LayoutBounds="0.5, 0.5, 350, -1"
-               AbsoluteLayout.LayoutFlags="PositionProportional"
-               Margin="0,-50,0,0" />
-            
-    </AbsoluteLayout>
+    <StackLayout>
+        <views:NavigationBar TitleText="{Binding Header}" />
+        
+    </StackLayout>
 </pages:BasePage>

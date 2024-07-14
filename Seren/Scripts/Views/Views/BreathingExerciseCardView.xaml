@@ -48,7 +48,7 @@
                VerticalTextAlignment="End"
                HorizontalOptions="Start"/>
         
-        <Label Text="{Binding Time}"
+        <Label Text="{Binding TimeText}"
                Style="{StaticResource SmallTextStyle}"
                TextColor="{StaticResource Gray4}"
                HeightRequest="14"
