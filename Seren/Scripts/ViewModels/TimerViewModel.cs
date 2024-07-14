@@ -4,9 +4,8 @@ using System.Windows.Input;
 
 namespace Seren.Scripts.ViewModels;
 
-public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
+public class TimerViewModel : BaseViewModel, INotifyPropertyChanged, IDisposable
 {
-    private readonly TimeSpan _initialTimer;
     private TimeSpan _remainingTime;
     private IDispatcherTimer _timer;
     private DateTime _endTime;
@@ -14,7 +13,6 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
 
     public TimerViewModel(TimeSpan initialTimer)
     {
-        _initialTimer = initialTimer;
         _remainingTime = initialTimer;
         
         StartTimer();
@@ -27,7 +25,7 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
     public TimeSpan RemainingTime
     {
         get => _remainingTime;
-        set
+        private set
         {
             if (_remainingTime != value)
             {
@@ -76,7 +74,7 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
 
     private void StartTimer()
     {
-        _endTime = DateTime.Now + _initialTimer;
+        _endTime = DateTime.Now + RemainingTime;
         _timer = Application.Current.Dispatcher.CreateTimer();
         _timer.Interval = TimeSpan.FromSeconds(0.01f);
         _timer.Tick += TimerTick;
@@ -102,5 +100,12 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
         {
             RemainingTime = remaining;
         }
+    }
+    
+    public void Dispose()
+    {
+        StopTimer();
+        _timer.Tick -= TimerTick;
+        _timer = null;
     }
 }

@@ -46,5 +46,9 @@ public partial class BreathingExercisePage
         DisposeTimerViewModel();
     }
 
-    private void DisposeTimerViewModel() => _timerViewModel.PropertyChanged -= OnTimerTicked;
+    private void DisposeTimerViewModel()
+    {
+        _timerViewModel.PropertyChanged -= OnTimerTicked;
+        _timerViewModel.Dispose();
+    }
 }

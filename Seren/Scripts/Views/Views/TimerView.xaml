@@ -24,9 +24,22 @@
                 Command="{Binding ToggleCommand}"
                 BackgroundColor="{StaticResource White}"
                 TextColor="{StaticResource Blue3}"
+                BorderColor="{StaticResource White}"
+                BorderWidth="2"
                 FontFamily="VollkornBold"
                 FontSize="24"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center">
+            <Button.Triggers>
+                <DataTrigger TargetType="Button" Binding="{Binding IsRunning}" Value="True">
+                    <Setter Property="BackgroundColor" Value="{StaticResource White}" />
+                    <Setter Property="TextColor" Value="{StaticResource Blue3}" />
+                </DataTrigger>
+                <DataTrigger TargetType="Button" Binding="{Binding IsRunning}" Value="False">
+                    <Setter Property="BackgroundColor" Value="Transparent" />
+                    <Setter Property="TextColor" Value="{StaticResource White}" />
+                </DataTrigger>
+            </Button.Triggers>
+        </Button>
         
     </StackLayout>
     
