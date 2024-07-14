@@ -12,6 +12,7 @@
                 Progress="{Binding Progress, Source={x:Reference this}}"
                 Size="{Binding Size, Source={x:Reference this}}"
                 Thickness="{Binding Thickness, Source={x:Reference this}}"
+                SectionsCount="{Binding SectionsCount, Source={x:Reference this}}"
                 ProgressColor="{Binding ProgressColor, Source={x:Reference this}}"
                 ProgressLeftColor="{Binding ProgressLeftColor, Source={x:Reference this}}"/>
         </GraphicsView.Drawable>

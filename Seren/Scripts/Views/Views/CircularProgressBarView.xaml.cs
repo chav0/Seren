@@ -7,15 +7,16 @@ public partial class CircularProgressBarView
         InitializeComponent();
     }
     
-    public static readonly BindableProperty ProgressProperty = BindableProperty.Create(nameof(Progress), typeof(int), typeof(CircularProgressBarView));
+    public static readonly BindableProperty ProgressProperty = BindableProperty.Create(nameof(Progress), typeof(float), typeof(CircularProgressBarView));
     public static readonly BindableProperty SizeProperty = BindableProperty.Create(nameof(Size), typeof(int), typeof(CircularProgressBarView));
     public static readonly BindableProperty ThicknessProperty = BindableProperty.Create(nameof(Thickness), typeof(int), typeof(CircularProgressBarView));
+    public static readonly BindableProperty SectionsCountProperty = BindableProperty.Create(nameof(SectionsCount), typeof(int), typeof(CircularProgressBarView));
     public static readonly BindableProperty ProgressColorProperty = BindableProperty.Create(nameof(ProgressColor), typeof(Color), typeof(CircularProgressBarView));
     public static readonly BindableProperty ProgressLeftColorProperty = BindableProperty.Create(nameof(ProgressLeftColor), typeof(Color), typeof(CircularProgressBarView));
 
-    public int Progress
+    public float Progress
     {
-        get => (int)GetValue(ProgressProperty);
+        get => (float)GetValue(ProgressProperty);
         set => SetValue(ProgressProperty, value);
     }
 
@@ -29,6 +30,12 @@ public partial class CircularProgressBarView
     {
         get => (int)GetValue(ThicknessProperty);
         set => SetValue(ThicknessProperty, value);
+    }
+    
+    public int SectionsCount
+    {
+        get { return (int)GetValue(SectionsCountProperty); }
+        set { SetValue(SectionsCountProperty, value); }
     }
 
     public Color ProgressColor

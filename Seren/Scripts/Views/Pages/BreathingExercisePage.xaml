@@ -20,7 +20,8 @@
             ProgressColor="{StaticResource White}"
             ProgressLeftColor="{StaticResource White20}"
             Size="300"
-            Thickness="8" />
+            Thickness="8"
+            SectionsCount="{Binding PatternCount}"/>
         
         <ContentView x:Name="Timer"/>
         
