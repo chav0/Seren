@@ -15,13 +15,15 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
     public TimerViewModel(TimeSpan initialTimer)
     {
         _initialTimer = initialTimer;
-        _remainingTime = initialTimer; 
+        _remainingTime = initialTimer;
+        
+        StartTimer();
         
         ToggleCommand = new Command(ToggleTimer);
     }
 
-    public string RemainingTimeText => RemainingTime.ToString();
-
+    public string RemainingTimeText => $"{RemainingTime.Minutes:D2}:{RemainingTime.Seconds:D2}";
+    
     public TimeSpan RemainingTime
     {
         get => _remainingTime;
@@ -31,6 +33,7 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
             {
                 _remainingTime = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(RemainingTimeText));
             }
         }
     }
@@ -75,7 +78,7 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
     {
         _endTime = DateTime.Now + _initialTimer; // например, 1 минута
         _timer = Application.Current.Dispatcher.CreateTimer();
-        _timer.Interval = TimeSpan.FromSeconds(1);
+        _timer.Interval = TimeSpan.FromSeconds(0.05f);
         _timer.Tick += TimerTick;
         _timer.Start();
         IsRunning = true;

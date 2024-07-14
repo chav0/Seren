@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Seren.Scripts.Views.Views;
 
 public partial class NavigationBar : ContentView
@@ -5,6 +7,7 @@ public partial class NavigationBar : ContentView
     public NavigationBar()
     {
         InitializeComponent();
+        BindingContext = this;
     }
 
     private void OnBackButtonClicked(object sender, EventArgs e)
@@ -17,7 +20,7 @@ public partial class NavigationBar : ContentView
     }
 
     public static readonly BindableProperty TitleTextProperty =
-        BindableProperty.Create(nameof(TitleText), typeof(string), typeof(NavigationBar), string.Empty);
+        BindableProperty.Create(nameof(TitleText), typeof(string), typeof(NavigationBar));
 
     public string TitleText
     {

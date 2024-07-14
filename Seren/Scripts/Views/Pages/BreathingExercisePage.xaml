@@ -13,7 +13,14 @@
                 Shell.TabBarIsVisible="False">
 
     <StackLayout>
-        <views:NavigationBar TitleText="{Binding Header}" />
+        <ContentView x:Name="NavigationBar"/>
+        
+        <views:CircularProgressBarView
+            Progress="40"
+            ProgressColor="{StaticResource White}"
+            ProgressLeftColor="{StaticResource White20}"
+            Size="300"
+            Thickness="8" />
         
         <ContentView x:Name="Timer"/>
         

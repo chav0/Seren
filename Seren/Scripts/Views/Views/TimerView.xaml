@@ -10,7 +10,7 @@
     
     <StackLayout Padding="20">
         
-        <Label Text="{Binding RemainingTime}"
+        <Label Text="{Binding RemainingTimeText}"
                Style="{StaticResource TextStyle}"
                TextColor="{StaticResource White}"
                HorizontalOptions="Center"/>

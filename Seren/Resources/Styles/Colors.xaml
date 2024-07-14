@@ -32,6 +32,7 @@
     <Color x:Key="White80">#CCFFFFFF</Color>
     <Color x:Key="White70">#B3FFFFFF</Color>
     <Color x:Key="White60">#99FFFFFF</Color>
+    <Color x:Key="White20">#33FFFFFF</Color>
     
     <!-- Gray Colors -->
     <Color x:Key="Gray1">#F0F3F5</Color>
