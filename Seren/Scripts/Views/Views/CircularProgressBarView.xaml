@@ -2,19 +2,20 @@
 <ContentView
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:drawables1="clr-namespace:Seren.Scripts.Drawables"
+    xmlns:drawables="clr-namespace:Seren.Scripts.Drawables"
+    xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
     x:Class="Seren.Scripts.Views.Views.CircularProgressBarView"
-    x:Name="this">
+    x:DataType="views:CircularProgressBarView">
 
-    <GraphicsView>
+    <GraphicsView x:Name="GraphicsView">
         <GraphicsView.Drawable>
-            <drawables1:CircularProgressBarDrawable
-                Progress="{Binding Progress, Source={x:Reference this}}"
-                Size="{Binding Size, Source={x:Reference this}}"
-                Thickness="{Binding Thickness, Source={x:Reference this}}"
-                SectionsCount="{Binding SectionsCount, Source={x:Reference this}}"
-                ProgressColor="{Binding ProgressColor, Source={x:Reference this}}"
-                ProgressLeftColor="{Binding ProgressLeftColor, Source={x:Reference this}}"/>
+            <drawables:CircularProgressBarDrawable x:Name="Drawable"
+                                                   Progress="{Binding Progress}"
+                                                   Size="{Binding Size}"
+                                                   Thickness="{Binding Thickness}"
+                                                   SectionsCount="{Binding SectionsCount}"
+                                                   ProgressColor="{Binding ProgressColor}"
+                                                   ProgressLeftColor="{Binding ProgressLeftColor}"/>
         </GraphicsView.Drawable>
     </GraphicsView>
 

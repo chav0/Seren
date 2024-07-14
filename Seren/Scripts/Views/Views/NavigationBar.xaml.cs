@@ -1,8 +1,6 @@
-using System.Diagnostics;
-
 namespace Seren.Scripts.Views.Views;
 
-public partial class NavigationBar : ContentView
+public partial class NavigationBar
 {
     public NavigationBar()
     {
@@ -12,11 +10,8 @@ public partial class NavigationBar : ContentView
 
     private void OnBackButtonClicked(object sender, EventArgs e)
     {
-        // Ваш код для обработки нажатия на кнопку "Назад"
-        if (Navigation.NavigationStack.Count > 0)
-        {
+        if (Navigation.NavigationStack.Count > 0) 
             Navigation.PopAsync();
-        }
     }
 
     public static readonly BindableProperty TitleTextProperty =

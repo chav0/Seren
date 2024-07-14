@@ -76,9 +76,9 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged
 
     private void StartTimer()
     {
-        _endTime = DateTime.Now + _initialTimer; // например, 1 минута
+        _endTime = DateTime.Now + _initialTimer;
         _timer = Application.Current.Dispatcher.CreateTimer();
-        _timer.Interval = TimeSpan.FromSeconds(0.05f);
+        _timer.Interval = TimeSpan.FromSeconds(0.01f);
         _timer.Tick += TimerTick;
         _timer.Start();
         IsRunning = true;

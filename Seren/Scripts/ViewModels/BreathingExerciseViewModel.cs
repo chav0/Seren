@@ -28,4 +28,34 @@ public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : B
     public int PatternCount => breathingExercise.Patterns.Count;
 
     public List<BreathingPatternEntry> Patterns => breathingExercise.Patterns;
+
+    public float CurrentProgress { get; private set; }
+    public int CurrentPatternRemainingTime { get; private set; }
+    public string CurrentPatternType { get; private set; }
+
+    public void UpdateTimer(float remainingTime)
+    {
+        var time = TimeSeconds - remainingTime;
+        var circleTime = TimeSeconds / (float) BreathingCount;
+        var currentTimeInCircle = time % circleTime;
+
+        CurrentProgress = currentTimeInCircle / circleTime * 100f;
+        
+        OnPropertyChanged();
+        OnPropertyChanged(nameof(CurrentProgress));
+
+        foreach (var pattern in Patterns)
+        {
+            currentTimeInCircle -= pattern.Time;
+            if (currentTimeInCircle < 0)
+            {
+                CurrentPatternRemainingTime = (int) -currentTimeInCircle;
+                CurrentPatternType = pattern.Type.ToString();
+                
+                OnPropertyChanged(nameof(CurrentPatternRemainingTime));
+                OnPropertyChanged(nameof(CurrentPatternType));
+                break;
+            }
+        }
+    }
 }

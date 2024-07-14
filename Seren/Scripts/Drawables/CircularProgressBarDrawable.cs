@@ -17,32 +17,32 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
 
     public int Size
     {
-        get { return (int)GetValue(SizeProperty); }
-        set { SetValue(SizeProperty, value); }
+        get => (int)GetValue(SizeProperty);
+        set => SetValue(SizeProperty, value);
     }
 
     public int Thickness
     {
-        get { return (int)GetValue(ThicknessProperty); }
-        set { SetValue(ThicknessProperty, value); }
+        get => (int)GetValue(ThicknessProperty);
+        set => SetValue(ThicknessProperty, value);
     }
 
     public int SectionsCount
     {
-        get { return (int)GetValue(SectionsCountProperty); }
-        set { SetValue(SectionsCountProperty, value); }
+        get => (int)GetValue(SectionsCountProperty);
+        set => SetValue(SectionsCountProperty, value);
     }
 
     public Color ProgressColor
     {
-        get { return (Color)GetValue(ProgressColorProperty); }
-        set { SetValue(ProgressColorProperty, value); }
+        get => (Color)GetValue(ProgressColorProperty);
+        set => SetValue(ProgressColorProperty, value);
     }
 
     public Color ProgressLeftColor
     {
-        get { return (Color)GetValue(ProgressLeftColorProperty); }
-        set { SetValue(ProgressLeftColorProperty, value); }
+        get => (Color)GetValue(ProgressLeftColorProperty);
+        set => SetValue(ProgressLeftColorProperty, value);
     }
 
     public void Draw(ICanvas canvas, RectF dirtyRect)
