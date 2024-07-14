@@ -5,6 +5,8 @@ namespace Seren.Scripts.Views.Pages;
 
 public partial class BreathingExercisePage
 {
+    private TimerViewModel _timerViewModel;
+    
     public BreathingExercisePage(BreathingExerciseViewModel viewModel) : base(viewModel)
     {
         InitializeComponent();
@@ -24,8 +26,8 @@ public partial class BreathingExercisePage
     
     private void InitializeTimer()
     {
-        var timerViewModel = new TimerViewModel(TimeSpan.FromSeconds(BindingContext.TimeSeconds)); 
-        var timerView = new TimerView(timerViewModel);
+        _timerViewModel = new TimerViewModel(TimeSpan.FromSeconds(BindingContext.TimeSeconds)); 
+        var timerView = new TimerView(_timerViewModel);
         Timer.Content = timerView;
     }
 }

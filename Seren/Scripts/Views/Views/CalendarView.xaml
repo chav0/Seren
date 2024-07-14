@@ -18,7 +18,8 @@
 
         <CollectionView ItemsSource="{Binding CalendarEntries}">
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Horizontal" ItemSpacing="16" />
+                <LinearItemsLayout Orientation="Horizontal" 
+                                   ItemSpacing="16" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:UserCalendarEntry">

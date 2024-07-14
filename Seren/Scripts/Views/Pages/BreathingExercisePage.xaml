@@ -13,20 +13,42 @@
                 Shell.NavBarIsVisible="False"
                 Shell.TabBarIsVisible="False">
 
-
     <Grid RowDefinitions="50, 56, 300, *, 96, 64"
           ColumnDefinitions="*">
         
         <ContentView Grid.Row="0"
                      x:Name="NavigationBar"/>
         
-        <views:CircularProgressBarView Grid.Row="2" 
-                                       Progress="40"
-                                       ProgressColor="{StaticResource White}"
-                                       ProgressLeftColor="{StaticResource White20}"
-                                       Size="300"
-                                       Thickness="8"
-                                       SectionsCount="{Binding PatternCount}"/>
+        <Grid Grid.Row="2">
+            <views:CircularProgressBarView 
+                Progress="40"
+                ProgressColor="{StaticResource White}"
+                ProgressLeftColor="{StaticResource White20}"
+                Size="300"
+                Thickness="8"
+                SectionsCount="{Binding PatternCount}"/>
+            
+            <StackLayout Orientation="Vertical" 
+                         HorizontalOptions="Center" 
+                         VerticalOptions="Center" 
+                         Spacing="8"
+                         WidthRequest="84">
+                
+                <Label Text="Inhale" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       Style="{StaticResource TextStyle}"
+                       TextColor="White" />
+                        
+                <Label Text="02" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center"
+                       Style="{StaticResource BigHeaderStyle}"
+                       TextColor="White"/>
+                        
+            </StackLayout>
+        </Grid>
+
         
         <CollectionView Grid.Row="3" 
                         HorizontalOptions="Center" 
@@ -35,7 +57,8 @@
                         ItemsSource="{Binding Patterns}">
             
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Horizontal"/>
+                <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="8"/>
             </CollectionView.ItemsLayout>
             
             <CollectionView.ItemTemplate>
@@ -43,13 +66,14 @@
                     <StackLayout Orientation="Vertical" 
                                  HorizontalOptions="Center" 
                                  VerticalOptions="Center" 
+                                 Spacing="4"
                                  WidthRequest="84">
                         
-                        <Label Text="{Binding DisplayTime}" 
+                        <Label Text="{Binding Time}" 
                                HorizontalOptions="Center" 
                                Style="{StaticResource BigHeaderStyle}"
                                TextColor="White"/>
-                        <Label Text="{Binding DisplayType}" 
+                        <Label Text="{Binding Type}" 
                                HorizontalOptions="Center" 
                                Style="{StaticResource TextStyle}"
                                TextColor="White" />
