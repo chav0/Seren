@@ -26,4 +26,6 @@ public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : B
     public int BreathingCount => breathingExercise.Count;
 
     public int PatternCount => breathingExercise.Patterns.Count;
+
+    public List<BreathingPatternEntry> Patterns => breathingExercise.Patterns;
 }

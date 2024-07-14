@@ -8,7 +8,9 @@
              x:TypeArguments="vm:TimerViewModel"
              x:DataType="vm:TimerViewModel">
     
-    <StackLayout Padding="20">
+    <StackLayout 
+        Spacing="12"
+        Padding="20">
         
         <Label Text="{Binding RemainingTimeText}"
                Style="{StaticResource TextStyle}"
@@ -17,6 +19,7 @@
         
         <Button WidthRequest="200"
                 HeightRequest="60"
+                CornerRadius="15"
                 Text="{Binding ToggleButtonText}"
                 Command="{Binding ToggleCommand}"
                 BackgroundColor="{StaticResource White}"

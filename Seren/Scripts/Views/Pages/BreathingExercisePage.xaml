@@ -5,6 +5,7 @@
                 xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
                 xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
                 xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:models="clr-namespace:Seren.Scripts.Models"
                 x:Class="Seren.Scripts.Views.Pages.BreathingExercisePage"
                 x:TypeArguments="vm:BreathingExerciseViewModel"
                 x:DataType="vm:BreathingExerciseViewModel"
@@ -12,18 +13,55 @@
                 Shell.NavBarIsVisible="False"
                 Shell.TabBarIsVisible="False">
 
-    <StackLayout>
-        <ContentView x:Name="NavigationBar"/>
+
+    <Grid RowDefinitions="50, 56, 300, *, 96, 64"
+          ColumnDefinitions="*">
         
-        <views:CircularProgressBarView
-            Progress="40"
-            ProgressColor="{StaticResource White}"
-            ProgressLeftColor="{StaticResource White20}"
-            Size="300"
-            Thickness="8"
-            SectionsCount="{Binding PatternCount}"/>
+        <ContentView Grid.Row="0"
+                     x:Name="NavigationBar"/>
         
-        <ContentView x:Name="Timer"/>
+        <views:CircularProgressBarView Grid.Row="2" 
+                                       Progress="40"
+                                       ProgressColor="{StaticResource White}"
+                                       ProgressLeftColor="{StaticResource White20}"
+                                       Size="300"
+                                       Thickness="8"
+                                       SectionsCount="{Binding PatternCount}"/>
         
-    </StackLayout>
+        <CollectionView Grid.Row="3" 
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center" 
+                        HeightRequest="73"
+                        ItemsSource="{Binding Patterns}">
+            
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"/>
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:BreathingPatternEntry">
+                    <StackLayout Orientation="Vertical" 
+                                 HorizontalOptions="Center" 
+                                 VerticalOptions="Center" 
+                                 WidthRequest="84">
+                        
+                        <Label Text="{Binding DisplayTime}" 
+                               HorizontalOptions="Center" 
+                               Style="{StaticResource BigHeaderStyle}"
+                               TextColor="White"/>
+                        <Label Text="{Binding DisplayType}" 
+                               HorizontalOptions="Center" 
+                               Style="{StaticResource TextStyle}"
+                               TextColor="White" />
+                        
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+        
+        <ContentView Grid.Row="4"
+                     x:Name="Timer"
+                     HeightRequest="106"/>
+    </Grid>
 </pages:BasePage>

@@ -13,6 +13,9 @@ public struct BreathingPatternEntry
 {
     public float Time { get; set; }
     public BreathType Type { get; set; }
+    
+    public string DisplayTime => Time.ToString("F0");
+    public string DisplayType => Type.ToString();
 }
 
 public enum BreathType
