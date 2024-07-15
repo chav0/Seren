@@ -11,7 +11,16 @@ public class UserCalendarRepository : SecureDataRepository<UserCalendarEntry>, I
     {
     }
 
-    public Task<UserCalendarEntry> GetByIdAsync(DateTime dateTime) => GetByIdAsync(dateTime.ToShortDateString());
+    public async Task<UserCalendarEntry> GetByIdAsync(DateTime dateTime)
+    {
+        var entry = await GetByIdAsync(dateTime.ToShortDateString()) ?? new UserCalendarEntry
+        {
+            Date = dateTime.Date,
+            PanicAttackLevel = PanicAttackLevel.None
+        };
+
+        return entry;
+    }
 
     public Task SetByIdAsync(UserCalendarEntry userCalendar) => SetByIdAsync(userCalendar.Id, userCalendar);
 }

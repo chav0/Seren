@@ -62,6 +62,6 @@ public class SecureDataRepository<T> where T : IIdentifiable
             return;
         
         var json = JsonSerializer.Serialize(_itemsMap.Values);
-        //await SecureStorage.SetAsync(_storagePath, json);
+        await SecureStorage.SetAsync(_storagePath, json);
     }
 }

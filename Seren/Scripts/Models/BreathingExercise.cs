@@ -19,6 +19,5 @@ public enum BreathType
 {
     Inhale,
     Exhale, 
-    Hold,
-    Repeat
+    Hold
 }

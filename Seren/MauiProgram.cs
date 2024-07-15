@@ -42,7 +42,7 @@ public static class MauiProgram
 		mauiAppBuilder.Services
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
-			.AddSingleton<IUserCalendarRepository, FakeUserCalendarRepository>();
+			.AddSingleton<IUserCalendarRepository, UserCalendarRepository>();
 
 		return mauiAppBuilder;        
 	}

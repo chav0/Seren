@@ -9,11 +9,16 @@ public partial class MainPage
 
 	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory) : base(viewModel)
 	{
+		Console.WriteLine("MainPage");
 		_pageFactory = pageFactory;
 		InitializeComponent();
+		Console.WriteLine("InitializeComponent");
 		InitializeCalendar();
+		Console.WriteLine("InitializeCalendar");
 		InitializeBreathingExercises();
+		Console.WriteLine("InitializeBreathingExercises");
 		InitializeMeditations();
+		Console.WriteLine("InitializeMeditations");
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	

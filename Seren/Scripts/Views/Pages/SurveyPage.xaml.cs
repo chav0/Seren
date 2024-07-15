@@ -69,7 +69,8 @@ public partial class SurveyPage
         var saveResultTask = BindingContext.SaveResult(button.PanicAttackLevel);
         await Task.WhenAll(animationTask, saveResultTask);
         var meditation = await BindingContext.AntiPanicMeditation;
-        await Navigation.PushAsync(new MeditationPage(new MeditationViewModel(meditation)));
+        //await Navigation.PushAsync(new MeditationPage(new MeditationViewModel(meditation)));
+        await Navigation.PopAsync();
     }
     
     private enum PageStep
