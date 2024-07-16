@@ -1,4 +1,5 @@
-﻿using Seren.Scripts.ViewModels;
+﻿using Plugin.Maui.Audio;
+using Seren.Scripts.ViewModels;
 using Seren.Scripts.Views.Views;
 
 namespace Seren.Scripts.Views.Pages;
@@ -6,20 +7,28 @@ namespace Seren.Scripts.Views.Pages;
 public partial class MainPage 
 {
 	private readonly IPageFactory _pageFactory;
+	
+	private IAudioManager _audioManager;
+	private IAudioPlayer _player;
 
-	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory) : base(viewModel)
+	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory, IAudioManager audioManager) : base(viewModel)
 	{
-		Console.WriteLine("MainPage");
 		_pageFactory = pageFactory;
+		_audioManager = audioManager;
+		
+		InitializeBackgroundMusic();
 		InitializeComponent();
-		Console.WriteLine("InitializeComponent");
 		InitializeCalendar();
-		Console.WriteLine("InitializeCalendar");
 		InitializeBreathingExercises();
-		Console.WriteLine("InitializeBreathingExercises");
 		InitializeMeditations();
-		Console.WriteLine("InitializeMeditations");
 		NavigationPage.SetHasNavigationBar(this, false);
+	}
+	
+	private async void InitializeBackgroundMusic()
+	{
+		_player = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.mp3"));
+		_player.Loop = true;
+		_player.Play();
 	}
 	
 	private void InitializeCalendar()

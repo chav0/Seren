@@ -5,6 +5,7 @@ using Seren.Scripts.Services;
 using Seren.Scripts.ViewModels;
 using Seren.Scripts.Views.Pages;
 using Seren.Scripts.Views.Views;
+using Plugin.Maui.Audio;
 
 namespace Seren;
 
@@ -28,8 +29,6 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		builder.Services.AddSingleton<IPageFactory, PageFactory>();
-
 		return builder
 			.RegisterServices()
 			.RegisterPages()
@@ -40,6 +39,8 @@ public static class MauiProgram
 	private static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services
+			.AddSingleton(AudioManager.Current)
+			.AddSingleton<IPageFactory, PageFactory>()
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
 			.AddSingleton<IUserCalendarRepository, UserCalendarRepository>();
