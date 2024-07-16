@@ -43,6 +43,7 @@ public static class MauiProgram
 			.AddSingleton<IPageFactory, PageFactory>()
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
+			.AddSingleton<IPanicQuestionaryRepository, PanicQuestionaryRepository>()
 			.AddSingleton<IUserCalendarRepository, UserCalendarRepository>();
 
 		return mauiAppBuilder;        

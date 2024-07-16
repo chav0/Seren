@@ -40,25 +40,115 @@
 		<value>Okay, you have a panic</value>
 	</data>
 	<data name="HowStrongIsAttack" xml:space="preserve">
-		<value>How strong is that attack?</value>
+		<value>Rate your attack</value>
 	</data>
 	<data name="AttackStrongness1" xml:space="preserve">
 		<value>A bit</value>
 	</data>
 	<data name="AttackStrongness2" xml:space="preserve">
-		<value />
+		<value>Little</value>
 	</data>
 	<data name="AttackStrongness3" xml:space="preserve">
 		<value>Somewhat</value>
 	</data>
 	<data name="AttackStrongness4" xml:space="preserve">
-		<value />
+		<value>Hard</value>
 	</data>
 	<data name="AttackStrongness5" xml:space="preserve">
-		<value>Very!!</value>
+		<value>VERY!!!</value>
 	</data>
 	<data name="Panic" xml:space="preserve">
 		<value>panic</value>
+	</data>
+	<data name="PanicQuestionary.FearWillPass" xml:space="preserve">
+		<value>Will the fear pass?</value>
+	</data>
+	<data name="PanicQuestionary.EveryoneThinksImSick" xml:space="preserve">
+		<value>Does everyone think I'm sick?</value>
+	</data>
+	<data name="PanicQuestionary.MyBrainIsHealthy" xml:space="preserve">
+		<value>Is my brain healthy?</value>
+	</data>
+	<data name="PanicQuestionary.ImParalyzed" xml:space="preserve">
+		<value>Am I paralyzed?</value>
+	</data>
+	<data name="PanicQuestionary.PanicAttackWillLastForever" xml:space="preserve">
+		<value>Will the panic attack last forever?</value>
+	</data>
+	<data name="PanicQuestionary.ICanBecomeAggressive" xml:space="preserve">
+		<value>Can I become aggressive?</value>
+	</data>
+	<data name="PanicQuestionary.ICanBeatPanicAttack" xml:space="preserve">
+		<value>Can I beat the panic attack?</value>
+	</data>
+	<data name="PanicQuestionary.IWillLoseTouchWithReality" xml:space="preserve">
+		<value>Will I lose touch with reality?</value>
+	</data>
+	<data name="PanicQuestionary.IWillGoCrazy" xml:space="preserve">
+		<value>Will I go crazy?</value>
+	</data>
+	<data name="PanicQuestionary.MyHeartIsHealthy" xml:space="preserve">
+		<value>Is my heart healthy?</value>
+	</data>
+	<data name="PanicQuestionary.IWillHaveStroke" xml:space="preserve">
+		<value>Will I have a stroke?</value>
+	</data>
+	<data name="PanicQuestionary.EveryoneThinksImCrazy" xml:space="preserve">
+		<value>Does everyone think I'm crazy?</value>
+	</data>
+	<data name="PanicQuestionary.WhatIFeelIsNormal" xml:space="preserve">
+		<value>Is what I feel normal?</value>
+	</data>
+	<data name="PanicQuestionary.PanicAttackIsSafe" xml:space="preserve">
+		<value>Is the panic attack safe?</value>
+	</data>
+	<data name="PanicQuestionary.FearCanKillMe" xml:space="preserve">
+		<value>Can fear kill me?</value>
+	</data>
+	<data name="PanicQuestionary.EveryoneThinksImWeak" xml:space="preserve">
+		<value>Does everyone think I'm weak?</value>
+	</data>
+	<data name="PanicQuestionary.IWillFaint" xml:space="preserve">
+		<value>Will I faint?</value>
+	</data>
+	<data name="PanicQuestionary.ICanSuffocate" xml:space="preserve">
+		<value>Can I suffocate?</value>
+	</data>
+	<data name="PanicQuestionary.ICanDie" xml:space="preserve">
+		<value>Can I die?</value>
+	</data>
+	<data name="PanicQuestionary.ShouldICallAmbulance" xml:space="preserve">
+		<value>Should I call an ambulance?</value>
+	</data>
+	<data name="PanicQuestionary.ShouldICheckPulse" xml:space="preserve">
+		<value>Should I check my pulse?</value>
+	</data>
+	<data name="PanicQuestionary.ShouldITryToDistract" xml:space="preserve">
+		<value>Should I try to distract myself?</value>
+	</data>
+	<data name="PanicQuestionary.IWillHaveHeartAttack" xml:space="preserve">
+		<value>Will I have a heart attack?</value>
+	</data>
+	<data name="PanicQuestionary.AdrenalineResponse" xml:space="preserve">
+		<value>Is this a reaction to adrenaline?</value>
+	</data>
+	<data name="PanicQuestionary.PanicAttackWillKillMe" xml:space="preserve">
+		<value>Will the panic attack kill me?</value>
+	</data>
+	<data name="Inhale" xml:space="preserve">
+		<value>Inhale</value>
+	</data>
+	<data name="Exhale" xml:space="preserve">
+		<value>Exhale</value>
+	</data>
+	<data name="Hold" xml:space="preserve">
+		<value>Hold</value>
+	</data>
+	<data name="Yes" xml:space="preserve">
+		<value>Yes</value>
+	</data>
+	<data name="No" xml:space="preserve">
+		<value>No</value>
 	</data>
 </root>
 

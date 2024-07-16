@@ -18,46 +18,4 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="PanicSign" xml:space="preserve">
-        <value>Panic!</value>
-    </data>
-    <data name="Meditation" xml:space="preserve">
-        <value>Meditation</value>
-    </data>
-    <data name="MeditationDescription" xml:space="preserve">
-        <value>Ways to suppress anxiety</value>
-    </data>
-    <data name="HelpYourselfDescription" xml:space="preserve">
-        <value>Self-help during  a panic attack</value>
-    </data>
-    <data name="HelpYourself" xml:space="preserve">
-        <value>Help yourself</value>
-    </data>
-    <data name="Breath" xml:space="preserve">
-        <value>Breath</value>
-    </data>
-    <data name="BreathDescription" xml:space="preserve">
-        <value>Concentration  on breathing</value>
-    </data>
-    <data name="DoYouHavePanic" xml:space="preserve">
-        <value>Are you here because  of the panic?</value>
-    </data>
-    <data name="YouHavePanic" xml:space="preserve">
-        <value>Okay, you have a panic</value>
-    </data>
-    <data name="HowStrongIsAttack" xml:space="preserve">
-        <value>Rate your attack</value>
-    </data>
-    <data name="AttackStrongness1" xml:space="preserve">
-        <value>A bit</value>
-    </data>
-    <data name="AttackStrongness3" xml:space="preserve">
-        <value>Somewhat</value>
-    </data>
-    <data name="AttackStrongness5" xml:space="preserve">
-        <value>Very!!</value>
-    </data>
-    <data name="Panic" xml:space="preserve">
-        <value>panic</value>
-    </data>
 </root>

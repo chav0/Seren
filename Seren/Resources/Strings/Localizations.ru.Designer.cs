@@ -140,5 +140,185 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("Panic", resourceCulture);
             }
         }
+        
+        internal static string Exhale {
+            get {
+                return ResourceManager.GetString("Exhale", resourceCulture);
+            }
+        }
+        
+        internal static string Inhale {
+            get {
+                return ResourceManager.GetString("Inhale", resourceCulture);
+            }
+        }
+        
+        internal static string Hold {
+            get {
+                return ResourceManager.GetString("Hold", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_AdrenalineResponse {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.AdrenalineResponse", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_EveryoneThinksImCrazy {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.EveryoneThinksImCrazy", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_EveryoneThinksImSick {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.EveryoneThinksImSick", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_EveryoneThinksImWeak {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.EveryoneThinksImWeak", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_FearCanKillMe {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.FearCanKillMe", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_FearWillPass {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.FearWillPass", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ICanBeatPanicAttack {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ICanBeatPanicAttack", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ICanBecomeAggressive {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ICanBecomeAggressive", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ICanDie {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ICanDie", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ICanSuffocate {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ICanSuffocate", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_MyBrainIsHealthy {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.MyBrainIsHealthy", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ImParalyzed {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ImParalyzed", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_IWillFaint {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.IWillFaint", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_IWillGoCrazy {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.IWillGoCrazy", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_IWillHaveHeartAttack {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.IWillHaveHeartAttack", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_IWillHaveStroke {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.IWillHaveStroke", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_IWillLoseTouchWithReality {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.IWillLoseTouchWithReality", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_MyHeartIsHealthy {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.MyHeartIsHealthy", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_PanicAttackIsSafe {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.PanicAttackIsSafe", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_PanicAttackWillKillMe {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.PanicAttackWillKillMe", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_PanicAttackWillLastForever {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.PanicAttackWillLastForever", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ShouldICallAmbulance {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ShouldICallAmbulance", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ShouldICheckPulse {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ShouldICheckPulse", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_ShouldITryToDistract {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.ShouldITryToDistract", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_WhatIFeelIsNormal {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.WhatIFeelIsNormal", resourceCulture);
+            }
+        }
+        
+        internal static string No {
+            get {
+                return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
     }
 }

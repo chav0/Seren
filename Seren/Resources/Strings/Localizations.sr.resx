@@ -38,4 +38,79 @@
     <data name="Panic" xml:space="preserve">
         <value>панику</value>
     </data>
+    <data name="PanicQuestionary.AdrenalineResponse" xml:space="preserve">
+        <value>Да ли је ово реакција на адреналин?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImCrazy" xml:space="preserve">
+        <value>Да ли сви мисле да сам луд?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImSick" xml:space="preserve">
+        <value>Да ли сви мисле да сам болестан?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImWeak" xml:space="preserve">
+        <value>Да ли сви мисле да сам слаб?</value>
+    </data>
+    <data name="PanicQuestionary.FearCanKillMe" xml:space="preserve">
+        <value>Може ли страх да ме убије?</value>
+    </data>
+    <data name="PanicQuestionary.FearWillPass" xml:space="preserve">
+        <value>Да ли ће страх проћи?</value>
+    </data>
+    <data name="PanicQuestionary.ICanBecomeAggressive" xml:space="preserve">
+        <value>Могу ли постати агресиван?</value>
+    </data>
+    <data name="PanicQuestionary.ICanBeatPanicAttack" xml:space="preserve">
+        <value>Могу ли победити панични напад?</value>
+    </data>
+    <data name="PanicQuestionary.ICanDie" xml:space="preserve">
+        <value>Могу ли умрети?</value>
+    </data>
+    <data name="PanicQuestionary.ICanSuffocate" xml:space="preserve">
+        <value>Могу ли се угушити?</value>
+    </data>
+    <data name="PanicQuestionary.MyBrainIsHealthy" xml:space="preserve">
+        <value>Да ли је мој мозак здрав?</value>
+    </data>
+    <data name="PanicQuestionary.ImParalyzed" xml:space="preserve">
+        <value>Да ли сам парализован?</value>
+    </data>
+    <data name="PanicQuestionary.IWillFaint" xml:space="preserve">
+        <value>Да ли ћу се онесвестити?</value>
+    </data>
+    <data name="PanicQuestionary.IWillGoCrazy" xml:space="preserve">
+        <value>Да ли ћу полудети?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveHeartAttack" xml:space="preserve">
+        <value>Да ли ћу имати срчани удар?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveStroke" xml:space="preserve">
+        <value>Да ли ћу имати мождани удар?</value>
+    </data>
+    <data name="PanicQuestionary.IWillLoseTouchWithReality" xml:space="preserve">
+        <value>Да ли ћу изгубити везу са стварношћу?</value>
+    </data>
+    <data name="PanicQuestionary.MyHeartIsHealthy" xml:space="preserve">
+        <value>Да ли је моје срце здраво?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackIsSafe" xml:space="preserve">
+        <value>Да ли је панични напад безбедан?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackWillKillMe" xml:space="preserve">
+        <value>Да ли ће ме панични напад убити?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackWillLastForever" xml:space="preserve">
+        <value>Да ли ће панични напад трајати заувек?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldICallAmbulance" xml:space="preserve">
+        <value>Да ли треба да позовем хитну помоћ?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldICheckPulse" xml:space="preserve">
+        <value>Да ли треба да измерим пулс?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldITryToDistract" xml:space="preserve">
+        <value>Да ли треба да покушам да се одвратим?</value>
+    </data>
+    <data name="PanicQuestionary.WhatIFeelIsNormal" xml:space="preserve">
+        <value>Да ли је оно што осећам нормално?</value>
+    </data>
 </root>

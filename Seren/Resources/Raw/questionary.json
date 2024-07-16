@@ -1,0 +1,164 @@
+[
+  {
+    "Id": "fear_will_pass",
+    "LocalizationKey": "PanicQuestionary.FearWillPass",
+    "NoAnswer": 1,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "everyone_thinks_im_sick",
+    "LocalizationKey": "PanicQuestionary.EveryoneThinksImSick",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "my_brain_is_healthy",
+    "LocalizationKey": "PanicQuestionary.MyBrainIsHealthy",
+    "NoAnswer": 2,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "im_paralyzed",
+    "LocalizationKey": "PanicQuestionary.ImParalyzed",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "i_need_a_doctor",
+    "LocalizationKey": "PanicQuestionary.INeedADoctor",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "panic_attack_will_last_forever",
+    "LocalizationKey": "PanicQuestionary.PanicAttackWillLastForever",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "i_can_become_aggressive",
+    "LocalizationKey": "PanicQuestionary.ICanBecomeAggressive",
+    "NoAnswer": -1,
+    "YesAnswer": 1
+  },
+  {
+    "Id": "i_can_beat_panic_attack",
+    "LocalizationKey": "PanicQuestionary.ICanBeatPanicAttack",
+    "NoAnswer": 1,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "i_will_lose_touch_with_reality",
+    "LocalizationKey": "PanicQuestionary.IWillLoseTouchWithReality",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "i_will_go_crazy",
+    "LocalizationKey": "PanicQuestionary.IWillGoCrazy",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "my_heart_is_healthy",
+    "LocalizationKey": "PanicQuestionary.MyHeartIsHealthy",
+    "NoAnswer": 2,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "i_will_have_stroke",
+    "LocalizationKey": "PanicQuestionary.IWillHaveStroke",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "everyone_thinks_im_crazy",
+    "LocalizationKey": "PanicQuestionary.EveryoneThinksImCrazy",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "what_i_feel_is_normal",
+    "LocalizationKey": "PanicQuestionary.WhatIFeelIsNormal",
+    "NoAnswer": 1,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "panic_attack_is_safe",
+    "LocalizationKey": "PanicQuestionary.PanicAttackIsSafe",
+    "NoAnswer": 2,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "fear_can_kill_me",
+    "LocalizationKey": "PanicQuestionary.FearCanKillMe",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "everyone_thinks_im_weak",
+    "LocalizationKey": "PanicQuestionary.EveryoneThinksImWeak",
+    "NoAnswer": -1,
+    "YesAnswer": 1
+  },
+  {
+    "Id": "i_will_faint",
+    "LocalizationKey": "PanicQuestionary.IWillFaint",
+    "NoAnswer": -1,
+    "YesAnswer": 1
+  },
+  {
+    "Id": "i_can_suffocate",
+    "LocalizationKey": "PanicQuestionary.ICanSuffocate",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "i_can_die",
+    "LocalizationKey": "PanicQuestionary.ICanDie",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "should_i_call_ambulance",
+    "LocalizationKey": "PanicQuestionary.ShouldICallAmbulance",
+    "NoAnswer": 1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "should_i_check_pulse",
+    "LocalizationKey": "PanicQuestionary.ShouldICheckPulse",
+    "NoAnswer": -1,
+    "YesAnswer": 1
+  },
+  {
+    "Id": "i_will_have_schizophrenia",
+    "LocalizationKey": "PanicQuestionary.IWillHaveSchizophrenia",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "should_i_try_to_distract",
+    "LocalizationKey": "PanicQuestionary.ShouldITryToDistract",
+    "NoAnswer": 1,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "i_will_have_heart_attack",
+    "LocalizationKey": "PanicQuestionary.IWillHaveHeartAttack",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  },
+  {
+    "Id": "adrenaline_response",
+    "LocalizationKey": "PanicQuestionary.AdrenalineResponse",
+    "NoAnswer": 1,
+    "YesAnswer": -1
+  },
+  {
+    "Id": "panic_attack_will_kill_me",
+    "LocalizationKey": "PanicQuestionary.PanicAttackWillKillMe",
+    "NoAnswer": -1,
+    "YesAnswer": 2
+  }
+]

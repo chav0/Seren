@@ -66,4 +66,94 @@
     <data name="Panic" xml:space="preserve">
         <value>панику</value>
     </data>
+    <data name="Exhale" xml:space="preserve">
+        <value>Выдох</value>
+    </data>
+    <data name="Inhale" xml:space="preserve">
+        <value>Вдох</value>
+    </data>
+    <data name="Hold" xml:space="preserve">
+        <value>Пауза</value>
+    </data>
+    <data name="PanicQuestionary.AdrenalineResponse" xml:space="preserve">
+        <value>Это реакция на выброс адреналина?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImCrazy" xml:space="preserve">
+        <value>Все считают меня сумасшедшим?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImSick" xml:space="preserve">
+        <value>Все считают меня больным?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImWeak" xml:space="preserve">
+        <value>Все считают меня слабым?</value>
+    </data>
+    <data name="PanicQuestionary.FearCanKillMe" xml:space="preserve">
+        <value>Страх может меня убить?</value>
+    </data>
+    <data name="PanicQuestionary.FearWillPass" xml:space="preserve">
+        <value>Страх пройдет?</value>
+    </data>
+    <data name="PanicQuestionary.ICanBeatPanicAttack" xml:space="preserve">
+        <value>Я смогу победить паническую атаку?</value>
+    </data>
+    <data name="PanicQuestionary.ICanBecomeAggressive" xml:space="preserve">
+        <value>Я могу стать агрессивным?</value>
+    </data>
+    <data name="PanicQuestionary.ICanDie" xml:space="preserve">
+        <value>Я могу умереть?</value>
+    </data>
+    <data name="PanicQuestionary.ICanSuffocate" xml:space="preserve">
+        <value>Я могу задохнуться?</value>
+    </data>
+    <data name="PanicQuestionary.MyBrainIsHealthy" xml:space="preserve">
+        <value>Мой мозг здоров?</value>
+    </data>
+    <data name="PanicQuestionary.ImParalyzed" xml:space="preserve">
+        <value>Меня парализует?</value>
+    </data>
+    <data name="PanicQuestionary.IWillFaint" xml:space="preserve">
+        <value>Я упаду в обморок?</value>
+    </data>
+    <data name="PanicQuestionary.IWillGoCrazy" xml:space="preserve">
+        <value>Я сойду с ума?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveHeartAttack" xml:space="preserve">
+        <value>У меня случится инфаркт?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveStroke" xml:space="preserve">
+        <value>У меня случится инсульт?</value>
+    </data>
+    <data name="PanicQuestionary.IWillLoseTouchWithReality" xml:space="preserve">
+        <value>Я потеряю связь с реальностью?</value>
+    </data>
+    <data name="PanicQuestionary.MyHeartIsHealthy" xml:space="preserve">
+        <value>Мое сердце здорово?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackIsSafe" xml:space="preserve">
+        <value>Паническая атака безопасна?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackWillKillMe" xml:space="preserve">
+        <value>Паническая атака меня убьет?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackWillLastForever" xml:space="preserve">
+        <value>Паническая атака продлится вечно?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldICallAmbulance" xml:space="preserve">
+        <value>Может, мне вызвать скорую?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldICheckPulse" xml:space="preserve">
+        <value>Мне посчитать пульс?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldITryToDistract" xml:space="preserve">
+        <value>Может, попробовать отвлечься?</value>
+    </data>
+    <data name="PanicQuestionary.WhatIFeelIsNormal" xml:space="preserve">
+        <value>То, что я чувствую, нормально?</value>
+    </data>
+    <data name="No" xml:space="preserve">
+        <value>Нет</value>
+    </data>
+    <data name="Yes" xml:space="preserve">
+        <value>Да</value>
+    </data>
 </root>
