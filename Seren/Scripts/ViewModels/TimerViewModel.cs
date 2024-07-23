@@ -14,9 +14,8 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged, IDisposable
     public TimerViewModel(TimeSpan initialTimer)
     {
         _remainingTime = initialTimer;
-        
-        StartTimer();
-        
+
+        InitTimer();
         ToggleCommand = new Command(ToggleTimer);
     }
 
@@ -54,12 +53,6 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged, IDisposable
 
     public ICommand ToggleCommand { get; }
 
-    public event PropertyChangedEventHandler PropertyChanged;
-    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-
     private void ToggleTimer()
     {
         if (IsRunning)
@@ -72,12 +65,18 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged, IDisposable
         }
     }
 
-    private void StartTimer()
+    private void InitTimer()
     {
-        _endTime = DateTime.Now + RemainingTime;
         _timer = Application.Current.Dispatcher.CreateTimer();
         _timer.Interval = TimeSpan.FromSeconds(0.01f);
         _timer.Tick += TimerTick;
+
+        StartTimer();
+    }
+
+    private void StartTimer()
+    {
+        _endTime = DateTime.Now + RemainingTime;
         _timer.Start();
         IsRunning = true;
     }

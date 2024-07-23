@@ -67,7 +67,13 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
             var progressTo = (i + 1) * sectionProgress - 0.5f;
 
             if (i + 1 == SectionsCount)
-                progressTo = 100 - 0.5f; 
+                progressTo = 100 - 0.5f;
+
+            // if (SectionsCount == 1)
+            // {
+            //     progressFrom = 0f;
+            //     progressTo = 100f; 
+            // }
             
             var angleFrom = GetAngle(progressFrom);
             var angleTo = GetAngle(progressTo);

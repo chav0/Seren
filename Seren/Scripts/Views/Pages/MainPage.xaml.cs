@@ -8,15 +8,13 @@ public partial class MainPage
 {
 	private readonly IPageFactory _pageFactory;
 	
-	private IAudioManager _audioManager;
 	private IAudioPlayer _player;
 
 	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory, IAudioManager audioManager) : base(viewModel)
 	{
 		_pageFactory = pageFactory;
-		_audioManager = audioManager;
 		
-		InitializeBackgroundMusic();
+		InitializeBackgroundMusic(audioManager);
 		InitializeComponent();
 		InitializeCalendar();
 		InitializeBreathingExercises();
@@ -24,9 +22,9 @@ public partial class MainPage
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	
-	private async void InitializeBackgroundMusic()
+	private async void InitializeBackgroundMusic(IAudioManager audioManager)
 	{
-		_player = _audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.mp3"));
+		_player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.mp3"));
 		_player.Loop = true;
 		_player.Play();
 	}

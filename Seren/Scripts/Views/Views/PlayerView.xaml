@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
+                x:Class="Seren.Scripts.Views.Views.PlayerView"
+                x:TypeArguments="vm:PlayerViewModel"
+                x:DataType="vm:PlayerViewModel">
+    
+    <Grid WidthRequest="80"
+          HeightRequest="80">
+        
+        <ImageButton WidthRequest="80"
+                     HeightRequest="80"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Source="pause_icon.png"
+                     Command="{Binding ToggleCommand}">
+            
+            <ImageButton.Triggers>
+                <DataTrigger TargetType="ImageButton" Binding="{Binding IsRunning}" Value="True">
+                    <Setter Property="Source" Value="pause_button.png" />
+                </DataTrigger>
+                <DataTrigger TargetType="ImageButton" Binding="{Binding IsRunning}" Value="False">
+                    <Setter Property="Source" Value="play_button.png" />
+                </DataTrigger>
+            </ImageButton.Triggers>
+            
+        </ImageButton>
+    </Grid>
+    
+</views:BaseView>

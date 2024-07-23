@@ -12,8 +12,36 @@
                 Shell.NavBarIsVisible="False"
                 Shell.TabBarIsVisible="False">
 
-    <StackLayout>
-        <views:NavigationBar TitleText="{Binding Header}" />
+    <Grid RowDefinitions="50, 56, 300, *, 80, 64"
+          ColumnDefinitions="*">
+
+        <views:NavigationBar Grid.Row="0" 
+                             TitleText=""/>
+
+        <Grid Grid.Row="2">
+            <views:CircularProgressBarView x:Name="ProgressBar"
+                                           ProgressColor="{StaticResource White}"
+                                           ProgressLeftColor="{StaticResource White20}"
+                                           Size="300"
+                                           Thickness="8"
+                                           SectionsCount="1" />
+
+            <Label x:Name="ProgressText"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Style="{StaticResource BigHeaderStyle}"
+                   TextColor="White" />
+        </Grid>
         
-    </StackLayout>
+        <Label Grid.Row="3"
+               Text="{Binding Header}" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               Style="{StaticResource HeaderStyle}"
+               TextColor="White"/>
+
+        <ContentView Grid.Row="4"
+                     x:Name="Player"
+                     HeightRequest="106"/>
+    </Grid>
 </pages:BasePage>
