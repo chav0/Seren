@@ -5,6 +5,7 @@
                 xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
                 xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
                 xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:strings="clr-namespace:Seren.Resources.Strings"
                 x:Class="Seren.Scripts.Views.Pages.MeditationPage"
                 x:TypeArguments="vm:MeditationViewModel"
                 x:DataType="vm:MeditationViewModel"
@@ -16,7 +17,7 @@
           ColumnDefinitions="*">
 
         <views:NavigationBar Grid.Row="0" 
-                             TitleText=""/>
+                             TitleText="{x:Static strings:Localizations.Meditation}"/>
 
         <Grid Grid.Row="2">
             <views:CircularProgressBarView x:Name="ProgressBar"

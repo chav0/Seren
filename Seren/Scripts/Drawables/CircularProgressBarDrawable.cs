@@ -61,44 +61,60 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
         var angle = GetAngle(Progress);
         var sectionProgress = 100 / SectionsCount;
         
-        for (var i = 0; i < SectionsCount; i++)
+        if (SectionsCount == 1)
         {
-            var progressFrom = i * sectionProgress + 0.5f;
-            var progressTo = (i + 1) * sectionProgress - 0.5f;
-
-            if (i + 1 == SectionsCount)
-                progressTo = 100 - 0.5f;
-
-            // if (SectionsCount == 1)
-            // {
-            //     progressFrom = 0f;
-            //     progressTo = 100f; 
-            // }
-            
-            var angleFrom = GetAngle(progressFrom);
-            var angleTo = GetAngle(progressTo);
-
-            if (Progress < progressFrom)
+            if (Progress < 100)
             {
                 canvas.StrokeColor = ProgressLeftColor;
                 canvas.StrokeSize = Thickness;
-                canvas.DrawArc(x, y, effectiveSize, effectiveSize, angleFrom, angleTo, true, false);
-            } 
-            else if (Progress > progressTo)
-            {
+                canvas.DrawEllipse(x, y, effectiveSize, effectiveSize);
+                
                 canvas.StrokeColor = ProgressColor;
                 canvas.StrokeSize = Thickness;
-                canvas.DrawArc(x, y, effectiveSize, effectiveSize, angleFrom, angleTo, true, false);
+                canvas.DrawArc(x, y, effectiveSize, effectiveSize, 90, angle, true, false);
             }
             else
             {
                 canvas.StrokeColor = ProgressColor;
                 canvas.StrokeSize = Thickness;
-                canvas.DrawArc(x, y, effectiveSize, effectiveSize, angleFrom, angle, true, false);
+                canvas.DrawEllipse(x, y, effectiveSize, effectiveSize);
+            }
+        }
+        else
+        {
+            for (var i = 0; i < SectionsCount; i++)
+            {
+                var progressFrom = i * sectionProgress + 0.5f;
+                var progressTo = (i + 1) * sectionProgress - 0.5f;
+
+                if (i + 1 == SectionsCount)
+                    progressTo = 100 - 0.5f;
+            
+                var angleFrom = GetAngle(progressFrom);
+                var angleTo = GetAngle(progressTo);
+
+                if (Progress < progressFrom)
+                {
+                    canvas.StrokeColor = ProgressLeftColor;
+                    canvas.StrokeSize = Thickness;
+                    canvas.DrawArc(x, y, effectiveSize, effectiveSize, angleFrom, angleTo, true, false);
+                } 
+                else if (Progress > progressTo)
+                {
+                    canvas.StrokeColor = ProgressColor;
+                    canvas.StrokeSize = Thickness;
+                    canvas.DrawArc(x, y, effectiveSize, effectiveSize, angleFrom, angleTo, true, false);
+                }
+                else
+                {
+                    canvas.StrokeColor = ProgressColor;
+                    canvas.StrokeSize = Thickness;
+                    canvas.DrawArc(x, y, effectiveSize, effectiveSize, angleFrom, angle, true, false);
                 
-                canvas.StrokeColor = ProgressLeftColor;
-                canvas.StrokeSize = Thickness;
-                canvas.DrawArc(x, y, effectiveSize, effectiveSize, angle, angleTo, true, false);
+                    canvas.StrokeColor = ProgressLeftColor;
+                    canvas.StrokeSize = Thickness;
+                    canvas.DrawArc(x, y, effectiveSize, effectiveSize, angle, angleTo, true, false);
+                }
             }
         }
     }

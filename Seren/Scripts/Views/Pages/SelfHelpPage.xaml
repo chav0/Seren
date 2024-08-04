@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pages:BasePage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+                xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:strings="clr-namespace:Seren.Resources.Strings"
+                x:Class="Seren.Scripts.Views.Pages.SelfHelpPage"
+                x:DataType="vm:SelfHelpViewModel"
+                x:TypeArguments="vm:SelfHelpViewModel">
+    
+    <Grid RowDefinitions="50, 30, 48, 78, 8, 78, 45, *, 60, 64"
+          ColumnDefinitions="*">
+
+        <views:NavigationBar Grid.Row="0" 
+                             TitleText="{x:Static strings:Localizations.HelpYourself}"/>
+        
+        <Label Grid.Row="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource TextStyle}"
+               TextColor="{StaticResource White60}" />
+        
+        <ProgressBar Grid.Row="4" 
+                     WidthRequest="300" 
+                     HeightRequest="8" 
+                     Progress="{Binding Progress}"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     BackgroundColor="LightGray"
+                     ProgressColor="Blue"/>
+
+        <Label Grid.Row="6"
+               Text="{Binding Progress, StringFormat='{0:P0}'}" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Style="{StaticResource BigHeaderStyle}"
+               TextColor="White" />
+        
+        <Label Grid.Row="7"
+               Text="{Binding Header}" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"
+               Style="{StaticResource HeaderStyle}"
+               TextColor="White"/>
+
+        <StackLayout Grid.Row="8"
+                     Orientation="Horizontal">
+            
+            <Button WidthRequest="200"
+                    HeightRequest="60"
+                    CornerRadius="15"
+                    Text="{x:Static strings:Localizations.Yes}"
+                    Command="{Binding YesCommand}"
+                    BackgroundColor="{StaticResource White}"
+                    TextColor="{StaticResource Blue3}"
+                    BorderColor="{StaticResource White}"
+                    FontFamily="VollkornBold"
+                    FontSize="24"
+                    HorizontalOptions="Center" />
+            
+            <Button WidthRequest="200"
+                    HeightRequest="60"
+                    CornerRadius="15"
+                    Text="{x:Static strings:Localizations.No}"
+                    Command="{Binding NoCommand}"
+                    BackgroundColor="{StaticResource White}"
+                    TextColor="{StaticResource Blue3}"
+                    BorderColor="{StaticResource White}"
+                    FontFamily="VollkornBold"
+                    FontSize="24"
+                    HorizontalOptions="Center" />
+
+        </StackLayout>
+    </Grid>
+    
+</pages:BasePage>
