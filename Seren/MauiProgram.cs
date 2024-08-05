@@ -55,7 +55,8 @@ public static class MauiProgram
 			.AddTransientWithShellRoute<MainPage, MainPageViewModel>("main")
 			.AddTransientWithShellRoute<SurveyPage, SurveyPageViewModel>("main/survey")
 			.AddTransientWithShellRoute<MeditationPage, MeditationViewModel>("main/meditation")
-			.AddTransientWithShellRoute<SelfHelpPage, SelfHelpViewModel>("main/selfhelp");
+			.AddTransientWithShellRoute<SelfHelpPage, SelfHelpViewModel>("main/selfhelp")
+			.AddTransient<CongratulationPage>();
 		
 		// TODO: create ViewModel
 		Routing.RegisterRoute("practices/meditations", typeof(MeditationListPage));

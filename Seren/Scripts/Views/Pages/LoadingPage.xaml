@@ -13,7 +13,7 @@
                Margin="0,0,46,14"/>
         
         <Label Text="Reducing panic attacks"
-               TextColor="{StaticResource Gray200}"
+               TextColor="{StaticResource White}"
                FontFamily="SpaceGroteskRegular"
                FontSize="24"
                AbsoluteLayout.LayoutBounds="0.5, 1, -1, -1"
@@ -21,7 +21,7 @@
                Margin="0,0,0,70"/>
         
         <Label Text="by Sieno"
-               TextColor="{StaticResource Gray200}"
+               TextColor="{StaticResource White}"
                FontFamily="SpaceGroteskRegular"
                Opacity="0.5"
                FontSize="24"

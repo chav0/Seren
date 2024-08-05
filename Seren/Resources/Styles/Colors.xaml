@@ -34,6 +34,8 @@
     <Color x:Key="White60">#99FFFFFF</Color>
     <Color x:Key="White30">#4DFFFFFF</Color>
     <Color x:Key="White20">#33FFFFFF</Color>
+    <Color x:Key="White10">#1AFFFFFF</Color>
+    <Color x:Key="White5">#0DFFFFFF</Color>
     
     <!-- Gray Colors -->
     <Color x:Key="Gray1">#F0F3F5</Color>
@@ -59,29 +61,5 @@
     <!-- Red Colors -->
     <Color x:Key="Red2">#FFAE64</Color>
     <Color x:Key="Red3">#F37039</Color>
-
-    <!-- Legacy -->
-    <Color x:Key="Gray600">#33312C</Color>
-    <Color x:Key="Gray500">#504D45</Color>
-    <Color x:Key="Gray300">#9A9480</Color>
-    <Color x:Key="Gray200">#ECE8D9</Color> 
-    <Color x:Key="Gray100">#FFFFFF</Color> 
-    <Color x:Key="Gray100Alpha10">#1AFFFFFF</Color> 
-    <Color x:Key="Gray100Alpha5">#0DFFFFFF</Color> 
-    <Color x:Key="Yellow700">#6B442F</Color>
-    <Color x:Key="Yellow600">#AE8E4D</Color>
-    <Color x:Key="Yellow400">#EDBE5F</Color>
-    <Color x:Key="Yellow300">#F8E5A3</Color>
-    <Color x:Key="Green800">#475525</Color>
-    <Color x:Key="Green600">#8DA145</Color>
-    <Color x:Key="Green400">#CBCC93</Color>
-    <Color x:Key="Blue700">#374F7D</Color>
-    <Color x:Key="Blue500">#6B9EC8</Color>
-    <Color x:Key="Blue300">#A5CFE5</Color>
-    <Color x:Key="Red700">#8C3232</Color>
-    <Color x:Key="Red400">#E86D5F</Color>
-    <Color x:Key="Red300">#EA8E84</Color>
-    <Color x:Key="Red200">#ECB0A9</Color>
-    <Color x:Key="Red100">#F5D7D4</Color>
 
 </ResourceDictionary>

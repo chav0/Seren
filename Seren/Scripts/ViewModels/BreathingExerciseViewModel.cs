@@ -14,7 +14,6 @@ public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : B
     {
         get
         {
-
             var time = TimeSpan.FromSeconds(TimeSeconds);
             if (time.Minutes > 0)
                 return $"{time.Minutes}m {time.Seconds}s";
@@ -39,7 +38,7 @@ public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : B
         var circleTime = TimeSeconds / (float) BreathingCount;
         var currentTimeInCircle = time % circleTime;
 
-        CurrentProgress = currentTimeInCircle / circleTime * 100f;
+        CurrentProgress = currentTimeInCircle / circleTime;
         
         OnPropertyChanged();
         OnPropertyChanged(nameof(CurrentProgress));

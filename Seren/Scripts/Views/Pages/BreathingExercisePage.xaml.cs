@@ -34,10 +34,16 @@ public partial class BreathingExercisePage
         Timer.Content = timerView;
     }
 
-    private void OnTimerTicked(object? sender, PropertyChangedEventArgs propertyChangedEventArgs)
+    private async void OnTimerTicked(object? sender, PropertyChangedEventArgs propertyChangedEventArgs)
     {
         BindingContext.UpdateTimer((float)_timerViewModel.RemainingTime.TotalSeconds);
-        ProgressBar.Progress = BindingContext.CurrentProgress;
+        ProgressBar.Progress = BindingContext.CurrentProgress * 100f;
+        
+        if (_timerViewModel.RemainingTime.TotalSeconds <= 0.1f)
+        {
+            var congratulationPage = App.Services.GetService<CongratulationPage>();
+            await Navigation.PushAsync(congratulationPage);
+        }
     }
     
     protected override void OnDisappearing()

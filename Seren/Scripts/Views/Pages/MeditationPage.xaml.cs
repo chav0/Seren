@@ -22,11 +22,17 @@ public partial class MeditationPage
         
         Player.Content = new PlayerView(_playerViewModel);
     }
-    
-    private void OnTimerTicked(object? sender, PropertyChangedEventArgs propertyChangedEventArgs)
+
+    private async void OnTimerTicked(object? sender, PropertyChangedEventArgs propertyChangedEventArgs)
     {
         ProgressBar.Progress = _playerViewModel.CurrentProgress * 100f;
-        ProgressText.Text = _playerViewModel.RemainingTimeText; 
+        ProgressText.Text = _playerViewModel.RemainingTime.ToString(@"mm\:ss");
+
+        if (_playerViewModel.RemainingTime.TotalSeconds <= 0.1f)
+        {
+            var congratulationPage = App.Services.GetService<CongratulationPage>();
+            await Navigation.PushAsync(congratulationPage);
+        }
     }
     
     protected override void OnDisappearing()

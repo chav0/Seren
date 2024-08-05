@@ -1,5 +1,3 @@
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Plugin.Maui.Audio;
 
@@ -26,12 +24,10 @@ public class PlayerViewModel : BaseViewModel, IDisposable
         _player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(soundPath));
         Start();
     }
-
-    public string RemainingTimeText => $"{RemainingTime.Minutes:D2}:{RemainingTime.Seconds:D2}";
     
     public TimeSpan RemainingTime => TimeSpan.FromSeconds(_player.Duration - _player.CurrentPosition);
     public float CurrentProgress => (float) (_player.CurrentPosition / _player.Duration);
-    
+
     public bool IsRunning
     {
         get => _isRunning;
@@ -53,7 +49,7 @@ public class PlayerViewModel : BaseViewModel, IDisposable
     private void ToggleTimer()
     {
         if (_player.IsPlaying)
-            Stop();
+            Pause();
         else
             Start();
     }
@@ -66,7 +62,7 @@ public class PlayerViewModel : BaseViewModel, IDisposable
         IsRunning = true;
     }
 
-    private void Stop()
+    private void Pause()
     {
         _player.Pause();
         _timer.Stop();
@@ -76,18 +72,13 @@ public class PlayerViewModel : BaseViewModel, IDisposable
 
     private void TimerTick(object? sender, EventArgs e)
     {
-        if (RemainingTime < TimeSpan.Zero && IsRunning)
-            Stop();
-        else
-        {
-            OnPropertyChanged();
-            OnPropertyChanged(nameof(RemainingTimeText));
-        }
+        OnPropertyChanged();
+        OnPropertyChanged(nameof(RemainingTime));
     }
     
     public void Dispose()
     {
-        Stop();
+        Pause();
         _player.Dispose();
     }
 }

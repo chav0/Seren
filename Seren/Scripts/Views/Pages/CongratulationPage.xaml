@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Seren.Scripts.Views.Pages.CongratulationPage"
+             Background="{StaticResource PrimaryTab2Color}"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnPageTapped"/>
+            </Grid.GestureRecognizers>
+
+            <Label Text="Well done!" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Style="{StaticResource BigHeaderStyle}"
+                   TextColor="White" />
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -66,9 +66,6 @@
                 <Label
                     Text="Breathing >"
                     Style="{StaticResource SmallHeaderStyle}">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnBreathingClick" />
-                    </Label.GestureRecognizers>
                 </Label>
 
                 <ContentView x:Name="BreathingExercisesContainer"/>
@@ -82,11 +79,8 @@
                 HorizontalOptions="FillAndExpand">
                     
                 <Label
-                    Text="Meditation >"
+                    Text="Meditation"
                     Style="{StaticResource SmallHeaderStyle}">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnMeditationClick" />
-                    </Label.GestureRecognizers>
                 </Label>
                     
                 <ContentView x:Name="MeditationsContainer"/>

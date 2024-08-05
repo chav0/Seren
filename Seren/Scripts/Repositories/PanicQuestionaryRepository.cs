@@ -2,7 +2,7 @@ using Seren.Scripts.Models;
 
 namespace Seren.Scripts.Repositories;
 
-public class PanicQuestionaryRepository() : JsonRepository<PanicQuestion>(MeditationJsonPath), IPanicQuestionaryRepository
+public class PanicQuestionaryRepository() : JsonRepository<PanicQuestion>(QuestionaryJsonPath), IPanicQuestionaryRepository
 {
-    private const string MeditationJsonPath = "questionary.json";
+    private const string QuestionaryJsonPath = "questionary.json";
 }

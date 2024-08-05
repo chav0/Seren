@@ -49,24 +49,11 @@ public partial class MainPage
 		var meditationsListView = new MeditationsListView(meditationsViewModel);
 		MeditationsContainer.Content = meditationsListView;
 	}
-
+ 
 	private async void OnPanicClick(object sender, EventArgs eventArgs)
 	{
-		var surveyPage = IPlatformApplication.Current?.Services.GetService<SurveyPage>();
+		var surveyPage = App.Services.GetService<SelfHelpPage>();
 		await Navigation.PushAsync(surveyPage);
-	}
-
-	private async void OnMeditationClick(object sender, EventArgs eventArgs) => 
-		await Shell.Current.GoToAsync("//practices/meditations");
-
-	private void OnHelpClick(object sender, EventArgs eventArgs)
-	{
-		
-	}
-	
-	private void OnBreathingClick(object sender, EventArgs eventArgs)
-	{
-		
 	}
 }
 

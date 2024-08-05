@@ -21,7 +21,6 @@
         
         <Grid Grid.Row="2">
             <views:CircularProgressBarView x:Name="ProgressBar"
-                                           Progress="{Binding CurrentProgress}"
                                            ProgressColor="{StaticResource White}"
                                            ProgressLeftColor="{StaticResource White20}"
                                            Size="300"

@@ -8,7 +8,10 @@
                 xmlns:strings="clr-namespace:Seren.Resources.Strings"
                 x:Class="Seren.Scripts.Views.Pages.SelfHelpPage"
                 x:DataType="vm:SelfHelpViewModel"
-                x:TypeArguments="vm:SelfHelpViewModel">
+                x:TypeArguments="vm:SelfHelpViewModel"
+                Background="{StaticResource PrimaryTab2Color}"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="False">
     
     <Grid RowDefinitions="50, 30, 48, 78, 8, 78, 45, *, 60, 64"
           ColumnDefinitions="*">
@@ -24,12 +27,13 @@
         
         <ProgressBar Grid.Row="4" 
                      WidthRequest="300" 
-                     HeightRequest="8" 
+                     HeightRequest="8"
+                     Height="8"
                      Progress="{Binding Progress}"
                      HorizontalOptions="Center"
                      VerticalOptions="Center"
                      BackgroundColor="LightGray"
-                     ProgressColor="Blue"/>
+                     ProgressColor="{Binding BarColor}"/>
 
         <Label Grid.Row="6"
                Text="{Binding Progress, StringFormat='{0:P0}'}" 
@@ -46,9 +50,11 @@
                TextColor="White"/>
 
         <StackLayout Grid.Row="8"
-                     Orientation="Horizontal">
+                     Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Spacing="23">
             
-            <Button WidthRequest="200"
+            <Button WidthRequest="170"
                     HeightRequest="60"
                     CornerRadius="15"
                     Text="{x:Static strings:Localizations.Yes}"
@@ -60,7 +66,7 @@
                     FontSize="24"
                     HorizontalOptions="Center" />
             
-            <Button WidthRequest="200"
+            <Button WidthRequest="170"
                     HeightRequest="60"
                     CornerRadius="15"
                     Text="{x:Static strings:Localizations.No}"

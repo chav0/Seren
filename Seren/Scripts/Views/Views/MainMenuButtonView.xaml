@@ -7,7 +7,7 @@
              x:Class="Seren.Scripts.Views.Views.MainMenuButtonView">
     
     <Frame CornerRadius="30"
-           BackgroundColor="{StaticResource Gray100Alpha10}" 
+           BackgroundColor="{StaticResource White10}" 
            Padding="15, 15"
            HorizontalOptions="FillAndExpand"
            HasShadow="False">
