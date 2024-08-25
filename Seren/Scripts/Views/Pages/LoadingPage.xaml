@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Seren.Scripts.Views.Pages.LoadingPage"
-             Background="{StaticResource LoadingBackgroundColor}">
+             Background="{StaticResource PrimaryTab2Color}">
 
     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
@@ -12,22 +12,12 @@
                AbsoluteLayout.LayoutFlags="PositionProportional"
                Margin="0,0,46,14"/>
         
-        <Label Text="Reducing panic attacks"
-               TextColor="{StaticResource White}"
-               FontFamily="SpaceGroteskRegular"
-               FontSize="24"
+        <Label Text="An assistant for a panic attack"
+               Style="{StaticResource TextStyle}"
+               TextColor="{StaticResource White60}"
                AbsoluteLayout.LayoutBounds="0.5, 1, -1, -1"
                AbsoluteLayout.LayoutFlags="PositionProportional"
-               Margin="0,0,0,70"/>
-        
-        <Label Text="by Sieno"
-               TextColor="{StaticResource White}"
-               FontFamily="SpaceGroteskRegular"
-               Opacity="0.5"
-               FontSize="24"
-               AbsoluteLayout.LayoutBounds="0.5, 1, -1, -1"
-               AbsoluteLayout.LayoutFlags="PositionProportional"
-               Margin="0,0,0,25"/>
+               Margin="0,0,0,64"/>
 
     </AbsoluteLayout>
 </ContentPage>

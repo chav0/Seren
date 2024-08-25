@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:strings="clr-namespace:Seren.Resources.Strings"
+             xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+             x:Class="Seren.Scripts.Views.Pages.InfoPage"
+             x:DataType="pages:InfoPage"
+             Background="{StaticResource BackgroundColor}"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+    
+    <Grid RowDefinitions="30, Auto, 24, *, 60, 64"
+          ColumnDefinitions="*"
+          Padding="16, 0">
+        
+        <Label Grid.Row="1" 
+               Style="{StaticResource HeaderStyle}"
+               Text="{x:Static strings:Localizations.InfoHeader}"/>
+        
+        <Label Grid.Row="3" 
+               Style="{StaticResource TextStyle}"
+               Text="{x:Static strings:Localizations.InfoText}"/>
+
+        <Button Grid.Row="4" 
+                WidthRequest="200"
+                HeightRequest="60"
+                CornerRadius="15"
+                Text="{x:Static strings:Localizations.InfoButtonText}"
+                Command="{Binding ToMainPageCommand}"
+                BackgroundColor="{StaticResource Blue3}"
+                TextColor="{StaticResource White}"
+                FontFamily="VollkornBold"
+                FontSize="24"
+                HorizontalOptions="Center">
+        </Button>
+    </Grid>
+</ContentPage>

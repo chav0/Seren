@@ -150,5 +150,15 @@
 	<data name="No" xml:space="preserve">
 		<value>No</value>
 	</data>
+	<data name="InfoHeader" xml:space="preserve">
+		<value>Informational Only – Not Medical Advice</value>
+	</data>
+	<data name="InfoText" xml:space="preserve">
+		<value>This app offers general health information for educational purposes and should not be considered medical advice. It does not replace professional medical consultation, diagnosis, or treatment. 
+Always consult a qualified healthcare provider for any health-related concerns or questions.</value>
+	</data>
+	<data name="InfoButtonText" xml:space="preserve">
+		<value>I understand</value>
+	</data>
 </root>
 

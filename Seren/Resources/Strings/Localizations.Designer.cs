@@ -320,5 +320,23 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("No", resourceCulture);
             }
         }
+        
+        internal static string InfoHeader {
+            get {
+                return ResourceManager.GetString("InfoHeader", resourceCulture);
+            }
+        }
+        
+        internal static string InfoText {
+            get {
+                return ResourceManager.GetString("InfoText", resourceCulture);
+            }
+        }
+        
+        internal static string InfoButtonText {
+            get {
+                return ResourceManager.GetString("InfoButtonText", resourceCulture);
+            }
+        }
     }
 }
