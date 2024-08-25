@@ -160,5 +160,26 @@ Always consult a qualified healthcare provider for any health-related concerns o
 	<data name="InfoButtonText" xml:space="preserve">
 		<value>I understand</value>
 	</data>
+	<data name="Settings" xml:space="preserve">
+		<value>Settings</value>
+	</data>
+	<data name="SoundSetting" xml:space="preserve">
+		<value>Sound</value>
+	</data>
+	<data name="BuyCoffee" xml:space="preserve">
+		<value>Buy us coffee</value>
+	</data>
+	<data name="RateUs" xml:space="preserve">
+		<value>Rate us</value>
+	</data>
+	<data name="Feedback" xml:space="preserve">
+		<value>Give us feedback</value>
+	</data>
+	<data name="DeleteData" xml:space="preserve">
+		<value>Delete app data</value>
+	</data>
+	<data name="SettingsInfo" xml:space="preserve">
+		<value>This app is free and created by  a group of enthusiasts. </value>
+	</data>
 </root>
 

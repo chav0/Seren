@@ -16,7 +16,9 @@
 
         <Button Grid.Column="0"
                 BackgroundColor="Transparent"
-                ImageSource="back_icon.png"
+                FontSize="28"
+                Text="←"
+                TextColor="{Binding TextColor}"
                 Clicked="OnBackButtonClicked"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
@@ -25,7 +27,7 @@
                x:Name="TitleContent"
                Text="{Binding TitleText}"
                Style="{StaticResource SmallHeaderStyle}"
-               TextColor="{StaticResource White}"
+               TextColor="{Binding TextColor}"
                VerticalOptions="Center"
                HorizontalOptions="CenterAndExpand"/>
     </Grid>

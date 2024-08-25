@@ -8,22 +8,32 @@
                 x:Class="Seren.Scripts.Views.Pages.MainPage"
                 Background="{StaticResource BackgroundColor}"
                 Shell.NavBarIsVisible="False"
-                Shell.TabBarIsVisible="True">
+                Shell.TabBarIsVisible="False">
     
     <ScrollView>
         <VerticalStackLayout VerticalOptions="Start">
+            
+            <Grid ColumnDefinitions="*, 32"
+                  Padding="16, 0">
+                    
+                <ImageButton Grid.Column="2"
+                             WidthRequest="32"
+                             HeightRequest="32"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Source="settings.png"
+                             Clicked="OnSettingsClick"/>
+            </Grid>
             
             <!-- Calendar Box -->
             <VerticalStackLayout
                 HeightRequest="176"
                 Padding="16"
                 HorizontalOptions="FillAndExpand">
-                    
-                <Label
-                    Text="Panic calendar >"
-                    Style="{StaticResource SmallHeaderStyle}">
-                </Label>
-                    
+                
+                <Label Text="Panic calendar >"
+                       Style="{StaticResource SmallHeaderStyle}" />
+                
                 <ContentView x:Name="CalendarContainer"/>
                     
             </VerticalStackLayout>

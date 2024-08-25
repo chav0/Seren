@@ -10,7 +10,7 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
     
-    <Grid RowDefinitions="30, Auto, 24, *, 60, 64"
+    <Grid RowDefinitions="80, Auto, 24, *, 60, 64"
           ColumnDefinitions="*"
           Padding="16, 0">
         

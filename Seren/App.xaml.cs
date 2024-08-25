@@ -1,4 +1,5 @@
-﻿using Seren.Scripts.Views.Pages;
+﻿using Plugin.Maui.Audio;
+using Seren.Scripts.Views.Pages;
 
 namespace Seren;
 

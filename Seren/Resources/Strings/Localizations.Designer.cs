@@ -338,5 +338,47 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("InfoButtonText", resourceCulture);
             }
         }
+        
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        internal static string SoundSetting {
+            get {
+                return ResourceManager.GetString("SoundSetting", resourceCulture);
+            }
+        }
+        
+        internal static string BuyCoffee {
+            get {
+                return ResourceManager.GetString("BuyCoffee", resourceCulture);
+            }
+        }
+        
+        internal static string RateUs {
+            get {
+                return ResourceManager.GetString("RateUs", resourceCulture);
+            }
+        }
+        
+        internal static string Feedback {
+            get {
+                return ResourceManager.GetString("Feedback", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteData {
+            get {
+                return ResourceManager.GetString("DeleteData", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsInfo {
+            get {
+                return ResourceManager.GetString("SettingsInfo", resourceCulture);
+            }
+        }
     }
 }

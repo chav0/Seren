@@ -1,9 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Seren.Scripts.Views.Pages.SettingsPage">
-    <ContentPage.Content>
-        
-    </ContentPage.Content>
-</ContentPage>
+<pages:BasePage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:strings="clr-namespace:Seren.Resources.Strings"
+                xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
+                xmlns:viewModels="clr-namespace:Seren.Scripts.ViewModels"
+                x:Class="Seren.Scripts.Views.Pages.SettingsPage"
+                x:TypeArguments="viewModels:SettingsViewModel"
+                x:DataType="viewModels:SettingsViewModel"
+                Background="{StaticResource Gray1}"
+                Shell.NavBarIsVisible="False"
+                Shell.TabBarIsVisible="False">
+
+    <Grid RowDefinitions="50, Auto, *, *">
+
+        <!-- Navigation Bar -->
+        <views:NavigationBar Grid.Row="0"
+                             TextColor="{StaticResource Gray6}"
+                             BackgroundColor="{StaticResource Gray1}"/>
+
+        <!-- Settings Header -->
+        <Label Grid.Row="1" 
+               Text="{x:Static strings:Localizations.Settings}"
+               Style="{StaticResource HeaderStyle}"
+               VerticalTextAlignment="Center"
+               VerticalOptions="Center"
+               Margin="16"/>
+
+        <!-- Settings Items -->
+        <VerticalStackLayout Grid.Row="2">
+
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="False"
+                   Padding="24, 20">
+                   
+                <Grid ColumnDefinitions="Auto, 16, *, 16, Auto">
+
+                    <Image Grid.Column="0"
+                           Source="icon_sound.png"
+                           WidthRequest="52"
+                           HeightRequest="52" />
+
+                    <Label Grid.Column="2"
+                           Text="{x:Static strings:Localizations.SoundSetting}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Style="{StaticResource SmallHeaderStyle}" />
+
+                    <Switch Grid.Column="4"
+                            IsToggled="{Binding IsSoundEnabled}"
+                            VerticalOptions="Center" />
+                </Grid>
+                
+                <!-- Add TapGestureRecognizer for Frame click -->
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SoundSettingsCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="{StaticResource Gray2}"
+                     HorizontalOptions="FillAndExpand"
+                     Margin="24, 0"/>
+
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="False"
+                   Padding="24, 20">
+                   
+                <Grid ColumnDefinitions="Auto, 16, *">
+
+                    <Image Grid.Column="0"
+                           Source="icon_coffee.png"
+                           WidthRequest="52"
+                           HeightRequest="52" />
+
+                    <Label Grid.Column="2"
+                           Text="{x:Static strings:Localizations.BuyCoffee}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Style="{StaticResource SmallHeaderStyle}" />
+                </Grid>
+                
+                <!-- Add TapGestureRecognizer for Frame click -->
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BuyCoffeeCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="{StaticResource Gray2}"
+                     HorizontalOptions="FillAndExpand" 
+                     Margin="24, 0"/>
+            
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="False"
+                   Padding="24, 20">
+                   
+                <Grid ColumnDefinitions="Auto, 16, *">
+
+                    <Image Grid.Column="0"
+                           Source="icon_rate.png"
+                           WidthRequest="52"
+                           HeightRequest="52" />
+
+                    <Label Grid.Column="2"
+                           Text="{x:Static strings:Localizations.RateUs}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Style="{StaticResource SmallHeaderStyle}" />
+                </Grid>
+                
+                <!-- Add TapGestureRecognizer for Frame click -->
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RateUsCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="{StaticResource Gray2}"
+                     HorizontalOptions="FillAndExpand"
+                     Margin="24, 0"/>
+            
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="False"
+                   Padding="24, 20">
+                   
+                <Grid ColumnDefinitions="Auto, 16, *">
+
+                    <Image Grid.Column="0"
+                           Source="icon_feedback.png"
+                           WidthRequest="52"
+                           HeightRequest="52" />
+
+                    <Label Grid.Column="2"
+                           Text="{x:Static strings:Localizations.Feedback}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Style="{StaticResource SmallHeaderStyle}" />
+                </Grid>
+                
+                <!-- Add TapGestureRecognizer for Frame click -->
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding FeedbackCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="{StaticResource Gray2}"
+                     HorizontalOptions="FillAndExpand" 
+                     Margin="24, 0"/>
+            
+            <Frame BackgroundColor="Transparent"
+                   HasShadow="False"
+                   Padding="24, 20">
+                   
+                <Grid ColumnDefinitions="Auto, 16, *">
+
+                    <Image Grid.Column="0"
+                           Source="icon_delete.png"
+                           WidthRequest="52"
+                           HeightRequest="52" />
+
+                    <Label Grid.Column="2"
+                           Text="{x:Static strings:Localizations.DeleteData}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Style="{StaticResource SmallHeaderStyle}" />
+                </Grid>
+                
+                <!-- Add TapGestureRecognizer for Frame click -->
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DeleteDataCommand}" />
+                </Frame.GestureRecognizers>
+            </Frame>
+
+            <BoxView HeightRequest="2"
+                     BackgroundColor="{StaticResource Gray2}"
+                     HorizontalOptions="FillAndExpand" 
+                     Margin="24, 0"/>
+
+        </VerticalStackLayout>
+
+        <Label Grid.Row="3"
+               Text="{x:Static strings:Localizations.SettingsInfo}"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Style="{StaticResource TextStyle}" />
+
+    </Grid>
+</pages:BasePage>

@@ -8,13 +8,11 @@ public partial class MainPage
 {
 	private readonly IPageFactory _pageFactory;
 	
-	private IAudioPlayer _player;
-
-	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory, IAudioManager audioManager) : base(viewModel)
+	public MainPage(MainPageViewModel viewModel, IPageFactory pageFactory, IAudioPlayer player) : base(viewModel)
 	{
 		_pageFactory = pageFactory;
 		
-		InitializeBackgroundMusic(audioManager);
+		InitializeBackgroundMusic(player);
 		InitializeComponent();
 		InitializeCalendar();
 		InitializeBreathingExercises();
@@ -22,13 +20,8 @@ public partial class MainPage
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	
-	private async void InitializeBackgroundMusic(IAudioManager audioManager)
-	{
-		_player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("background_music.mp3"));
-		_player.Loop = true;
-		_player.Play();
-	}
-	
+	private void InitializeBackgroundMusic(IAudioPlayer player) => player.Play();
+
 	private void InitializeCalendar()
 	{
 		var calendarViewModel = _pageFactory.GetViewModel<CalendarViewModel>();
@@ -53,6 +46,12 @@ public partial class MainPage
 	private async void OnPanicClick(object sender, EventArgs eventArgs)
 	{
 		var surveyPage = App.Services.GetService<SelfHelpPage>();
+		await Navigation.PushAsync(surveyPage);
+	}
+	
+	private async void OnSettingsClick(object sender, EventArgs eventArgs)
+	{
+		var surveyPage = App.Services.GetService<SettingsPage>();
 		await Navigation.PushAsync(surveyPage);
 	}
 }

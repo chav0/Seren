@@ -33,13 +33,13 @@ public static class MauiProgram
 			.RegisterServices()
 			.RegisterPages()
 			.RegisterViews()
+			.RegisterAudio()
 			.Build();
 	}
 
 	private static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
 	{
 		mauiAppBuilder.Services
-			.AddSingleton(AudioManager.Current)
 			.AddSingleton<IPageFactory, PageFactory>()
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
@@ -56,6 +56,7 @@ public static class MauiProgram
 			.AddTransientWithShellRoute<SurveyPage, SurveyPageViewModel>("main/survey")
 			.AddTransientWithShellRoute<MeditationPage, MeditationViewModel>("main/meditation")
 			.AddTransientWithShellRoute<SelfHelpPage, SelfHelpViewModel>("main/selfhelp")
+			.AddTransientWithShellRoute<SettingsPage, SettingsViewModel>("main/settings")
 			.AddTransient<CongratulationPage>();
 		
 		// TODO: create ViewModel
@@ -73,4 +74,19 @@ public static class MauiProgram
 
 		return mauiAppBuilder;        
 	}
+
+	private static MauiAppBuilder RegisterAudio(this MauiAppBuilder mauiAppBuilder)
+	{
+		mauiAppBuilder.Services.AddSingleton(AudioManager.Current);
+		mauiAppBuilder.Services.AddSingleton(provider =>
+		{
+			var audioManager = provider.GetRequiredService<IAudioManager>();
+			var player = audioManager.CreatePlayer(FileSystem.OpenAppPackageFileAsync("background_music.mp3").Result);
+			player.Loop = true;
+			return player;
+		});
+
+		return mauiAppBuilder;
+	}
+
 }

@@ -320,5 +320,11 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
+        
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
     }
 }

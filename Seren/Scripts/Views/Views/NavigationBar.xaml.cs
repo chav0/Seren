@@ -16,10 +16,19 @@ public partial class NavigationBar
 
     public static readonly BindableProperty TitleTextProperty =
         BindableProperty.Create(nameof(TitleText), typeof(string), typeof(NavigationBar));
+    
+    public static readonly BindableProperty TextColorProperty =
+        BindableProperty.Create(nameof(TextColor), typeof(Color), typeof(NavigationBar));
 
     public string TitleText
     {
         get => (string)GetValue(TitleTextProperty);
         set => SetValue(TitleTextProperty, value);
+    }
+    
+    public Color TextColor
+    {
+        get => (Color)GetValue(TextColorProperty);
+        set => SetValue(TextColorProperty, value);
     }
 }
