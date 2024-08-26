@@ -70,13 +70,12 @@
             <!-- Breathing box -->
             <VerticalStackLayout
                 HeightRequest="236"
-                Padding="16"
+                Padding="0, 16"
                 HorizontalOptions="FillAndExpand">
                     
-                <Label
-                    Text="Breathing >"
-                    Style="{StaticResource SmallHeaderStyle}">
-                </Label>
+                <Label Padding="16, 0"
+                       Text="Breathing >"
+                       Style="{StaticResource SmallHeaderStyle}" />
 
                 <ContentView x:Name="BreathingExercisesContainer"/>
                     
@@ -85,14 +84,13 @@
             <!-- Meditation Box -->
             <VerticalStackLayout
                 HeightRequest="228"
-                Padding="16"
+                Padding="0, 16"
                 HorizontalOptions="FillAndExpand">
-                    
-                <Label
-                    Text="Meditation"
-                    Style="{StaticResource SmallHeaderStyle}">
-                </Label>
-                    
+
+                <Label Padding="0, 16"
+                       Text="Meditation"
+                       Style="{StaticResource SmallHeaderStyle}" />
+
                 <ContentView x:Name="MeditationsContainer"/>
                     
             </VerticalStackLayout>

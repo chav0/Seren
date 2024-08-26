@@ -13,6 +13,7 @@
                 HeightRequest="168"
                 HorizontalScrollBarVisibility="Never">
         <HorizontalStackLayout x:Name="BreathingExercisesContainer"
+                               Padding="16, 0"
                                Spacing="12"
                                HorizontalOptions="FillAndExpand"
                                VerticalOptions="FillAndExpand">

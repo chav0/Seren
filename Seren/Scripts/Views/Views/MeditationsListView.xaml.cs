@@ -2,7 +2,7 @@ using Seren.Scripts.ViewModels;
 
 namespace Seren.Scripts.Views.Views;
 
-public partial class MeditationsListView : BaseView<MeditationsViewModel>
+public partial class MeditationsListView
 {
     public MeditationsListView(MeditationsViewModel viewModel) : base(viewModel)
     {
