@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+       xmlns:strings="clr-namespace:Seren.Resources.Strings"
+       x:Class="Seren.Scripts.Views.Popups.ErrorPopup"
+       VerticalOptions="End"
+       HorizontalOptions="Fill"
+       Color="{StaticResource Gray1}">
+
+       <VerticalStackLayout VerticalOptions="End"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="{StaticResource Gray1}"
+                            Padding="40, 40, 40, 30">
+           
+           <!-- Заголовок -->
+           <Label Text="{x:Static strings:Localizations.ErrorHeader}"
+                  Style="{StaticResource HeaderStyle}"
+                  HorizontalOptions="Center"
+                  HorizontalTextAlignment="Center"/>
+
+           <!-- Основной текст -->
+           <Label Text="{x:Static strings:Localizations.ErrorMessage}"
+                  Style="{StaticResource TextStyle}"
+                  HorizontalOptions="Center"
+                  HorizontalTextAlignment="Center"
+                  Margin="0,28,0,0" />
+
+           <!-- Кнопка Ok -->
+           <Button WidthRequest="230"
+                   HeightRequest="60"
+                   CornerRadius="15"
+                   Text="{x:Static strings:Localizations.ErrorOk}"
+                   BackgroundColor="{StaticResource Blue3}"
+                   TextColor="{StaticResource White}"
+                   FontFamily="VollkornBold"
+                   FontSize="24"
+                   HorizontalOptions="FillAndExpand"
+                   Clicked="OnOkButtonClicked"
+                   Margin="0,64,0,0"/>
+
+       </VerticalStackLayout>
+       
+</toolkit:Popup>

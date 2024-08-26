@@ -181,5 +181,26 @@ Always consult a qualified healthcare provider for any health-related concerns o
 	<data name="SettingsInfo" xml:space="preserve">
 		<value>This app is free and created by  a group of enthusiasts. </value>
 	</data>
+	<data name="DeleteAccountHeader" xml:space="preserve">
+		<value>Do you want to delete your account?</value>
+	</data>
+	<data name="DeleteAccountMessage" xml:space="preserve">
+		<value>The action cannot be undone. Your profile and all your data in the app will be permanently deleted.</value>
+	</data>
+	<data name="Cancel" xml:space="preserve">
+		<value>Cancel</value>
+	</data>
+	<data name="Delete" xml:space="preserve">
+		<value>Delete</value>
+	</data>
+	<data name="ErrorOk" xml:space="preserve">
+		<value>Oh, got it</value>
+	</data>
+	<data name="ErrorHeader" xml:space="preserve">
+		<value>Oh no, we have  an error!</value>
+	</data>
+	<data name="ErrorMessage" xml:space="preserve">
+		<value>Something went wrong due to technical reasons. Let’s take a deep breath; it’s not critical.</value>
+	</data>
 </root>
 

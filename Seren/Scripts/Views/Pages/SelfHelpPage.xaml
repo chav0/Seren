@@ -13,7 +13,7 @@
                 Shell.NavBarIsVisible="False"
                 Shell.TabBarIsVisible="False">
     
-    <Grid RowDefinitions="50, 30, 48, 78, 8, 78, 45, *, 60, 64"
+    <Grid RowDefinitions="50, 30, 48, 78, 8, 78, 45, *, 60, 30"
           ColumnDefinitions="*">
 
         <views:NavigationBar Grid.Row="0" 

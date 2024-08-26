@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+       xmlns:strings="clr-namespace:Seren.Resources.Strings"
+       x:Class="Seren.Scripts.Views.Popups.DeleteDataPopup"
+       VerticalOptions="End"
+       HorizontalOptions="Fill"
+       Color="{StaticResource Gray1}">
+
+       <VerticalStackLayout VerticalOptions="End"
+                            HorizontalOptions="FillAndExpand"
+                            BackgroundColor="{StaticResource Gray1}"
+                            Padding="40, 40, 40, 30">
+           
+           <!-- Заголовок -->
+           <Label Text="{x:Static strings:Localizations.DeleteAccountHeader}"
+                  Style="{StaticResource HeaderStyle}"
+                  HorizontalOptions="Center"
+                  HorizontalTextAlignment="Center"/>
+
+           <!-- Основной текст -->
+           <Label Text="{x:Static strings:Localizations.DeleteAccountMessage}"
+                  Style="{StaticResource TextStyle}"
+                  HorizontalOptions="Center"
+                  HorizontalTextAlignment="Center"
+                  Margin="0,28,0,0" />
+
+           <!-- Кнопки -->
+           <Grid HorizontalOptions="FillAndExpand"
+                 ColumnDefinitions="*, *"
+                 ColumnSpacing="24"
+                 Margin="0,64,0,0">
+                  
+                  <!-- Кнопка Отмена -->
+                  <Button Grid.Column="0"
+                          HeightRequest="60"
+                          CornerRadius="15"
+                          Text="{x:Static strings:Localizations.Cancel}"
+                          BackgroundColor="{StaticResource Blue3}"
+                          TextColor="{StaticResource White}"
+                          FontFamily="VollkornBold"
+                          FontSize="24"
+                          HorizontalOptions="FillAndExpand"
+                          Clicked="OnCancelButtonClicked"/>
+                  
+                  <!-- Кнопка Удалить -->
+                  <Button Grid.Column="1"
+                          HeightRequest="60"
+                          CornerRadius="15"
+                          Text="{x:Static strings:Localizations.Delete}"
+                          BackgroundColor="{StaticResource Red3}"
+                          TextColor="{StaticResource White}"
+                          FontFamily="VollkornBold"
+                          FontSize="24"
+                          HorizontalOptions="FillAndExpand"
+                          Clicked="OnDeleteButtonClicked"/>
+
+           </Grid>
+
+       </VerticalStackLayout>
+       
+</toolkit:Popup>

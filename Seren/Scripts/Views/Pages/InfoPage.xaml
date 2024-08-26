@@ -10,7 +10,7 @@
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
     
-    <Grid RowDefinitions="80, Auto, 24, *, 60, 64"
+    <Grid RowDefinitions="80, Auto, 24, *, 60, 30"
           ColumnDefinitions="*"
           Padding="16, 0">
         
@@ -32,7 +32,6 @@
                 TextColor="{StaticResource White}"
                 FontFamily="VollkornBold"
                 FontSize="24"
-                HorizontalOptions="Center">
-        </Button>
+                HorizontalOptions="Center" />
     </Grid>
 </ContentPage>

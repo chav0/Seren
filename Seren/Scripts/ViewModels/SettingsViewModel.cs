@@ -1,10 +1,12 @@
 using System.Windows.Input;
+using CommunityToolkit.Maui.Core;
 using Plugin.Maui.Audio;
 
 namespace Seren.Scripts.ViewModels;
 
 public class SettingsViewModel : BaseViewModel
 {
+    private readonly IPopupService _popupService;
     private readonly IAudioPlayer _audioPlayer;
     
     private bool _isSoundEnabled = true;
@@ -26,8 +28,9 @@ public class SettingsViewModel : BaseViewModel
     public ICommand FeedbackCommand { get; }
     public ICommand DeleteDataCommand { get; }
 
-    public SettingsViewModel(IAudioPlayer audioPlayer)
+    public SettingsViewModel(IPopupService popupService, IAudioPlayer audioPlayer)
     {
+        _popupService = popupService;
         _audioPlayer = audioPlayer;
         
         SoundSettingsCommand = new Command(OnSoundSettings);
@@ -49,17 +52,9 @@ public class SettingsViewModel : BaseViewModel
 
     private void OnBuyCoffee() => Browser.OpenAsync("https://www.buymeacoffee.com/alinulken", BrowserLaunchMode.SystemPreferred);
 
-    private void OnRateUs()
-    {
-        //DependencyService.Get<IAppRatingService>()?.RequestAppReview();
-    }
+    private void OnRateUs() => _popupService.ShowPopup<ErrorPopupViewModel>();
 
-    private void OnFeedback()
-    {
-        //feedback form
-    }
+    private void OnFeedback() => _popupService.ShowPopup<ErrorPopupViewModel>();
 
-    private void OnDeleteData()
-    {
-    }
+    private void OnDeleteData() => _popupService.ShowPopup<DeleteDataViewModel>();
 }

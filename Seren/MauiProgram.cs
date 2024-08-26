@@ -6,6 +6,7 @@ using Seren.Scripts.ViewModels;
 using Seren.Scripts.Views.Pages;
 using Seren.Scripts.Views.Views;
 using Plugin.Maui.Audio;
+using Seren.Scripts.Views.Popups;
 
 namespace Seren;
 
@@ -32,26 +33,27 @@ public static class MauiProgram
 		return builder
 			.RegisterServices()
 			.RegisterPages()
+			.RegisterPopups()
 			.RegisterViews()
 			.RegisterAudio()
 			.Build();
 	}
 
-	private static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
+	private static MauiAppBuilder RegisterServices(this MauiAppBuilder builder)
 	{
-		mauiAppBuilder.Services
+		builder.Services
 			.AddSingleton<IPageFactory, PageFactory>()
 			.AddSingleton<IMeditationRepository, MeditationRepository>()
 			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
 			.AddSingleton<IPanicQuestionaryRepository, PanicQuestionaryRepository>()
 			.AddSingleton<IUserCalendarRepository, UserCalendarRepository>();
 
-		return mauiAppBuilder;        
+		return builder;        
 	}
 
-	private static MauiAppBuilder RegisterPages(this MauiAppBuilder mauiAppBuilder)
+	private static MauiAppBuilder RegisterPages(this MauiAppBuilder builder)
 	{
-		mauiAppBuilder.Services
+		builder.Services
 			.AddTransientWithShellRoute<MainPage, MainPageViewModel>("main")
 			.AddTransientWithShellRoute<SurveyPage, SurveyPageViewModel>("main/survey")
 			.AddTransientWithShellRoute<MeditationPage, MeditationViewModel>("main/meditation")
@@ -62,17 +64,26 @@ public static class MauiProgram
 		// TODO: create ViewModel
 		Routing.RegisterRoute("practices/meditations", typeof(MeditationListPage));
 
-		return mauiAppBuilder;        
+		return builder;        
+	}
+
+	private static MauiAppBuilder RegisterPopups(this MauiAppBuilder builder)
+	{
+		builder.Services
+			.AddTransientPopup<DeleteDataPopup, DeleteDataViewModel>()
+			.AddTransientPopup<ErrorPopup, ErrorPopupViewModel>();
+		
+		return builder;
 	}
 	
-	private static MauiAppBuilder RegisterViews(this MauiAppBuilder mauiAppBuilder)
+	private static MauiAppBuilder RegisterViews(this MauiAppBuilder builder)
 	{
-		mauiAppBuilder.Services
+		builder.Services
 			.AddTransient<CalendarView, CalendarViewModel>()
 			.AddTransient<BreathingExercisesView, BreathingExercisesViewModel>()
 			.AddTransient<MeditationsListView, MeditationsViewModel>();
 
-		return mauiAppBuilder;        
+		return builder;        
 	}
 
 	private static MauiAppBuilder RegisterAudio(this MauiAppBuilder mauiAppBuilder)

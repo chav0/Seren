@@ -380,5 +380,47 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("SettingsInfo", resourceCulture);
             }
         }
+        
+        internal static string DeleteAccountHeader {
+            get {
+                return ResourceManager.GetString("DeleteAccountHeader", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteAccountMessage {
+            get {
+                return ResourceManager.GetString("DeleteAccountMessage", resourceCulture);
+            }
+        }
+        
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        internal static string ErrorOk {
+            get {
+                return ResourceManager.GetString("ErrorOk", resourceCulture);
+            }
+        }
+        
+        internal static string ErrorHeader {
+            get {
+                return ResourceManager.GetString("ErrorHeader", resourceCulture);
+            }
+        }
+        
+        internal static string ErrorMessage {
+            get {
+                return ResourceManager.GetString("ErrorMessage", resourceCulture);
+            }
+        }
     }
 }
