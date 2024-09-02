@@ -13,7 +13,8 @@
                 Shell.TabBarIsVisible="False">
 
     <StackLayout>
-        <views:NavigationBar TitleText=""/>
+        <views:NavigationBar TextColor="{StaticResource White}"
+                             TitleText="" />
 
         <VerticalStackLayout HorizontalOptions="FillAndExpand"
                              VerticalOptions="FillAndExpand"

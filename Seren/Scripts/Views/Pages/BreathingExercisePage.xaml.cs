@@ -19,7 +19,8 @@ public partial class BreathingExercisePage
     {
         var navigationBar = new NavigationBar
         {
-            TitleText = BindingContext.Header
+            TitleText = BindingContext.Header,
+            TextColor = Colors.White
         };
 
         NavigationBar.Content = navigationBar;

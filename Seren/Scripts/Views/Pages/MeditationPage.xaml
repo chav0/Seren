@@ -17,6 +17,7 @@
           ColumnDefinitions="*">
 
         <views:NavigationBar Grid.Row="0" 
+                             TextColor="{StaticResource White}"
                              TitleText="{x:Static strings:Localizations.Meditation}"/>
 
         <Grid Grid.Row="2">
