@@ -202,5 +202,11 @@ Always consult a qualified healthcare provider for any health-related concerns o
 	<data name="ErrorMessage" xml:space="preserve">
 		<value>Something went wrong due to technical reasons. Let’s take a deep breath; it’s not critical.</value>
 	</data>
+	<data name="Breathing" xml:space="preserve">
+		<value>Breathing</value>
+	</data>
+	<data name="Calendar" xml:space="preserve">
+		<value>Calendar</value>
+	</data>
 </root>
 

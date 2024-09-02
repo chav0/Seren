@@ -1,15 +1,16 @@
+using Seren.Scripts.ViewModels;
+using Seren.Scripts.Views.Views;
+
 namespace Seren.Scripts.Views.Pages;
 
-public class PageFactory : IPageFactory
+public class PageFactory(IServiceProvider serviceProvider) : IPageFactory
 {
-    private readonly IServiceProvider _serviceProvider;
+    public TPage GetPage<TPage>() where TPage : BasePage => 
+        serviceProvider.GetService<TPage>();
+    
+    public TView GetView<TView>() where TView : BaseView => 
+        serviceProvider.GetService<TView>();
 
-    public PageFactory(IServiceProvider serviceProvider)
-    {
-        _serviceProvider = serviceProvider;
-    }
-
-    public TPage GetPage<TPage>() where TPage : class => _serviceProvider.GetService<TPage>();
-
-    public TViewModel GetViewModel<TViewModel>() where TViewModel : class => _serviceProvider.GetService<TViewModel>();
+    public TViewModel GetViewModel<TViewModel>() where TViewModel : BaseViewModel => 
+        serviceProvider.GetService<TViewModel>();
 }

@@ -422,5 +422,17 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("ErrorMessage", resourceCulture);
             }
         }
+        
+        internal static string Breathing {
+            get {
+                return ResourceManager.GetString("Breathing", resourceCulture);
+            }
+        }
+        
+        internal static string Calendar {
+            get {
+                return ResourceManager.GetString("Calendar", resourceCulture);
+            }
+        }
     }
 }

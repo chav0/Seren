@@ -17,6 +17,7 @@ public partial class MainPage
 		InitializeCalendar();
 		InitializeBreathingExercises();
 		InitializeMeditations();
+		InitializeSelfHelp();
 		NavigationPage.SetHasNavigationBar(this, false);
 	}
 	
@@ -42,18 +43,21 @@ public partial class MainPage
 		var meditationsListView = new MeditationsListView(meditationsViewModel);
 		MeditationsContainer.Content = meditationsListView;
 	}
+	
+	private void InitializeSelfHelp()
+	{
+		SelfHelpContainer.Content = _pageFactory.GetView<SelfHelpCardView>();
+	}
  
 	private async void OnPanicClick(object sender, EventArgs eventArgs)
 	{
-		var surveyPage = App.Services.GetService<SelfHelpPage>();
+		var surveyPage = _pageFactory.GetPage<SurveyPage>();
 		await Navigation.PushAsync(surveyPage);
 	}
 	
 	private async void OnSettingsClick(object sender, EventArgs eventArgs)
 	{
-		var surveyPage = App.Services.GetService<SettingsPage>();
-		await Navigation.PushAsync(surveyPage);
+		var settingsPage = _pageFactory.GetPage<SettingsPage>();
+		await Navigation.PushAsync(settingsPage);
 	}
 }
-
-

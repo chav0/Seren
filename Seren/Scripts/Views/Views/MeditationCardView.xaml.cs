@@ -3,7 +3,7 @@ using Seren.Scripts.Views.Pages;
 
 namespace Seren.Scripts.Views.Views;
 
-public partial class MeditationCardView : BaseView<MeditationViewModel>
+public partial class MeditationCardView
 {
     public MeditationCardView(MeditationViewModel viewModel) : base(viewModel) => 
         InitializeComponent();

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<views:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="Seren.Scripts.Views.Views.SelfHelpCardView"
+                xmlns:views="clr-namespace:Seren.Scripts.Views.Views"
+                xmlns:vm="clr-namespace:Seren.Scripts.ViewModels"
+                xmlns:strings="clr-namespace:Seren.Resources.Strings"
+                x:TypeArguments="vm:SelfHelpViewModel"
+                x:DataType="vm:SelfHelpViewModel">
+    
+    <Frame HeightRequest="160"
+           WidthRequest="320"
+           CornerRadius="15"
+           HorizontalOptions="FillAndExpand"
+           HasShadow="False"
+           BackgroundColor="{StaticResource Gray2}">
+
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnTapped" />
+        </Frame.GestureRecognizers>
+
+        <Grid HeightRequest="160"
+              WidthRequest="320">
+
+            <!-- Background Image -->
+            <Image Source="meditation_card.png"
+                   Aspect="AspectFill"
+                   HeightRequest="160"
+                   WidthRequest="120"
+                   VerticalOptions="FillAndExpand"
+                   Margin="180,0,20,0" />
+
+            <!-- Play Icon 2 -->
+            <Image Source="play_icon.png"
+                   Aspect="AspectFill"
+                   WidthRequest="32"
+                   HeightRequest="32"
+                   VerticalOptions="End"
+                   HorizontalOptions="End"
+                   Margin="0,0,12,12" />
+
+            <!-- Content -->
+            <VerticalStackLayout VerticalOptions="Center" Padding="10">
+                <Label Text="{x:Static strings:Localizations.HelpYourself}"
+                       Style="{StaticResource HeaderStyle}"
+                       TextColor="{StaticResource HeaderColor}" />
+
+                <Label Text="{x:Static strings:Localizations.HelpYourselfDescription}"
+                       Style="{StaticResource SmallTextStyle}"
+                       TextColor="{StaticResource TextColor}" />
+
+                <Label Text="5 min"
+                       Style="{StaticResource SmallTextStyle}"
+                       TextColor="{StaticResource TextColor}" />
+
+            </VerticalStackLayout>
+        </Grid>
+
+    </Frame>
+    
+</views:BaseView>

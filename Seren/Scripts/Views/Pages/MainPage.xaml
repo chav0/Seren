@@ -31,7 +31,7 @@
                 Padding="16"
                 HorizontalOptions="FillAndExpand">
                 
-                <Label Text="Panic calendar >"
+                <Label Text="{x:Static strings:Localizations.Calendar}"
                        Style="{StaticResource SmallHeaderStyle}" />
                 
                 <ContentView x:Name="CalendarContainer"/>
@@ -74,7 +74,7 @@
                 HorizontalOptions="FillAndExpand">
                     
                 <Label Padding="16, 0"
-                       Text="Breathing >"
+                       Text="{x:Static strings:Localizations.Breathing}"
                        Style="{StaticResource SmallHeaderStyle}" />
 
                 <ContentView x:Name="BreathingExercisesContainer"/>
@@ -87,12 +87,37 @@
                 Padding="0, 16"
                 HorizontalOptions="FillAndExpand">
 
-                <Label Padding="0, 16"
-                       Text="Meditation"
+                <Label Padding="16, 0"
+                       Text="{x:Static strings:Localizations.Meditation}"
                        Style="{StaticResource SmallHeaderStyle}" />
 
                 <ContentView x:Name="MeditationsContainer"/>
                     
+            </VerticalStackLayout>
+            
+            <!-- Self Help Box -->
+            <VerticalStackLayout
+                HeightRequest="228"
+                Padding="0, 16"
+                HorizontalOptions="FillAndExpand">
+            
+                <Label Padding="16, 0"
+                       Text="{x:Static strings:Localizations.HelpYourself}"
+                       Style="{StaticResource SmallHeaderStyle}" />
+            
+                <ScrollView Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            HeightRequest="160"
+                            HorizontalScrollBarVisibility="Never">
+                    <HorizontalStackLayout Padding="16, 0"
+                                           Spacing="12"
+                                           HorizontalOptions="FillAndExpand"
+                                           VerticalOptions="FillAndExpand">
+                        <ContentView x:Name="SelfHelpContainer"/>
+                    </HorizontalStackLayout>
+                </ScrollView>
+                
             </VerticalStackLayout>
 
         </VerticalStackLayout>

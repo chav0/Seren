@@ -14,7 +14,7 @@
                 HeightRequest="160"
                 HorizontalScrollBarVisibility="Never">
         <HorizontalStackLayout x:Name="MeditationsContainer"
-                               Padding="0, 16"
+                               Padding="16, 0"
                                Spacing="12"
                                HorizontalOptions="FillAndExpand"
                                VerticalOptions="FillAndExpand">

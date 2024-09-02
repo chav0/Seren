@@ -2,7 +2,7 @@ using Seren.Scripts.ViewModels;
 
 namespace Seren.Scripts.Views.Views;
 
-public partial class BreathingExercisesView : BaseView<BreathingExercisesViewModel>
+public partial class BreathingExercisesView
 {
     public BreathingExercisesView(BreathingExercisesViewModel viewModel) : base(viewModel)
     {

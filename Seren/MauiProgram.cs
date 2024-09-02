@@ -81,7 +81,8 @@ public static class MauiProgram
 		builder.Services
 			.AddTransient<CalendarView, CalendarViewModel>()
 			.AddTransient<BreathingExercisesView, BreathingExercisesViewModel>()
-			.AddTransient<MeditationsListView, MeditationsViewModel>();
+			.AddTransient<MeditationsListView, MeditationsViewModel>()
+			.AddTransient<SelfHelpCardView, SelfHelpViewModel>();
 
 		return builder;        
 	}
