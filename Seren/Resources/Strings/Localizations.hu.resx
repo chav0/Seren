@@ -142,6 +142,7 @@
     </data>
     <data name="InfoText" xml:space="preserve">
         <value>Ez az alkalmazás általános egészségügyi információkat nyújt oktatási célokra, és nem tekinthető orvosi tanácsnak. Nem helyettesíti a szakszerű orvosi konzultációt, diagnózist vagy kezelést.
+
 Egészségügyi problémákkal vagy kérdésekkel kapcsolatban mindig forduljon képzett egészségügyi szolgáltatóhoz.</value>
     </data>
     <data name="InfoHeader" xml:space="preserve">

@@ -6,11 +6,11 @@
              xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
              x:Class="Seren.Scripts.Views.Pages.InfoPage"
              x:DataType="pages:InfoPage"
-             Background="{StaticResource BackgroundColor}"
+             Background="{StaticResource Gray1}"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
     
-    <Grid RowDefinitions="80, Auto, 24, *, 60, 30"
+    <Grid RowDefinitions="30, Auto, 24, *, 60, 30"
           ColumnDefinitions="*"
           Padding="16, 0">
         
@@ -20,10 +20,11 @@
         
         <Label Grid.Row="3" 
                Style="{StaticResource TextStyle}"
-               Text="{x:Static strings:Localizations.InfoText}"/>
+               Text="{x:Static strings:Localizations.InfoText}"
+               TextColor="{StaticResource Gray4}"/>
 
         <Button Grid.Row="4" 
-                WidthRequest="200"
+                WidthRequest="230"
                 HeightRequest="60"
                 CornerRadius="15"
                 Text="{x:Static strings:Localizations.InfoButtonText}"

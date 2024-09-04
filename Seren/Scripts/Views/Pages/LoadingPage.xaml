@@ -8,16 +8,15 @@
     <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
 
         <Image Source="logo.png"
-               AbsoluteLayout.LayoutBounds="0.5, 0.5, 276, 94"
-               AbsoluteLayout.LayoutFlags="PositionProportional"
-               Margin="0,0,46,14"/>
+               AbsoluteLayout.LayoutBounds="0.5, 0.4, 260, 120"
+               AbsoluteLayout.LayoutFlags="PositionProportional"/>
         
         <Label Text="An assistant for a panic attack"
                Style="{StaticResource TextStyle}"
-               TextColor="{StaticResource White60}"
+               TextColor="{StaticResource White80}"
                AbsoluteLayout.LayoutBounds="0.5, 1, -1, -1"
                AbsoluteLayout.LayoutFlags="PositionProportional"
-               Margin="0,0,0,64"/>
+               Margin="0,0,0,30"/>
 
     </AbsoluteLayout>
 </ContentPage>

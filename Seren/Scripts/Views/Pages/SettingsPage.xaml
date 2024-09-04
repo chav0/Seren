@@ -27,14 +27,14 @@
                    Style="{StaticResource HeaderStyle}"
                    VerticalTextAlignment="Center"
                    VerticalOptions="Center"
-                   Margin="16" />
+                   Margin="16, 16, 16, 28" />
 
             <!-- Settings Items -->
             <VerticalStackLayout Grid.Row="2">
 
                 <Frame BackgroundColor="Transparent"
                        HasShadow="False"
-                       Padding="24, 20">
+                       Padding="24, 18">
 
                     <Grid ColumnDefinitions="Auto, 16, *, 16, Auto">
 
@@ -47,7 +47,8 @@
                                Text="{x:Static strings:Localizations.SoundSetting}"
                                VerticalOptions="Center"
                                HorizontalOptions="Start"
-                               Style="{StaticResource SmallHeaderStyle}" />
+                               Style="{StaticResource SmallHeaderStyle}"
+                               Padding="0, 2, 0, 0" />
 
                         <Switch Grid.Column="4"
                                 IsToggled="{Binding IsSoundEnabled}"
@@ -67,7 +68,7 @@
 
                 <Frame BackgroundColor="Transparent"
                        HasShadow="False"
-                       Padding="24, 20">
+                       Padding="24, 18">
 
                     <Grid ColumnDefinitions="Auto, 16, *">
 
@@ -80,7 +81,8 @@
                                Text="{x:Static strings:Localizations.BuyCoffee}"
                                VerticalOptions="Center"
                                HorizontalOptions="Start"
-                               Style="{StaticResource SmallHeaderStyle}" />
+                               Style="{StaticResource SmallHeaderStyle}"
+                               Padding="0, 2, 0, 0" />
                     </Grid>
 
                     <!-- Add TapGestureRecognizer for Frame click -->
@@ -96,7 +98,7 @@
 
                 <Frame BackgroundColor="Transparent"
                        HasShadow="False"
-                       Padding="24, 20">
+                       Padding="24, 18">
 
                     <Grid ColumnDefinitions="Auto, 16, *">
 
@@ -109,7 +111,8 @@
                                Text="{x:Static strings:Localizations.RateUs}"
                                VerticalOptions="Center"
                                HorizontalOptions="Start"
-                               Style="{StaticResource SmallHeaderStyle}" />
+                               Style="{StaticResource SmallHeaderStyle}"
+                               Padding="0, 2, 0, 0" />
                     </Grid>
 
                     <!-- Add TapGestureRecognizer for Frame click -->
@@ -125,7 +128,7 @@
 
                 <Frame BackgroundColor="Transparent"
                        HasShadow="False"
-                       Padding="24, 20">
+                       Padding="24, 18">
 
                     <Grid ColumnDefinitions="Auto, 16, *">
 
@@ -138,7 +141,8 @@
                                Text="{x:Static strings:Localizations.Feedback}"
                                VerticalOptions="Center"
                                HorizontalOptions="Start"
-                               Style="{StaticResource SmallHeaderStyle}" />
+                               Style="{StaticResource SmallHeaderStyle}"
+                               Padding="0, 2, 0, 0" />
                     </Grid>
 
                     <!-- Add TapGestureRecognizer for Frame click -->
@@ -154,7 +158,7 @@
 
                 <Frame BackgroundColor="Transparent"
                        HasShadow="False"
-                       Padding="24, 20">
+                       Padding="24, 18">
 
                     <Grid ColumnDefinitions="Auto, 16, *">
 
@@ -167,7 +171,8 @@
                                Text="{x:Static strings:Localizations.DeleteData}"
                                VerticalOptions="Center"
                                HorizontalOptions="Start"
-                               Style="{StaticResource SmallHeaderStyle}" />
+                               Style="{StaticResource SmallHeaderStyle}"
+                               Padding="0, 2, 0, 0" />
                     </Grid>
 
                     <!-- Add TapGestureRecognizer for Frame click -->
@@ -185,9 +190,12 @@
 
             <Label Grid.Row="3"
                    Text="{x:Static strings:Localizations.SettingsInfo}"
+                   Style="{StaticResource TextStyle}"
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
-                   Style="{StaticResource TextStyle}" />
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource Gray4}" 
+                   Margin="32"/>
 
         </Grid>
     </ScrollView>

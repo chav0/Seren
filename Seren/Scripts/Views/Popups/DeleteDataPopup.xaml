@@ -12,28 +12,26 @@
        <VerticalStackLayout VerticalOptions="End"
                             HorizontalOptions="FillAndExpand"
                             BackgroundColor="{StaticResource Gray1}"
-                            Padding="40, 40, 40, 30">
-           
-           <!-- Заголовок -->
+                            Padding="0, 45, 0, 17">
+
            <Label Text="{x:Static strings:Localizations.DeleteAccountHeader}"
                   Style="{StaticResource HeaderStyle}"
                   HorizontalOptions="Center"
-                  HorizontalTextAlignment="Center"/>
+                  HorizontalTextAlignment="Center"
+                  Margin="47, 0"/>
 
-           <!-- Основной текст -->
            <Label Text="{x:Static strings:Localizations.DeleteAccountMessage}"
                   Style="{StaticResource TextStyle}"
                   HorizontalOptions="Center"
                   HorizontalTextAlignment="Center"
-                  Margin="0,28,0,0" />
+                  TextColor="{StaticResource Gray4}"
+                  Margin="33,28,33,0" />
 
-           <!-- Кнопки -->
            <Grid HorizontalOptions="FillAndExpand"
                  ColumnDefinitions="*, *"
                  ColumnSpacing="24"
-                 Margin="0,64,0,0">
-                  
-                  <!-- Кнопка Отмена -->
+                 Margin="15,64,15,0">
+
                   <Button Grid.Column="0"
                           HeightRequest="60"
                           CornerRadius="15"
@@ -44,8 +42,7 @@
                           FontSize="24"
                           HorizontalOptions="FillAndExpand"
                           Clicked="OnCancelButtonClicked"/>
-                  
-                  <!-- Кнопка Удалить -->
+
                   <Button Grid.Column="1"
                           HeightRequest="60"
                           CornerRadius="15"
