@@ -25,8 +25,7 @@
                                            ProgressColor="{StaticResource White}"
                                            ProgressLeftColor="{StaticResource White20}"
                                            Size="300"
-                                           Thickness="8"
-                                           SectionsCount="1" />
+                                           Thickness="8" />
 
             <Label x:Name="ProgressText"
                    HorizontalOptions="Center"

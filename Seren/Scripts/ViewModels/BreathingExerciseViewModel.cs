@@ -25,7 +25,7 @@ public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : B
 
     public int BreathingCount => breathingExercise.Count;
 
-    public int PatternCount => breathingExercise.Patterns.Count;
+    public float[] Pattern => breathingExercise.Patterns.Select(x => x.Time).ToArray();
 
     public List<BreathingPatternEntry> Patterns => breathingExercise.Patterns;
 

@@ -10,7 +10,7 @@ public partial class CircularProgressBarView
     public static readonly BindableProperty ProgressProperty = BindableProperty.Create(nameof(Progress), typeof(float), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
     public static readonly BindableProperty SizeProperty = BindableProperty.Create(nameof(Size), typeof(int), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
     public static readonly BindableProperty ThicknessProperty = BindableProperty.Create(nameof(Thickness), typeof(int), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
-    public static readonly BindableProperty SectionsCountProperty = BindableProperty.Create(nameof(SectionsCount), typeof(int), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
+    public static readonly BindableProperty SectionsProperty = BindableProperty.Create(nameof(Sections), typeof(float[]), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
     public static readonly BindableProperty ProgressColorProperty = BindableProperty.Create(nameof(ProgressColor), typeof(Color), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
     public static readonly BindableProperty ProgressLeftColorProperty = BindableProperty.Create(nameof(ProgressLeftColor), typeof(Color), typeof(CircularProgressBarView), propertyChanged: OnBindablePropertyChanged);
 
@@ -32,10 +32,10 @@ public partial class CircularProgressBarView
         set => SetValue(ThicknessProperty, value);
     }
     
-    public int SectionsCount
+    public float[] Sections
     {
-        get { return (int)GetValue(SectionsCountProperty); }
-        set { SetValue(SectionsCountProperty, value); }
+        get => (float[])GetValue(SectionsProperty);
+        set => SetValue(SectionsProperty, value);
     }
 
     public Color ProgressColor
@@ -74,7 +74,7 @@ public partial class CircularProgressBarView
             Drawable.Progress = Progress;
             Drawable.Size = Size;
             Drawable.Thickness = Thickness;
-            Drawable.SectionsCount = SectionsCount;
+            Drawable.Sections = Sections;
             Drawable.ProgressColor = ProgressColor;
             Drawable.ProgressLeftColor = ProgressLeftColor;
             GraphicsView.Invalidate();

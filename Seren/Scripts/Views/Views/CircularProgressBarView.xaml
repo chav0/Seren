@@ -13,7 +13,7 @@
                                                    Progress="{Binding Progress}"
                                                    Size="{Binding Size}"
                                                    Thickness="{Binding Thickness}"
-                                                   SectionsCount="{Binding SectionsCount}"
+                                                   Sections="{Binding Sections}"
                                                    ProgressColor="{Binding ProgressColor}"
                                                    ProgressLeftColor="{Binding ProgressLeftColor}"/>
         </GraphicsView.Drawable>

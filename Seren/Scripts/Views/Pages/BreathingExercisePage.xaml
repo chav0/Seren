@@ -25,7 +25,7 @@
                                            ProgressLeftColor="{StaticResource White20}"
                                            Size="300"
                                            Thickness="8"
-                                           SectionsCount="{Binding PatternCount}"/>
+                                           Sections="{Binding Pattern}"/>
             
             <StackLayout Orientation="Vertical" 
                          HorizontalOptions="Center" 

@@ -5,7 +5,7 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
     public static readonly BindableProperty ProgressProperty = BindableProperty.Create(nameof(Progress), typeof(float), typeof(CircularProgressBarDrawable));
     public static readonly BindableProperty SizeProperty = BindableProperty.Create(nameof(Size), typeof(int), typeof(CircularProgressBarDrawable));
     public static readonly BindableProperty ThicknessProperty = BindableProperty.Create(nameof(Thickness), typeof(int), typeof(CircularProgressBarDrawable));
-    public static readonly BindableProperty SectionsCountProperty = BindableProperty.Create(nameof(SectionsCount), typeof(int), typeof(CircularProgressBarDrawable));
+    public static readonly BindableProperty SectionsProperty = BindableProperty.Create(nameof(Sections), typeof(float[]), typeof(CircularProgressBarDrawable));
     public static readonly BindableProperty ProgressColorProperty = BindableProperty.Create(nameof(ProgressColor), typeof(Color), typeof(CircularProgressBarDrawable));
     public static readonly BindableProperty ProgressLeftColorProperty = BindableProperty.Create(nameof(ProgressLeftColor), typeof(Color), typeof(CircularProgressBarDrawable));
 
@@ -27,10 +27,10 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
         set => SetValue(ThicknessProperty, value);
     }
 
-    public int SectionsCount
+    public float[] Sections
     {
-        get => (int)GetValue(SectionsCountProperty);
-        set => SetValue(SectionsCountProperty, value);
+        get => (float[])GetValue(SectionsProperty);
+        set => SetValue(SectionsProperty, value);
     }
 
     public Color ProgressColor
@@ -47,9 +47,9 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
 
     public void Draw(ICanvas canvas, RectF dirtyRect)
     {
-        float effectiveSize = Size - Thickness;
-        float x = Thickness / 2;
-        float y = Thickness / 2;
+        var effectiveSize = Size - Thickness;
+        var x = Thickness / 2f;
+        var y = Thickness / 2f;
 
         Progress = Progress switch
         {
@@ -59,9 +59,8 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
         };
 
         var angle = GetAngle(Progress);
-        var sectionProgress = 100 / SectionsCount;
         
-        if (SectionsCount == 1)
+        if (Sections == null || Sections.Length <= 1)
         {
             if (Progress < 100)
             {
@@ -82,13 +81,15 @@ public class CircularProgressBarDrawable : BindableObject, IDrawable
         }
         else
         {
-            for (var i = 0; i < SectionsCount; i++)
+            var sectionsSum = Sections.Sum();
+            var progress = 0f;
+            
+            for (var i = 0; i < Sections.Length; i++)
             {
-                var progressFrom = i * sectionProgress + 0.5f;
-                var progressTo = (i + 1) * sectionProgress - 0.5f;
-
-                if (i + 1 == SectionsCount)
-                    progressTo = 100 - 0.5f;
+                var section = Sections[i];
+                var progressFrom = 100 / sectionsSum * progress + 0.5f;
+                progress += section;
+                var progressTo = 100 / sectionsSum * progress - 0.5f;
             
                 var angleFrom = GetAngle(progressFrom);
                 var angleTo = GetAngle(progressTo);
