@@ -179,7 +179,7 @@ Always consult a qualified healthcare provider for any health-related concerns o
 		<value>Delete app data</value>
 	</data>
 	<data name="SettingsInfo" xml:space="preserve">
-		<value>This app is free and created by  a group of enthusiasts. </value>
+		<value>This app is free and created by a group of enthusiasts. </value>
 	</data>
 	<data name="DeleteAccountHeader" xml:space="preserve">
 		<value>Do you want to delete your account?</value>
@@ -197,7 +197,7 @@ Always consult a qualified healthcare provider for any health-related concerns o
 		<value>Oh, got it</value>
 	</data>
 	<data name="ErrorHeader" xml:space="preserve">
-		<value>Oh no, we have  an error!</value>
+		<value>Oh no, we have an error!</value>
 	</data>
 	<data name="ErrorMessage" xml:space="preserve">
 		<value>Something went wrong due to technical reasons. Let’s take a deep breath; it’s not critical.</value>
@@ -207,6 +207,9 @@ Always consult a qualified healthcare provider for any health-related concerns o
 	</data>
 	<data name="Calendar" xml:space="preserve">
 		<value>Calendar</value>
+	</data>
+	<data name="WellDone" xml:space="preserve">
+		<value>Well done!</value>
 	</data>
 </root>
 

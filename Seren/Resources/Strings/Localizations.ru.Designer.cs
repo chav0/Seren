@@ -326,5 +326,119 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
+        
+        internal static string WellDone {
+            get {
+                return ResourceManager.GetString("WellDone", resourceCulture);
+            }
+        }
+        
+        internal static string SoundSetting {
+            get {
+                return ResourceManager.GetString("SoundSetting", resourceCulture);
+            }
+        }
+        
+        internal static string SettingsInfo {
+            get {
+                return ResourceManager.GetString("SettingsInfo", resourceCulture);
+            }
+        }
+        
+        internal static string RateUs {
+            get {
+                return ResourceManager.GetString("RateUs", resourceCulture);
+            }
+        }
+        
+        internal static string InfoText {
+            get {
+                return ResourceManager.GetString("InfoText", resourceCulture);
+            }
+        }
+        
+        internal static string InfoHeader {
+            get {
+                return ResourceManager.GetString("InfoHeader", resourceCulture);
+            }
+        }
+        
+        internal static string InfoButtonText {
+            get {
+                return ResourceManager.GetString("InfoButtonText", resourceCulture);
+            }
+        }
+        
+        internal static string Feedback {
+            get {
+                return ResourceManager.GetString("Feedback", resourceCulture);
+            }
+        }
+        
+        internal static string ErrorOk {
+            get {
+                return ResourceManager.GetString("ErrorOk", resourceCulture);
+            }
+        }
+        
+        internal static string ErrorMessage {
+            get {
+                return ResourceManager.GetString("ErrorMessage", resourceCulture);
+            }
+        }
+        
+        internal static string ErrorHeader {
+            get {
+                return ResourceManager.GetString("ErrorHeader", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteData {
+            get {
+                return ResourceManager.GetString("DeleteData", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteAccountMessage {
+            get {
+                return ResourceManager.GetString("DeleteAccountMessage", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteAccountHeader {
+            get {
+                return ResourceManager.GetString("DeleteAccountHeader", resourceCulture);
+            }
+        }
+        
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        internal static string Calendar {
+            get {
+                return ResourceManager.GetString("Calendar", resourceCulture);
+            }
+        }
+        
+        internal static string BuyCoffee {
+            get {
+                return ResourceManager.GetString("BuyCoffee", resourceCulture);
+            }
+        }
+        
+        internal static string Breathing {
+            get {
+                return ResourceManager.GetString("Breathing", resourceCulture);
+            }
+        }
     }
 }

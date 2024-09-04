@@ -113,4 +113,101 @@
     <data name="PanicQuestionary.WhatIFeelIsNormal" xml:space="preserve">
         <value>Да ли је оно што осећам нормално?</value>
     </data>
+    <data name="WellDone" xml:space="preserve">
+        <value>Браво!</value>
+    </data>
+    <data name="YouHavePanic" xml:space="preserve">
+        <value>У реду је, имаш панични напад</value>
+    </data>
+    <data name="Yes" xml:space="preserve">
+        <value>Да</value>
+    </data>
+    <data name="SoundSetting" xml:space="preserve">
+        <value>Звук</value>
+    </data>
+    <data name="SettingsInfo" xml:space="preserve">
+        <value>Ова апликација је бесплатна и креирана од стране групе ентузијаста.</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>Подешавања</value>
+    </data>
+    <data name="RateUs" xml:space="preserve">
+        <value>Оцените нас</value>
+    </data>
+    <data name="No" xml:space="preserve">
+        <value>Не</value>
+    </data>
+    <data name="Inhale" xml:space="preserve">
+        <value>Удах</value>
+    </data>
+    <data name="InfoText" xml:space="preserve">
+        <value>Ова апликација нуди опште здравствене информације у образовне сврхе и не треба се сматрати медицинским саветом. Не замењује стручне медицинске консултације, дијагнозу или лечење.
+Увек се обратите квалификованом здравственом раднику за било какве забринутости или питања везана за здравље.</value>
+    </data>
+    <data name="InfoHeader" xml:space="preserve">
+        <value>Само информативно – Није медицински савет</value>
+    </data>
+    <data name="InfoButtonText" xml:space="preserve">
+        <value>Разумем</value>
+    </data>
+    <data name="HowStrongIsAttack" xml:space="preserve">
+        <value>Оцени свој напад</value>
+    </data>
+    <data name="Hold" xml:space="preserve">
+        <value>Пауза</value>
+    </data>
+    <data name="Feedback" xml:space="preserve">
+        <value>Дајте нам повратне информације</value>
+    </data>
+    <data name="Exhale" xml:space="preserve">
+        <value>Издах</value>
+    </data>
+    <data name="ErrorOk" xml:space="preserve">
+        <value>Ох, разумем</value>
+    </data>
+    <data name="ErrorMessage" xml:space="preserve">
+        <value>Нешто је пошло наопако због техничких разлога. Хајде да дубоко удахнемо; није критично.</value>
+    </data>
+    <data name="ErrorHeader" xml:space="preserve">
+        <value>Ох не, имамо грешку!</value>
+    </data>
+    <data name="DeleteData" xml:space="preserve">
+        <value>Обриши податке апликације</value>
+    </data>
+    <data name="DeleteAccountMessage" xml:space="preserve">
+        <value>Ова радња се не може поништити. Ваш профил и сви подаци у апликацији биће трајно обрисани.</value>
+    </data>
+    <data name="DeleteAccountHeader" xml:space="preserve">
+        <value>Да ли желите да обришете свој налог?</value>
+    </data>
+    <data name="Delete" xml:space="preserve">
+        <value>Обриши</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+        <value>Откажи</value>
+    </data>
+    <data name="Calendar" xml:space="preserve">
+        <value>Календар</value>
+    </data>
+    <data name="BuyCoffee" xml:space="preserve">
+        <value>Купи нам кафу</value>
+    </data>
+    <data name="Breathing" xml:space="preserve">
+        <value>Дисање</value>
+    </data>
+    <data name="AttackStrongness1" xml:space="preserve">
+        <value>Веома слаба</value>
+    </data>
+    <data name="AttackStrongness2" xml:space="preserve">
+        <value>Слаба</value>
+    </data>
+    <data name="AttackStrongness3" xml:space="preserve">
+        <value>Умерена</value>
+    </data>
+    <data name="AttackStrongness4" xml:space="preserve">
+        <value>Јака</value>
+    </data>
+    <data name="AttackStrongness5" xml:space="preserve">
+        <value>Веома јака</value>
+    </data>
 </root>

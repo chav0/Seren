@@ -43,7 +43,7 @@
         <value>Ты здесь, потому что испытываешь панику?</value>
     </data>
     <data name="YouHavePanic" xml:space="preserve">
-        <value>Хорошо, у тебя паника</value>
+        <value>Все в порядке, у тебя паническая атака</value>
     </data>
     <data name="HowStrongIsAttack" xml:space="preserve">
         <value>Оцени панику</value>
@@ -158,5 +158,64 @@
     </data>
     <data name="Settings" xml:space="preserve">
         <value>Настройки</value>
+    </data>
+    <data name="WellDone" xml:space="preserve">
+        <value>Молодец!</value>
+    </data>
+    <data name="SoundSetting" xml:space="preserve">
+        <value>Звук</value>
+    </data>
+    <data name="SettingsInfo" xml:space="preserve">
+        <value>Это приложение бесплатно и создано группой энтузиастов.</value>
+    </data>
+    <data name="RateUs" xml:space="preserve">
+        <value>Оцените нас</value>
+    </data>
+    <data name="InfoText" xml:space="preserve">
+        <value>Это приложение предлагает общую информацию о здоровье в образовательных целях и не должно рассматриваться как медицинский совет. Оно не заменяет профессиональную медицинскую консультацию, диагностику или лечение.
+Всегда консультируйтесь с квалифицированным медицинским специалистом по любым вопросам или проблемам, связанным со здоровьем.</value>
+    </data>
+    <data name="InfoHeader" xml:space="preserve">
+        <value>Только для информации – Не является медицинским советом</value>
+    </data>
+    <data name="InfoButtonText" xml:space="preserve">
+        <value>Я понимаю
+</value>
+    </data>
+    <data name="Feedback" xml:space="preserve">
+        <value>Оставьте нам отзыв</value>
+    </data>
+    <data name="ErrorOk" xml:space="preserve">
+        <value>Ох, понимаю</value>
+    </data>
+    <data name="ErrorMessage" xml:space="preserve">
+        <value>Что-то пошло не так по техническим причинам. Давай сделаем глубокий вдох; это не критично.</value>
+    </data>
+    <data name="ErrorHeader" xml:space="preserve">
+        <value>О нет, у нас ошибка!</value>
+    </data>
+    <data name="DeleteData" xml:space="preserve">
+        <value>Удалить данные приложения</value>
+    </data>
+    <data name="DeleteAccountMessage" xml:space="preserve">
+        <value>Это действие нельзя отменить. Ваш профиль и все данные в приложении будут безвозвратно удалены.</value>
+    </data>
+    <data name="DeleteAccountHeader" xml:space="preserve">
+        <value>Вы хотите удалить свой аккаунт?</value>
+    </data>
+    <data name="Delete" xml:space="preserve">
+        <value>Удалить</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+        <value>Отмена</value>
+    </data>
+    <data name="Calendar" xml:space="preserve">
+        <value>Календарь</value>
+    </data>
+    <data name="BuyCoffee" xml:space="preserve">
+        <value>Купите нам кофе</value>
+    </data>
+    <data name="Breathing" xml:space="preserve">
+        <value>Дыхание</value>
     </data>
 </root>

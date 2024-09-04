@@ -2,6 +2,7 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:strings="clr-namespace:Seren.Resources.Strings"
              x:Class="Seren.Scripts.Views.Pages.CongratulationPage"
              Background="{StaticResource PrimaryTab2Color}"
              Shell.NavBarIsVisible="False"
@@ -13,7 +14,7 @@
                 <TapGestureRecognizer Tapped="OnPageTapped"/>
             </Grid.GestureRecognizers>
 
-            <Label Text="Well done!" 
+            <Label Text="{x:Static strings:Localizations.WellDone}"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
                    Style="{StaticResource BigHeaderStyle}"

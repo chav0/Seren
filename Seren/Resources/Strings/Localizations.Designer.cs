@@ -434,5 +434,11 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("Calendar", resourceCulture);
             }
         }
+        
+        internal static string WellDone {
+            get {
+                return ResourceManager.GetString("WellDone", resourceCulture);
+            }
+        }
     }
 }

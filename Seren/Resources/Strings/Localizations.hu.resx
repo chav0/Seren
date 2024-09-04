@@ -38,4 +38,176 @@
     <data name="Panic" xml:space="preserve">
         <value>pánik</value>
     </data>
+    <data name="WellDone" xml:space="preserve">
+        <value>Jól van!</value>
+    </data>
+    <data name="YouHavePanic" xml:space="preserve">
+        <value>Rendben van, pánikrohamod van</value>
+    </data>
+    <data name="Yes" xml:space="preserve">
+        <value>Igen</value>
+    </data>
+    <data name="SoundSetting" xml:space="preserve">
+        <value>Hang</value>
+    </data>
+    <data name="SettingsInfo" xml:space="preserve">
+        <value>Ez az alkalmazás ingyenes, és egy lelkes csapat készítette.</value>
+    </data>
+    <data name="Settings" xml:space="preserve">
+        <value>Beállítások</value>
+    </data>
+    <data name="RateUs" xml:space="preserve">
+        <value>Értékelj minket</value>
+    </data>
+    <data name="PanicQuestionary.AdrenalineResponse" xml:space="preserve">
+        <value>Ez egy adrenalinválasz?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImCrazy" xml:space="preserve">
+        <value>Mindenki azt hiszi, hogy őrült vagyok?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImSick" xml:space="preserve">
+        <value>Mindenki azt hiszi, hogy beteg vagyok?</value>
+    </data>
+    <data name="PanicQuestionary.EveryoneThinksImWeak" xml:space="preserve">
+        <value>Mindenki azt hiszi, hogy gyenge vagyok?</value>
+    </data>
+    <data name="PanicQuestionary.FearCanKillMe" xml:space="preserve">
+        <value>Megölhet a félelem?</value>
+    </data>
+    <data name="PanicQuestionary.FearWillPass" xml:space="preserve">
+        <value>Elmúlik a félelem?</value>
+    </data>
+    <data name="PanicQuestionary.ICanBeatPanicAttack" xml:space="preserve">
+        <value>Legyőzhetem a pánikrohamot?</value>
+    </data>
+    <data name="PanicQuestionary.ICanBecomeAggressive" xml:space="preserve">
+        <value>Agresszívvé válhatok?</value>
+    </data>
+    <data name="PanicQuestionary.ICanDie" xml:space="preserve">
+        <value>Meghalhatok?</value>
+    </data>
+    <data name="PanicQuestionary.ICanSuffocate" xml:space="preserve">
+        <value>Megfulladhatok?</value>
+    </data>
+    <data name="PanicQuestionary.ImParalyzed" xml:space="preserve">
+        <value>Lebénultam?</value>
+    </data>
+    <data name="PanicQuestionary.IWillFaint" xml:space="preserve">
+        <value>El fogok ájulni?</value>
+    </data>
+    <data name="PanicQuestionary.IWillGoCrazy" xml:space="preserve">
+        <value>Megőrülök?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveHeartAttack" xml:space="preserve">
+        <value>Szívrohamom lesz?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveStroke" xml:space="preserve">
+        <value>Szélütésem lesz?</value>
+    </data>
+    <data name="PanicQuestionary.IWillLoseTouchWithReality" xml:space="preserve">
+        <value>Elvesztem a kapcsolatot a valósággal?</value>
+    </data>
+    <data name="PanicQuestionary.MyBrainIsHealthy" xml:space="preserve">
+        <value>Egészséges az agyam?</value>
+    </data>
+    <data name="PanicQuestionary.MyHeartIsHealthy" xml:space="preserve">
+        <value>Egészséges a szívem?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackIsSafe" xml:space="preserve">
+        <value>Biztonságos a pánikroham?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackWillKillMe" xml:space="preserve">
+        <value>Megölhet a pánikroham?</value>
+    </data>
+    <data name="PanicQuestionary.PanicAttackWillLastForever" xml:space="preserve">
+        <value>Örökké fog tartani a pánikroham?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldICallAmbulance" xml:space="preserve">
+        <value>Hívjak mentőt?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldICheckPulse" xml:space="preserve">
+        <value>Ellenőrizzem a pulzusomat?</value>
+    </data>
+    <data name="PanicQuestionary.ShouldITryToDistract" xml:space="preserve">
+        <value>Próbáljam elterelni a figyelmemet?</value>
+    </data>
+    <data name="PanicQuestionary.WhatIFeelIsNormal" xml:space="preserve">
+        <value>Normális, amit érzek?</value>
+    </data>
+    <data name="No" xml:space="preserve">
+        <value>Nem</value>
+    </data>
+    <data name="Inhale" xml:space="preserve">
+        <value>Belégzés</value>
+    </data>
+    <data name="InfoText" xml:space="preserve">
+        <value>Ez az alkalmazás általános egészségügyi információkat nyújt oktatási célokra, és nem tekinthető orvosi tanácsnak. Nem helyettesíti a szakszerű orvosi konzultációt, diagnózist vagy kezelést.
+Egészségügyi problémákkal vagy kérdésekkel kapcsolatban mindig forduljon képzett egészségügyi szolgáltatóhoz.</value>
+    </data>
+    <data name="InfoHeader" xml:space="preserve">
+        <value>Csak tájékoztató jellegű – Nem orvosi tanács</value>
+    </data>
+    <data name="InfoButtonText" xml:space="preserve">
+        <value>Értem</value>
+    </data>
+    <data name="HowStrongIsAttack" xml:space="preserve">
+        <value>Értékeld a rohamodat</value>
+    </data>
+    <data name="Hold" xml:space="preserve">
+        <value>Szünet</value>
+    </data>
+    <data name="Feedback" xml:space="preserve">
+        <value>Adj visszajelzést nekünk</value>
+    </data>
+    <data name="Exhale" xml:space="preserve">
+        <value>Kilégzés</value>
+    </data>
+    <data name="ErrorOk" xml:space="preserve">
+        <value>Ó, értem</value>
+    </data>
+    <data name="ErrorMessage" xml:space="preserve">
+        <value>Valami technikai okokból félrement. Vegyünk egy mély levegőt; ez nem kritikus.</value>
+    </data>
+    <data name="ErrorHeader" xml:space="preserve">
+        <value>Ó, ne, hiba történt!</value>
+    </data>
+    <data name="DeleteData" xml:space="preserve">
+        <value>Alkalmazás adatok törlése</value>
+    </data>
+    <data name="DeleteAccountMessage" xml:space="preserve">
+        <value>A művelet nem visszavonható. A profilod és az összes adatod az alkalmazásban véglegesen törlődik.</value>
+    </data>
+    <data name="DeleteAccountHeader" xml:space="preserve">
+        <value>Szeretnéd törölni a fiókodat?</value>
+    </data>
+    <data name="Delete" xml:space="preserve">
+        <value>Törlés</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+        <value>Mégse</value>
+    </data>
+    <data name="Calendar" xml:space="preserve">
+        <value>Naptár</value>
+    </data>
+    <data name="BuyCoffee" xml:space="preserve">
+        <value>Vegyél nekünk egy kávét</value>
+    </data>
+    <data name="Breathing" xml:space="preserve">
+        <value>Légzés</value>
+    </data>
+    <data name="AttackStrongness1" xml:space="preserve">
+        <value>Nagyon enyhe</value>
+    </data>
+    <data name="AttackStrongness2" xml:space="preserve">
+        <value>Enyhe</value>
+    </data>
+    <data name="AttackStrongness3" xml:space="preserve">
+        <value>Mérsékelt</value>
+    </data>
+    <data name="AttackStrongness4" xml:space="preserve">
+        <value>Erős</value>
+    </data>
+    <data name="AttackStrongness5" xml:space="preserve">
+        <value>Nagyon erős</value>
+    </data>
 </root>
