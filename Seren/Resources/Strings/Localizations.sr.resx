@@ -210,4 +210,40 @@
     <data name="AttackStrongness5" xml:space="preserve">
         <value>Веома јака</value>
     </data>
+    <data name="Start" xml:space="preserve">
+        <value>Пусти</value>
+    </data>
+    <data name="Stop" xml:space="preserve">
+        <value>Стоп</value>
+    </data>
+    <data name="Circles3" xml:space="preserve">
+        <value>Кругови 3</value>
+    </data>
+    <data name="Mindful" xml:space="preserve">
+        <value>Свесно</value>
+    </data>
+    <data name="Box" xml:space="preserve">
+        <value>Квадрат</value>
+    </data>
+    <data name="Steady" xml:space="preserve">
+        <value>Стабилно</value>
+    </data>
+    <data name="Grounding" xml:space="preserve">
+        <value>Уземљење</value>
+    </data>
+    <data name="Star4" xml:space="preserve">
+        <value>Звезда 4</value>
+    </data>
+    <data name="Fan4" xml:space="preserve">
+        <value>Вејар 4</value>
+    </data>
+    <data name="MindfulnessMeditation" xml:space="preserve">
+        <value>Медитација свесности</value>
+    </data>
+    <data name="RelaxationMeditation" xml:space="preserve">
+        <value>Медитација за опуштање</value>
+    </data>
+    <data name="AntiPanicMeditation" xml:space="preserve">
+        <value>Медитација при паници</value>
+    </data>
 </root>

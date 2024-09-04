@@ -440,5 +440,77 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("WellDone", resourceCulture);
             }
         }
+        
+        internal static string Start {
+            get {
+                return ResourceManager.GetString("Start", resourceCulture);
+            }
+        }
+        
+        internal static string Stop {
+            get {
+                return ResourceManager.GetString("Stop", resourceCulture);
+            }
+        }
+        
+        internal static string Circles3 {
+            get {
+                return ResourceManager.GetString("Circles3", resourceCulture);
+            }
+        }
+        
+        internal static string Mindful {
+            get {
+                return ResourceManager.GetString("Mindful", resourceCulture);
+            }
+        }
+        
+        internal static string Box {
+            get {
+                return ResourceManager.GetString("Box", resourceCulture);
+            }
+        }
+        
+        internal static string Steady {
+            get {
+                return ResourceManager.GetString("Steady", resourceCulture);
+            }
+        }
+        
+        internal static string Grounding {
+            get {
+                return ResourceManager.GetString("Grounding", resourceCulture);
+            }
+        }
+        
+        internal static string Star4 {
+            get {
+                return ResourceManager.GetString("Star4", resourceCulture);
+            }
+        }
+        
+        internal static string Fan4 {
+            get {
+                return ResourceManager.GetString("Fan4", resourceCulture);
+            }
+        }
+        
+        internal static string MindfulnessMeditation {
+            get {
+                return ResourceManager.GetString("MindfulnessMeditation", resourceCulture);
+            }
+        }
+        
+        internal static string RelaxationMeditation {
+            get {
+                return ResourceManager.GetString("RelaxationMeditation", resourceCulture);
+            }
+        }
+        
+        internal static string AntiPanicMeditation {
+            get {
+                return ResourceManager.GetString("AntiPanicMeditation", resourceCulture);
+            }
+        }
     }
 }

@@ -211,5 +211,41 @@ Always consult a qualified healthcare provider for any health-related concerns o
 	<data name="WellDone" xml:space="preserve">
 		<value>Well done!</value>
 	</data>
+	<data name="Start" xml:space="preserve">
+		<value>Start</value>
+	</data>
+	<data name="Stop" xml:space="preserve">
+		<value>Stop</value>
+	</data>
+	<data name="Circles3" xml:space="preserve">
+		<value>Circles 3</value>
+	</data>
+	<data name="Mindful" xml:space="preserve">
+		<value>Mindful</value>
+	</data>
+	<data name="Box" xml:space="preserve">
+		<value>Box</value>
+	</data>
+	<data name="Steady" xml:space="preserve">
+		<value>Steady</value>
+	</data>
+	<data name="Grounding" xml:space="preserve">
+		<value>Grounding</value>
+	</data>
+	<data name="Star4" xml:space="preserve">
+		<value>Star 4</value>
+	</data>
+	<data name="Fan4" xml:space="preserve">
+		<value>Fan 4</value>
+	</data>
+	<data name="MindfulnessMeditation" xml:space="preserve">
+		<value>Mindfulness Meditation</value>
+	</data>
+	<data name="RelaxationMeditation" xml:space="preserve">
+		<value>Relaxation Meditation</value>
+	</data>
+	<data name="AntiPanicMeditation" xml:space="preserve">
+		<value>Anti-Panic Meditation</value>
+	</data>
 </root>
 

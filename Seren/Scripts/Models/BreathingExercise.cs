@@ -1,3 +1,5 @@
+using Seren.Scripts.Utils;
+
 namespace Seren.Scripts.Models;
 
 public class BreathingExercise : IIdentifiable
@@ -13,6 +15,8 @@ public struct BreathingPatternEntry
 {
     public float Time { get; set; }
     public BreathType Type { get; set; }
+
+    public string TypeName => Type.ToString().Localize();
 }
 
 public enum BreathType

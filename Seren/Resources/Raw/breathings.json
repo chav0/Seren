@@ -1,9 +1,9 @@
 [
   {
     "Id": "circles_3",
-    "Header": "Circles 3",
+    "Header": "Circles3",
     "FullImagePath": "breathing_circles3.png",
-    "Count": 10,
+    "Count": 20,
     "Patterns": [
       {
         "Type": "Inhale",
@@ -97,7 +97,8 @@
   },
   {
     "Id": "star_4",
-    "Header": "Star 4",
+    "Header": "Star4",
+    
     "FullImagePath": "breathing_star.png",
     "Count": 12,
     "Patterns": [
@@ -113,7 +114,7 @@
   },
   {
     "Id": "fan_4",
-    "Header": "Fan 4",
+    "Header": "Fan4",
     "FullImagePath": "breathing_fan4.png",
     "Count": 9,
     "Patterns": [

@@ -72,7 +72,7 @@
                                HorizontalOptions="Center" 
                                Style="{StaticResource BigHeaderStyle}"
                                TextColor="White"/>
-                        <Label Text="{Binding Type}" 
+                        <Label Text="{Binding TypeName}" 
                                HorizontalOptions="Center" 
                                Style="{StaticResource TextStyle}"
                                TextColor="White" />

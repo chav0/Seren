@@ -1,10 +1,11 @@
 using Seren.Scripts.Models;
+using Seren.Scripts.Utils;
 
 namespace Seren.Scripts.ViewModels;
 
 public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : BaseViewModel
 {
-    public string Header => breathingExercise.Header;
+    public string Header => breathingExercise.Header.Localize();
 
     public string FullImagePath => breathingExercise.FullImagePath;
 
@@ -49,7 +50,7 @@ public class BreathingExerciseViewModel(BreathingExercise breathingExercise) : B
             if (currentTimeInCircle < 0)
             {
                 CurrentPatternRemainingTime = (int) -currentTimeInCircle;
-                CurrentPatternType = pattern.Type.ToString();
+                CurrentPatternType = pattern.Type.ToString().Localize();
                 
                 OnPropertyChanged(nameof(CurrentPatternRemainingTime));
                 OnPropertyChanged(nameof(CurrentPatternType));

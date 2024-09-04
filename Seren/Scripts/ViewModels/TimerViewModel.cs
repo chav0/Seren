@@ -1,10 +1,9 @@
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using Seren.Scripts.Utils;
 
 namespace Seren.Scripts.ViewModels;
 
-public class TimerViewModel : BaseViewModel, INotifyPropertyChanged, IDisposable
+public class TimerViewModel : BaseViewModel, IDisposable
 {
     private TimeSpan _remainingTime;
     private IDispatcherTimer _timer;
@@ -49,7 +48,7 @@ public class TimerViewModel : BaseViewModel, INotifyPropertyChanged, IDisposable
         }
     }
 
-    public string ToggleButtonText => IsRunning ? "Stop" : "Start";
+    public string ToggleButtonText => IsRunning ? "Stop".Localize() : "Start".Localize();
 
     public ICommand ToggleCommand { get; }
 

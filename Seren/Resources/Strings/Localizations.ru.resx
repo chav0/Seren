@@ -218,4 +218,40 @@
     <data name="Breathing" xml:space="preserve">
         <value>Дыхание</value>
     </data>
+    <data name="Start" xml:space="preserve">
+        <value>Старт</value>
+    </data>
+    <data name="Stop" xml:space="preserve">
+        <value>Стоп</value>
+    </data>
+    <data name="Circles3" xml:space="preserve">
+        <value>Круги 3</value>
+    </data>
+    <data name="Mindful" xml:space="preserve">
+        <value>Осознанное</value>
+    </data>
+    <data name="Box" xml:space="preserve">
+        <value>По квадрату</value>
+    </data>
+    <data name="Steady" xml:space="preserve">
+        <value>Ровное</value>
+    </data>
+    <data name="Grounding" xml:space="preserve">
+        <value>Заземление</value>
+    </data>
+    <data name="Star4" xml:space="preserve">
+        <value>Звезда 4</value>
+    </data>
+    <data name="Fan4" xml:space="preserve">
+        <value>Веер 4</value>
+    </data>
+    <data name="MindfulnessMeditation" xml:space="preserve">
+        <value>Медитация осознанности</value>
+    </data>
+    <data name="RelaxationMeditation" xml:space="preserve">
+        <value>Медитация расслабления</value>
+    </data>
+    <data name="AntiPanicMeditation" xml:space="preserve">
+        <value>Медитация при панике</value>
+    </data>
 </root>

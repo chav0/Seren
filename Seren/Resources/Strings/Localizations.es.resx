@@ -210,4 +210,40 @@ Siempre consulte a un proveedor de atención médica calificado para cualquier i
     <data name="AttackStrongness5" xml:space="preserve">
         <value>Muy fuerte</value>
     </data>
+    <data name="Start" xml:space="preserve">
+        <value>Reproducir</value>
+    </data>
+    <data name="Stop" xml:space="preserve">
+        <value>Detener</value>
+    </data>
+    <data name="Circles3" xml:space="preserve">
+        <value>Círculos 3</value>
+    </data>
+    <data name="Mindful" xml:space="preserve">
+        <value>Consciente</value>
+    </data>
+    <data name="Box" xml:space="preserve">
+        <value>Caja</value>
+    </data>
+    <data name="Steady" xml:space="preserve">
+        <value>Estable</value>
+    </data>
+    <data name="Grounding" xml:space="preserve">
+        <value>Aterrizaje</value>
+    </data>
+    <data name="Star4" xml:space="preserve">
+        <value>Estrella 4</value>
+    </data>
+    <data name="Fan4" xml:space="preserve">
+        <value>Abanico 4</value>
+    </data>
+    <data name="MindfulnessMeditation" xml:space="preserve">
+        <value>Meditación de atención plena</value>
+    </data>
+    <data name="RelaxationMeditation" xml:space="preserve">
+        <value>Meditación de relajación</value>
+    </data>
+    <data name="AntiPanicMeditation" xml:space="preserve">
+        <value>Meditación para la pánico</value>
+    </data>
 </root>

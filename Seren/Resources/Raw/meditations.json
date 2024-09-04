@@ -2,21 +2,21 @@
   {
     "Id": "mindfulness",
     "AudioUrl": "mindfulness.mp3",
-    "Header": "Mindfulness Meditation",
+    "Header": "MindfulnessMeditation",
     "Description": "Stay present and mindful.",
     "Duration": "3 min"
   },
   {
     "Id": "relaxation",
     "AudioUrl": "relaxation.mp3",
-    "Header": "Relaxation Meditation",
+    "Header": "RelaxationMeditation",
     "Description": "Relax and unwind completely.",
     "Duration": "4 min"
   },
   {
     "Id": "anti-panic",
     "AudioUrl": "antipanic.mp3",
-    "Header": "Anti-Panic Meditation",
+    "Header": "AntiPanicMeditation",
     "Description": "Calm your mind quickly.",
     "Duration": "5 min"
   }

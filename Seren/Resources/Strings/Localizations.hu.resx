@@ -210,4 +210,40 @@ Egészségügyi problémákkal vagy kérdésekkel kapcsolatban mindig forduljon 
     <data name="AttackStrongness5" xml:space="preserve">
         <value>Nagyon erős</value>
     </data>
+    <data name="Start" xml:space="preserve">
+        <value>Indítás</value>
+    </data>
+    <data name="Stop" xml:space="preserve">
+        <value>Megállítás</value>
+    </data>
+    <data name="Circles3" xml:space="preserve">
+        <value>Körök 3</value>
+    </data>
+    <data name="Mindful" xml:space="preserve">
+        <value>Tudatos</value>
+    </data>
+    <data name="Box" xml:space="preserve">
+        <value>Doboz</value>
+    </data>
+    <data name="Steady" xml:space="preserve">
+        <value>Stabil</value>
+    </data>
+    <data name="Grounding" xml:space="preserve">
+        <value>Földelés</value>
+    </data>
+    <data name="Star4" xml:space="preserve">
+        <value>Csillag 4</value>
+    </data>
+    <data name="Fan4" xml:space="preserve">
+        <value>Ventilátor 4</value>
+    </data>
+    <data name="MindfulnessMeditation" xml:space="preserve">
+        <value>Tudatos meditáció</value>
+    </data>
+    <data name="RelaxationMeditation" xml:space="preserve">
+        <value>Relaxációs meditáció</value>
+    </data>
+    <data name="AntiPanicMeditation" xml:space="preserve">
+        <value>Meditáció pánik esetén</value>
+    </data>
 </root>
