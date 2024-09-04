@@ -6,7 +6,7 @@
              xmlns:pages="clr-namespace:Seren.Scripts.Views.Pages"
              x:Class="Seren.Scripts.Views.Pages.InfoPage"
              x:DataType="pages:InfoPage"
-             Background="{StaticResource Gray1}"
+             Background="{StaticResource BackgroundColor}"
              Shell.NavBarIsVisible="False"
              Shell.TabBarIsVisible="False">
     

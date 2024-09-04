@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     
     <!-- Primary colors -->
-    <Color x:Key="BackgroundColor">#FFFFFF</Color>
+    <Color x:Key="BackgroundColor">#F0F3F5</Color>
     <Color x:Key="LoadingBackgroundColor">#F37039</Color>
     <Color x:Key="TextColor">#474E52</Color>
     <Color x:Key="LightTextColor">#B7C9D8</Color>

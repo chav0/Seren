@@ -7,11 +7,11 @@
        x:Class="Seren.Scripts.Views.Popups.DeleteDataPopup"
        VerticalOptions="End"
        HorizontalOptions="Fill"
-       Color="{StaticResource Gray1}">
+       Color="{StaticResource BackgroundColor}">
 
        <VerticalStackLayout VerticalOptions="End"
                             HorizontalOptions="FillAndExpand"
-                            BackgroundColor="{StaticResource Gray1}"
+                            BackgroundColor="{StaticResource BackgroundColor}"
                             Padding="0, 45, 0, 17">
 
            <Label Text="{x:Static strings:Localizations.DeleteAccountHeader}"

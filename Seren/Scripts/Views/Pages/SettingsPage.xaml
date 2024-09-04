@@ -9,7 +9,7 @@
                 x:Class="Seren.Scripts.Views.Pages.SettingsPage"
                 x:TypeArguments="viewModels:SettingsViewModel"
                 x:DataType="viewModels:SettingsViewModel"
-                Background="{StaticResource Gray1}"
+                Background="{StaticResource BackgroundColor}"
                 Shell.NavBarIsVisible="False"
                 Shell.TabBarIsVisible="False">
 
@@ -19,7 +19,7 @@
             <!-- Navigation Bar -->
             <views:NavigationBar Grid.Row="0"
                                  TextColor="{StaticResource Gray6}"
-                                 BackgroundColor="{StaticResource Gray1}" />
+                                 BackgroundColor="{StaticResource BackgroundColor}" />
 
             <!-- Settings Header -->
             <Label Grid.Row="1"
