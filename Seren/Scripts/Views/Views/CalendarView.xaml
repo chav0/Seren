@@ -16,9 +16,10 @@
            Padding="16, 0, 16, 8"
            BackgroundColor="{StaticResource OverlayColor}">
 
-        <CollectionView ItemsSource="{Binding CalendarEntries}">
+        <CollectionView ItemsSource="{Binding CalendarEntries}"
+                        HorizontalOptions="Center">
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Horizontal" 
+                <LinearItemsLayout Orientation="Horizontal"
                                    ItemSpacing="16" />
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
