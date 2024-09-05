@@ -6,6 +6,7 @@ using Seren.Scripts.ViewModels;
 using Seren.Scripts.Views.Pages;
 using Seren.Scripts.Views.Views;
 using Plugin.Maui.Audio;
+using Seren.Scripts.Models;
 using Seren.Scripts.Views.Popups;
 
 namespace Seren;
@@ -43,10 +44,10 @@ public static class MauiProgram
 	{
 		builder.Services
 			.AddSingleton<IPageFactory, PageFactory>()
-			.AddSingleton<IMeditationRepository, MeditationRepository>()
-			.AddSingleton<IBreathingExerciseRepository, BreathingExerciseRepository>()
-			.AddSingleton<IPanicQuestionaryRepository, PanicQuestionaryRepository>()
-			.AddSingleton<IUserCalendarRepository, UserCalendarRepository>();
+			.AddSingleton<IRepository<Meditation>, MeditationRepository>()
+			.AddSingleton<IRepository<BreathingExercise>, BreathingExerciseRepository>()
+			.AddSingleton<IRepository<PanicQuestion>, PanicQuestionaryRepository>()
+			.AddSingleton<IUserCalendarRepository, FakeUserCalendarRepository>();
 
 		return builder;        
 	}

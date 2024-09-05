@@ -247,4 +247,19 @@ Siempre consulte a un proveedor de atención médica calificado para cualquier i
     <data name="AntiPanicMeditation" xml:space="preserve">
         <value>Meditación para la pánico</value>
     </data>
+    <data name="PanicQuestionary.INeedADoctor" xml:space="preserve">
+        <value>¿Necesito un médico?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveSchizophrenia" xml:space="preserve">
+        <value>¿Tendré esquizofrenia?</value>
+    </data>
+    <data name="MindfulnessMeditationDescription" xml:space="preserve">
+        <value>Mantente presente y consciente</value>
+    </data>
+    <data name="RelaxationMeditationDescription" xml:space="preserve">
+        <value>Relájate y desestrésate completamente</value>
+    </data>
+    <data name="AntiPanicMeditationDescription" xml:space="preserve">
+        <value>Calma tu mente rápidamente</value>
+    </data>
 </root>

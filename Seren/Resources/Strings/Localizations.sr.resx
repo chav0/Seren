@@ -247,4 +247,19 @@
     <data name="AntiPanicMeditation" xml:space="preserve">
         <value>Медитација при паници</value>
     </data>
+    <data name="PanicQuestionary.INeedADoctor" xml:space="preserve">
+        <value>Да ли ми треба лекар?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveSchizophrenia" xml:space="preserve">
+        <value>Хоћу ли имати шизофренију?</value>
+    </data>
+    <data name="MindfulnessMeditationDescription" xml:space="preserve">
+        <value>Остани присутан и свестан</value>
+    </data>
+    <data name="RelaxationMeditationDescription" xml:space="preserve">
+        <value>Опусти се и потпуно се опусти</value>
+    </data>
+    <data name="AntiPanicMeditationDescription" xml:space="preserve">
+        <value>Брзо смири свој ум</value>
+    </data>
 </root>

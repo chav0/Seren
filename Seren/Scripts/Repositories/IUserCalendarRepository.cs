@@ -2,9 +2,8 @@ using Seren.Scripts.Models;
 
 namespace Seren.Scripts.Repositories;
 
-public interface IUserCalendarRepository
+public interface IUserCalendarRepository : IRepository<UserCalendarEntry>
 {
-    Task<IEnumerable<UserCalendarEntry>> GetAllAsync();
-    Task<UserCalendarEntry> GetByIdAsync(DateTime dateTime);
+    Task<UserCalendarEntry> GetByDateAsync(DateTime dateTime);
     Task SetByIdAsync(UserCalendarEntry userCalendar);
 }

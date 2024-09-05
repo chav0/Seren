@@ -512,5 +512,35 @@ namespace Seren.Resources.Strings {
                 return ResourceManager.GetString("AntiPanicMeditation", resourceCulture);
             }
         }
+        
+        internal static string PanicQuestionary_INeedADoctor {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.INeedADoctor", resourceCulture);
+            }
+        }
+        
+        internal static string PanicQuestionary_IWillHaveSchizophrenia {
+            get {
+                return ResourceManager.GetString("PanicQuestionary.IWillHaveSchizophrenia", resourceCulture);
+            }
+        }
+        
+        internal static string MindfulnessMeditationDescription {
+            get {
+                return ResourceManager.GetString("MindfulnessMeditationDescription", resourceCulture);
+            }
+        }
+        
+        internal static string RelaxationMeditationDescription {
+            get {
+                return ResourceManager.GetString("RelaxationMeditationDescription", resourceCulture);
+            }
+        }
+        
+        internal static string AntiPanicMeditationDescription {
+            get {
+                return ResourceManager.GetString("AntiPanicMeditationDescription", resourceCulture);
+            }
+        }
     }
 }

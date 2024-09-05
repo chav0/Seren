@@ -255,4 +255,19 @@
     <data name="AntiPanicMeditation" xml:space="preserve">
         <value>Медитация при панике</value>
     </data>
+    <data name="PanicQuestionary.INeedADoctor" xml:space="preserve">
+        <value>Мне нужен врач?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveSchizophrenia" xml:space="preserve">
+        <value>У меня будет шизофрения?</value>
+    </data>
+    <data name="MindfulnessMeditationDescription" xml:space="preserve">
+        <value>Оставайся в моменте и осознанным</value>
+    </data>
+    <data name="RelaxationMeditationDescription" xml:space="preserve">
+        <value>Расслабься и полностью отпусти напряжение</value>
+    </data>
+    <data name="AntiPanicMeditationDescription" xml:space="preserve">
+        <value>Быстро успокой свой разум</value>
+    </data>
 </root>

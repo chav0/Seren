@@ -28,7 +28,7 @@ public class CalendarViewModel : BaseViewModel
         for (var i = 0; i < 7; i++)
         {
             var time = today - TimeSpan.FromDays(7 - i - 2);
-            var foundEntry = await _userCalendar.GetByIdAsync(time);
+            var foundEntry = await _userCalendar.GetByDateAsync(time);
             entries.Add(foundEntry);
         }
         CalendarEntries = new ObservableCollection<UserCalendarEntry>(entries);

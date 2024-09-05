@@ -247,4 +247,19 @@ Egészségügyi problémákkal vagy kérdésekkel kapcsolatban mindig forduljon 
     <data name="AntiPanicMeditation" xml:space="preserve">
         <value>Meditáció pánik esetén</value>
     </data>
+    <data name="PanicQuestionary.INeedADoctor" xml:space="preserve">
+        <value>Szükségem van orvosra?</value>
+    </data>
+    <data name="PanicQuestionary.IWillHaveSchizophrenia" xml:space="preserve">
+        <value>Lesz skizofréniám?</value>
+    </data>
+    <data name="MindfulnessMeditationDescription" xml:space="preserve">
+        <value>Maradj jelen és tudatos</value>
+    </data>
+    <data name="RelaxationMeditationDescription" xml:space="preserve">
+        <value>Lazíts és engedd el magad teljesen</value>
+    </data>
+    <data name="AntiPanicMeditationDescription" xml:space="preserve">
+        <value>Nyugtasd meg az elméd gyorsan</value>
+    </data>
 </root>

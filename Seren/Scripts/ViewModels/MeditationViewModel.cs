@@ -8,7 +8,7 @@ public class MeditationViewModel : BaseViewModel
     public Meditation Meditation { get; }
 
     public string Header => Meditation.Header.Localize();
-    public string Description => Meditation.Description;
+    public string Description => Meditation.Description.Localize();
     public string Duration => Meditation.Duration;
 
     public MeditationViewModel(Meditation meditation)

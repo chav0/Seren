@@ -248,5 +248,20 @@ Always consult a qualified healthcare provider for any health-related concerns o
 	<data name="AntiPanicMeditation" xml:space="preserve">
 		<value>Anti-Panic Meditation</value>
 	</data>
+	<data name="PanicQuestionary.INeedADoctor" xml:space="preserve">
+		<value>Do I need doctor?</value>
+	</data>
+	<data name="PanicQuestionary.IWillHaveSchizophrenia" xml:space="preserve">
+		<value>Will I have schizophrenia?</value>
+	</data>
+	<data name="MindfulnessMeditationDescription" xml:space="preserve">
+		<value>Stay present and mindful</value>
+	</data>
+	<data name="RelaxationMeditationDescription" xml:space="preserve">
+		<value>Relax and unwind completely</value>
+	</data>
+	<data name="AntiPanicMeditationDescription" xml:space="preserve">
+		<value>Calm your mind quickly</value>
+	</data>
 </root>
 

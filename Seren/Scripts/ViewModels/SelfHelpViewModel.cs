@@ -39,7 +39,7 @@ public class SelfHelpViewModel : BaseViewModel
         }
     }
 
-    public SelfHelpViewModel(IPanicQuestionaryRepository panicQuestionaryRepository)
+    public SelfHelpViewModel(IRepository<PanicQuestion> panicQuestionaryRepository)
     {
         InitializeQuestionary(panicQuestionaryRepository);
 
@@ -47,7 +47,7 @@ public class SelfHelpViewModel : BaseViewModel
         NoCommand = new Command(SayNo);
     }
 
-    private async void InitializeQuestionary(IPanicQuestionaryRepository panicQuestionaryRepository)
+    private async void InitializeQuestionary(IRepository<PanicQuestion> panicQuestionaryRepository)
     {
         var panicQuestions = await panicQuestionaryRepository.GetAllAsync();
         PanicQuestions = panicQuestions.OrderBy(q => Guid.NewGuid()).ToList();

@@ -11,7 +11,7 @@ public class UserCalendarRepository : SecureDataRepository<UserCalendarEntry>, I
     {
     }
 
-    public async Task<UserCalendarEntry> GetByIdAsync(DateTime dateTime)
+    public async Task<UserCalendarEntry> GetByDateAsync(DateTime dateTime)
     {
         var entry = await GetByIdAsync(dateTime.ToShortDateString()) ?? new UserCalendarEntry
         {
@@ -42,7 +42,17 @@ public class FakeUserCalendarRepository : IUserCalendarRepository
         return Task.FromResult<IEnumerable<UserCalendarEntry>>(_calendarEntries);
     }
 
-    public Task<UserCalendarEntry> GetByIdAsync(DateTime dateTime)
+    public Task<UserCalendarEntry> GetByIdAsync(string id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task LoadItemsAsync()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<UserCalendarEntry> GetByDateAsync(DateTime dateTime)
     {
         var entry = _calendarEntries.FirstOrDefault(e => e.Date.Date == dateTime.Date);
         if (entry == null)

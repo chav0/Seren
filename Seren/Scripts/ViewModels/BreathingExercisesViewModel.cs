@@ -1,15 +1,16 @@
 using System.Collections.ObjectModel;
+using Seren.Scripts.Models;
 using Seren.Scripts.Repositories;
 
 namespace Seren.Scripts.ViewModels;
 
 public class BreathingExercisesViewModel : BaseViewModel
 {
-    private readonly IBreathingExerciseRepository _breathingExerciseRepository;
+    private readonly IRepository<BreathingExercise> _breathingExerciseRepository;
 
     public ObservableCollection<BreathingExerciseViewModel> BreathingExercises { get; set; }
 
-    public BreathingExercisesViewModel(IBreathingExerciseRepository breathingExerciseRepository)
+    public BreathingExercisesViewModel(IRepository<BreathingExercise> breathingExerciseRepository)
     {
         _breathingExerciseRepository = breathingExerciseRepository;
         BreathingExercises = new ObservableCollection<BreathingExerciseViewModel>();

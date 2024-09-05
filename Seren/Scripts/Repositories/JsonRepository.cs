@@ -31,7 +31,7 @@ public class JsonRepository<T> where T : IIdentifiable
         return _itemsMap!.TryGetValue(id, out var item) ? item : default;
     }
 
-    private async Task LoadItemsAsync()
+    public async Task LoadItemsAsync()
     {
         if (_jsonFilePath == null)
             return;

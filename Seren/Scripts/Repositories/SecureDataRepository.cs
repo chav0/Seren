@@ -39,7 +39,7 @@ public class SecureDataRepository<T> where T : IIdentifiable
         await Flush();
     }
 
-    private async Task LoadItemsAsync()
+    public async Task LoadItemsAsync()
     {
         if (_storagePath == null)
             return;
